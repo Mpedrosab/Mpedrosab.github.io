@@ -1,0 +1,10 @@
+Codes
+Data/*/*.xlsx
+Data/*/*.abs
+Data/*/*.pdf
+Data/*/DataRaw
+Data/*/BAMRAW
+Data/*/BAM
+Data/*/ABS
+Data/*/BAM_ABS
+.vscode
