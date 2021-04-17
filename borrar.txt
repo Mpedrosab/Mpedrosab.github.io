@@ -1,0 +1,27 @@
+<div class="isotherm_button">
+        
+        <a href="./Data/Chol_B0414X36/Chol_B0414X36.html" class="button"><h2>Chol</h2><br>50 &mul [0.50 mg/ml]<br>T=36 °C &nbsp &nbsp v=10 mm/min<br> Date: 04/15/2021</a>
+
+            <a href="./Data/Chol_B0414Y/Chol_B0414Y.html" class="button"><h2>Chol</h2><br>50 &mul [0.50 mg/ml]<br>T=20 °C &nbsp &nbsp v=10 mm/min<br> Date: 04/14/2021</a>
+
+            <a href="./Data/Chol_B0414Y25/Chol_B0414Y25.html" class="button"><h2>Chol</h2><br>50 &mul [0.50 mg/ml]<br>T=25 °C &nbsp &nbsp v=10 mm/min<br> Date: 04/14/2021</a>
+
+            <a href="./Data/Chol_B0414Y25S/Chol_B0414Y25S_tuned.html" class="button"><h2>Chol</h2><br>50 &mul [0.50 mg/ml]<br>T=25 °C &nbsp &nbsp v=5 mm/min<br> Date: 04/14/2021</a>
+
+            <a href="./Data/Chol_W1/Chol_W1.html" class="button"><h2>Chol</h2><br>50 &mul [0.50 mg/ml]<br>T=20 °C &nbsp &nbsp v=10 mm/min<br> Date: 02/26/2021</a>
+
+            <a href="./Data/DPPC_B0413Y/DPPC_B0413Y.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=20 °C &nbsp &nbsp v=10 mm/min<br> Date: 04/13/2021</a>
+
+            <a href="./Data/DPPC_B0413Y2/DPPC_B0413Y2.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=25 °C &nbsp &nbsp v=10 mm/min<br> Date: 04/13/2021</a>
+
+            <a href="./Data/DPPC_B0415X36/DPPC_B0415X36.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=36 °C &nbsp &nbsp v=10 mm/min<br> Date: 04/15/2021</a>
+
+            <a href="./Data/DPPC_B2103X/DPPC_B2103X.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=25 °C &nbsp &nbsp v=10 mm/min<br> Date: 03/26/2021</a>
+
+            <a href="./Data/DPPC_W1/DPPC_W1.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=20 °C &nbsp &nbsp v=10 mm/min<br> Date: 02/26/2021</a>
+
+            <a href="./Data/DPPC_W2/DPPC_W2.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=20 °C &nbsp &nbsp v=10 mm/min<br> Date: 03/05/2021</a>
+
+            <a href="./Data/DPPC_W3/DPPC_W3.html" class="button"><h2>DPPC</h2><br>50 &mul [0.50 mg/ml]<br>T=20 °C &nbsp &nbsp v=10 mm/min<br> Date: 03/05/2021</a>
+
+            </div>
