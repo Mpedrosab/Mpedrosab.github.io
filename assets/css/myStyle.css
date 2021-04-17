@@ -1,6 +1,6 @@
 .isotherm_button a.button{
-	    display: block;
-    width: 138px;
+	display: inline-block;
+    width: 30%;
     padding-left: 64px;
     margin-bottom: 20px;
     font-size: 21px;
