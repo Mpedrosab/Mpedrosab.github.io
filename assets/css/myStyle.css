@@ -1,12 +1,12 @@
 .isotherm_button a.button{
 display: inline-block;
     height: inherit;
-	width: 30%;
+	width: 25%;
     margin-bottom: 20px;
 	padding: 30px;
     font-size: 15px;
     background: #2e7bcf;
 }
 .isotherm_button h2.button{
-	padding: 30px;
+	text-align: center;
 }
