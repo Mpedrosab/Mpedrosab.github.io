@@ -1,8 +1,8 @@
 .isotherm_button a.button{
 
 position: absolute;
-    height: inherit;
-	width: 100%;
+    height: auto;
+	width: auto;
     margin-bottom: 20px;
 	padding: 30px;
     font-size: 15px;
@@ -10,14 +10,18 @@ position: absolute;
 	opacity: 0.5;
 }
 .isotherm_button img.button{
-	    height: inherit;
+	position: absolute;
+	height: auto;
 	width: 100%;
 }
 .isotherm_button h2.button{
 	text-align: center;
 }
 .overlay{
-	position: absolute;
+
 display: inline-block;
 width: 25%;
+	position: relative;
+    margin-bottom: 20px;
+	height:200px;
 }
