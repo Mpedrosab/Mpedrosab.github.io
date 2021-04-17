@@ -4,6 +4,9 @@ display: inline-block;
 	widht: 30%;
     margin-bottom: 20px;
 	padding: 30px;
-    font-size: 12px;
+    font-size: 15px;
     background: #2e7bcf;
+}
+.isotherm_button h2.button{
+	padding: 30px;
 }
