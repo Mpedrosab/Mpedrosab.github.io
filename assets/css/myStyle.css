@@ -2,20 +2,21 @@
 
 position: absolute;
     height: auto;
-	width: auto;
+	width: 79%;
 	padding: 30px;
     font-size: 15px;
+	font-weight: bold;
 
 }
 .isotherm_button div.button{
 	position: absolute;
-    height: auto;
-	width: auto;
+    height: 100%;
+	width: 100%;
     background: rgba(46, 123, 207, 0.5)
 }
 .isotherm_button img.button{
 	position: absolute;
-	height: auto;
+	height: inherit;
 	width: 100%;
 }
 .isotherm_button h2.button{
@@ -28,6 +29,6 @@ display: inline-block;
 width: 30%;
 
     margin-bottom: 20px;
-	margin-right: 30px;
+	margin-right: 5px;
 	height:200px;
 }
