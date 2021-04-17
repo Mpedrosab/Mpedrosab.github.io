@@ -1,12 +1,23 @@
 .isotherm_button a.button{
-display: inline-block;
+
+position: absolute;
     height: inherit;
-	width: 25%;
+	width: 100%;
     margin-bottom: 20px;
 	padding: 30px;
     font-size: 15px;
     background: #2e7bcf;
+	opacity: 0.5;
+}
+.isotherm_button img.button{
+	    height: inherit;
+	width: 100%;
 }
 .isotherm_button h2.button{
 	text-align: center;
+}
+.overlay{
+	position: absolute;
+display: inline-block;
+width: 25%;
 }
