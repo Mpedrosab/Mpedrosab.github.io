@@ -1,0 +1,44 @@
+.isotherm_data {
+border-collapse: collapse;
+/*width: 100%;*/
+font-size:20px;
+margin: 0 auto;
+}
+
+.isotherm_data td, .isotherm_data th {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
+}
+
+.isotherm_data td img {
+	 display:inline-block; 
+	 float:center;
+max-height: 300px
+}
+
+.title {
+	display: block;
+
+	text-align: center;
+	font-weight:bold;
+    color: #4CAF50;
+	font-size:25px;
+	max-height: 700px important!;
+
+}
+.title img{
+	max-height: 700px important!;
+}
+
+.isotherm_data tr:nth-child(even){background-color: #f2f2f2;}
+
+.isotherm_data tr:hover {background-color: #ddd;}
+
+.isotherm_data th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+background-color: #4CAF50;
+color: white;
+}

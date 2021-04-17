@@ -1,4 +1,6 @@
-Codes
+Codes/*.py
+Codes/*.sh
+Codes/__pycache__
 Data/*/*.xlsx
 Data/*/*.abs
 Data/*/*.pdf
