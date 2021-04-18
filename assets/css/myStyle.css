@@ -12,7 +12,11 @@ position: absolute;
 	position: absolute;
     height: 100%;
 	width: 100%;
-    background: rgba(46, 123, 207, 0.7)
+    background: rgba(46, 123, 207, 0.8)
+	transition: .5s ease;
+}
+.isotherm_button div.button:hover{
+	    background: rgba(46, 123, 207, 0.5)
 }
 .isotherm_button img.button{
 	position: absolute;
