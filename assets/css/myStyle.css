@@ -47,3 +47,8 @@ width: 45%;
 	margin-right: 5px;
 }
 
+.comparison-div img{
+	position: relative;
+	height: inherit;
+	width: 100%;
+}
