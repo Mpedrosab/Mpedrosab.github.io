@@ -36,3 +36,13 @@ width: 30%;
 	margin-right: 5px;
 	height:200px;
 }
+
+.comparison-div{
+
+display: inline-block;
+	position: relative;
+width: 45%;
+
+    margin-bottom: 20px;
+	margin-right: 5px;
+}
