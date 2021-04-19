@@ -1,0 +1,33 @@
+<div class="comparison-div">
+<img src="./Data/Compare/Chol-DPPC_20_B0413Y-B0414Y.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/Chol-DPPC_25_B0413Y25-B0414Y2.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/Chol-DPPC_36_B0414XH-B0415XH.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/Chol_substance_B0414Y-W1-Old.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/Chol_temp_B0414-W1.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/Chol_vel_B0414Y25-S.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/DPPC_Water_W1-W2-W3.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/DPPC_substance_B0414Y-B2103X25-W3-OldB3.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/DPPC_temp_B0414Y-B2103X.png" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/borrar.txt" class="button">
+</div>
+<div class="comparison-div">
+<img src="./Data/Compare/desktop.ini" class="button">
+</div>
