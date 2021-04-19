@@ -18,7 +18,7 @@ position: absolute;
 .isotherm_button div.button:hover{
 	    background: rgba(46, 123, 207, 0.5)
 }
-.isotherm_button img.button{
+.isotherm_button img.button, .comparison-div img{
 	position: absolute;
 	height: inherit;
 	width: 100%;
@@ -46,3 +46,4 @@ width: 45%;
     margin-bottom: 20px;
 	margin-right: 5px;
 }
+
