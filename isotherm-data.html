@@ -23,6 +23,8 @@
 <meta property="og:url" contenT= "http://localhost:4000/" />
 <meta property="og:site_name" contenT= "Architect theme" />
 <script type="application/ld+json">
+
+
 {"@type":"WebSite","url":"http://localhost:4000/","headline":"María Pedrosa Bustos","description":"Physicist, PhD Student at the Department of Applied Physics UGR","name":"María Pedrosa Bustos","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
@@ -46,7 +48,25 @@
         <section>
 
 <div class="isotherm_button">
-        
+    <?php include('functions.php') ?>
+
+					<form action="functions.php" method="post">
+						<label for="textfield">Name: </label>
+						<input type="text" name="sautor" id="sautor">
+						<div style="height:20px;"></div>
+				
+						<label for="textfield">Substance: </label>
+						<input type="text" name="d" id="ssub">
+						<div style="height:20px;"></div>
+			
+
+						<label for="textfield">Date: </label>
+						<input type="text" name="e" id="sdate">
+						<div style="height:20px;"></div>
+					
+					<input class="vce-button vce-action-link misbotonesfiltro" id="idBotonBusquedaPubli" type="submit" value="Enviar">
+
+				</form>
         <div class="overlay">
 
             <img src="./Data/Chol_B0414XH/Chol_B0414XH.png" class="button">
