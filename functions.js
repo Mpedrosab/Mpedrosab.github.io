@@ -1,38 +1,24 @@
 
-
 function sub(){
-    var name = document.getElementById("name").value;
-    var start = document.getElementById("start").value;
-    var end = document.getElementById("end").value;
-    var dppc = document.getElementById("cDPPC").checked;
-    var chol = document.getElementById("cChol").checked;
-        if (end==""){
-        end="-"
+
+    
+   var output= $.ajax({
+        url: 'Params.csv',
+        dataType: 'text',
+      }).done(successFunction);
+
+};
+
+
+    function successFunction(data) {
+        var allRows = data.split(/\r?\n|\r/);
+        var header=allRows[0].replace('"','').split(",");
+        
+       var output;
+         for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+             output+="<p>"+allRows[singleRow]+"</p>"
+         
+        
     }
-     /*alert (name+start+end+dppc+chol);*/
-
-  $.getJSON('functions.php', function(e) {
-    alert('Result from PHP: ' + e.result);
-});  
-};
-    
-
-
-function createQuery(){
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      var phpResponse= xmlhttp.responseText;
-    document.getElementById("demo").innerHTML = phpResponse;
-  }
-        };
-    xmlhttp.open("GET", "functions.php?HEY=hey", true);
-xmlhttp.send();
-    
-};
-   
-
-
-
-
-
+        document.getElementById("demo").innerHTML=header;
+    };
