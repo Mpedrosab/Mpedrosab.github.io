@@ -2,9 +2,20 @@
 
 function sub(){
     var name = document.getElementById("name").value;
-    var date = document.getElementById("date").value;
-    var subs = document.getElementById("sub").value;
-     alert (name+date+subs);
+    var start = document.getElementById("start").value;
+    var end = document.getElementById("end").value;
+    var dppc = document.getElementById("cDPPC").checked;
+    var chol = document.getElementById("cChol").checked;
+        if (end==""){
+        end=
+    }
+     alert (name+start+end+dppc+chol);
+
+};
+    
+function createQuery(){
+    
+    
 };
    
 
