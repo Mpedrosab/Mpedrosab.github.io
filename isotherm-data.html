@@ -31,7 +31,7 @@
 
 <!-- End Jekyll SEO tag -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="functions.js"></script>  
+     
   </head>
 
   <body>
@@ -53,26 +53,33 @@
 
 <div class="isotherm_button">
 
-    <div id="text"></div>
+    
     <?php include('functions.php') ?>
 
-					<form action="functions.php" method="post">
-						<label for="textfield">Name: </label>
-						<input type="text" name="sautor" id="sautor">
+					<div class="isotherm-filter" style="border-top: medium none; display: block;">
+						<label for="name">Name: </label>
+						<input type="text" name="nname" id="name">
 						<div style="height:20px;"></div>
 				
 						<label for="textfield">Substance: </label>
-						<input type="text" name="d" id="ssub">
-						<div style="height:20px;"></div>
-			
+                        <input type="checkbox" id="cDPPC" value="DPPC">  <label for="cDPPC">DPPC </label><br>
 
-						<label for="textfield">Date: </label>
-						<input type="text" name="e" id="sdate">
-						<div style="height:20px;"></div>
+                        <input type="checkbox" id="cChol" value="Chol"> <label for="cChol">Chol</label>
+
+
+						<label for="start">Start date:</label>
+                        <input type="date" id="start" name="nstart"
+                               
+                               min="2017-01-01" max="2022-12-31">
+                        <label for="end">End date:</label>
+                        <input type="date" id="end" name="nend"
+                               min="2017-01-01" max="2022-12-31">
 					
 					<input type="button" onclick="sub()" value="Submit">
 
-				</form>
+				    </div>
+    
+    <div id="text"></div>
         <div class="overlay">
 
             <img src="./Data/Chol_B0414XH/Chol_B0414XH.png" class="button">
@@ -147,7 +154,7 @@
       </div>
     </div>
 
-
+<script src="functions.js"></script> 
     
   </body>
 </html>
