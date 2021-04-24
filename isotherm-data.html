@@ -27,7 +27,7 @@
 
 {"@type":"WebSite","url":"http://localhost:4000/","headline":"María Pedrosa Bustos","description":"Physicist, PhD Student at the Department of Applied Physics UGR","name":"María Pedrosa Bustos","@context":"https://schema.org"}</script>
       
-      <script type="text/json" src="functions.js"></script>
+      
 
 <!-- End Jekyll SEO tag -->
 
@@ -51,6 +51,8 @@
         <section>
 
 <div class="isotherm_button">
+
+    <div id="text"></div>
     <?php include('functions.php') ?>
 
 					<form action="functions.php" method="post">
@@ -143,7 +145,11 @@
 
       </div>
     </div>
-
+          <script>
+              
+document.getElementById("text").innerHTML = "Text added by JavaScript code";
+</script>
+<script type="text/json" src="functions.js"></script>
     
   </body>
 </html>
