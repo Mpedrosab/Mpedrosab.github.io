@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<p> This is <strong>The file </strong></p>
 
-$text = $_GET['HEY'];
+<?php
 
-echo $text;
+echo "HERE";
+
+
+?>
