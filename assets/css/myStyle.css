@@ -53,6 +53,9 @@ width: 49%;
 	width: 100%;
 }
 
+
+/********************/
+/*Filter */
 #suggestionsName{
     border: 1px solid #AAAAAA;
 display: none;
@@ -79,6 +82,11 @@ background: #fff;
 .suggestion_name:hover{
     color:white;
 background:#2879d0;
+}
+
+
+.isotherm-filter{
+    margin-bottom:50px;
 }
 .RemoveButton{
 
