@@ -34,7 +34,7 @@ xmlhttp.onreadystatechange = function () {
     }
 };
 
-xmlhttp.open("GET", "/Data/ParamsDB.json", true);
+xmlhttp.open("GET", "/Data/ParamDB.json", true);
 xmlhttp.send(); 
     
      $('#suggestionsName').hide(); //Hide name suggestins
@@ -210,7 +210,7 @@ function createFilter(arr,parameter){
      var strOut="";
       for (const [key, value] of Object.entries(arr)){
                       
-          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myUnitSpeed",value["Unit_Speed"])
+          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"]).replace("myUnitSpeed",value["Unit_Speed"])
           
       }
      return strOut;
