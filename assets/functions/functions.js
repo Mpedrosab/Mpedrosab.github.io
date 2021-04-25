@@ -31,7 +31,7 @@ xmlhttp.onreadystatechange = function () {
     }
 };
 
-xmlhttp.open("GET", "/borrar.json", true);
+xmlhttp.open("GET", "/Data/ParamsDB.json", true);
 xmlhttp.send(); 
     
      $('#suggestionsName').hide(); //Hide name suggestins
