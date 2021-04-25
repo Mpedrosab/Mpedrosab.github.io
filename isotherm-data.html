@@ -31,7 +31,7 @@
 
 <!-- End Jekyll SEO tag -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+<!-- <script src="/borrar.json"></script> -->
      
   </head>
 
@@ -54,30 +54,54 @@
 
 <div class="isotherm_button">
 
-    
-    <?php include('functions.php') ?>
+
 <p class="broken"></p>
 					<div class="isotherm-filter" style="border-top: medium none; display: block;">
-						<label for="name">Name: </label>
-						<input type="text" name="nname" id="name">
+						
+						<div style="display: inline-block">
+                            <label for="name">Name: </label>
+						<input type="text" name="nnameFind" id="nameFind">
+                        <div id="suggestionsName" style="display: flex"></div>
+                            </div>
+                        <input type="text" name="nname" id="nameSelect" readonly style="border:none">
+                        <button onclick="eraseText('nameSelect')">Clear</button>
 						<div style="height:20px;"></div>
-				
-						<label for="textfield">Substance: </label>
-                        <input type="checkbox" id="cDPPC" value="DPPC">  <label for="cDPPC">DPPC </label><br>
+   
+                        
+                        <div style="display: inline-block">
+                                <label for="sub">Substance: </label>
+                            <select id="suggestionsSub" name="suggestionsSub" style=""></select>
+                                </div>
+                            <input type="text" name="nSubstance1Select" id="Substance1Select" readonly style="border:none">
+                            <button onclick="eraseText('Substance1Select');$('.Substance1Select').show()">Clear</button>
+                            <div style="height:20px;"></div>
+ 
+                    <div style="display: inline-block">
+                        
+                                <label for="temp">Temperature: </label>
+                            <select id="suggestionsTemp" name="suggestionsTemp" style=""></select>
+                                </div>
+                            <input type="text" name="nTemperatureSelect" id="TemperatureSelect" readonly style="border:none">
+                            <button onclick="eraseText('TemperatureSelect');$('.TemperatureSelect').show()">Clear</button>
+                            <div style="height:20px;"></div>
 
-                        <input type="checkbox" id="cChol" value="Chol"> <label for="cChol">Chol</label>
-                        <input type="checkbox" id="cChol" value="Chol"> <label for="cChol">Chol</label>
+                        <div style="display: inline-block">
+                    <label for="vel">Velocity: </label>
+                            <select id="suggestionsSpeed" name="suggestionsSpeed" style=""></select>
+                                </div>
+                            <input type="text" name="SpeedSelect" id="SpeedSelect" readonly style="border:none">
+                            <button onclick="eraseText('SpeedSelect');$('.SpeedSelect').show()">Clear</button>
+                            <div style="height:20px;"></div>
+    
+                          <input type="text" id="txtName" /> Name:
 
-						<label for="temp">Temperature: </label>
-						<input type="text" name="ntemp" id="temp">
-						<div style="height:20px;"></div>
-				
-						<label for="start">Start date:</label>
-                        <input type="date" id="start" name="nstart"
+                        
+						<label for="startDate">Start date:</label>
+                        <input type="date" id="startDate" name="nstart"
                                
                         min="2017-01-01" max="2022-12-31">
-                        <label for="end">End date:</label>
-                        <input type="date" id="end" name="nend"
+                        <label for="endDate">End date:</label>
+                        <input type="date" id="endDate" name="nend"
                                min="2017-01-01" max="2022-12-31">
 					
 					<input type="button" onclick="sub()" value="Submit">
@@ -160,7 +184,9 @@
       </div>
     </div>
 
-<script src="/assets/functions/functions.js"></script> 
+
+
+      <script src="/assets/functions/functions.js"></script> 
 
   </body>
 </html>

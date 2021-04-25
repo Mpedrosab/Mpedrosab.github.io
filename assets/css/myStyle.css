@@ -52,3 +52,31 @@ width: 49%;
 	height: inherit;
 	width: 100%;
 }
+
+#suggestionsName{
+    border: 1px solid #AAAAAA;
+display: none;
+    max-width: 200px;
+
+margin-right: 6px;
+margin-top: 1px;
+margin-left: 45px;
+font-size: 11px;
+background: #fff;
+    
+}
+#suggestionsName ul{
+    width:100%;
+    margin-left:0px;
+    list-style-position: outside;
+    list-style-type:none;
+}
+
+.suggestion_name{
+    width:100%;
+    margin-left:-5px;
+}
+.suggestion_name:hover{
+    color:white;
+background:#2879d0;
+}
