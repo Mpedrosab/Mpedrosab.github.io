@@ -54,8 +54,6 @@
 
 <div class="isotherm_button">
 
-
-<p class="broken"></p>
 					<div class="isotherm-filter" style="border-top: medium none; display: block;">
 						
 						<div style="display: inline-block">
@@ -103,10 +101,13 @@
                         <input type="date" id="endDate" name="nend"
                                min="2017-01-01" max="2022-12-31">
 					
-                        <input type="button" onclick="sub()" value="Submit" style="background: rgba(46, 123, 207, 0.8)">
+                        <input class="submit" type="button" onclick="sub()" value="Submit" style="background: rgba(46, 123, 207, 0.8)">
                         <div style="height:20px;"></div>
+                        
+                        <button onclick="clearAll()" value="Submit" style="background: rgba(46, 123, 207, 0.8)"></button>
+                        <div style="height:20px;">Clear All</div>
     </div>
-				  
+<div id="isotherm_button_in">		  
         <div class="overlay">
 
             <img src="./Data/Chol_B0414XH/Chol_B0414XH.png" class="button">
@@ -170,6 +171,7 @@
             <img src="./Data/DPPC_W1/DPPC_W1.png" class="button"><div class="button"><a href="./Data/DPPC_W1/DPPC_W1.html" class="button"><h2 class="button">DPPC</h2><br>Date: 26/02/2021<br>V= 50 ul [0.50 mg/ml]<br>T= 20 °C; speed= 10 mm/min</a></div>
             </div>
 
+            </div>
             </div>
 
 			

@@ -100,58 +100,78 @@ something.onclick=SetName("suggestion_name","name");
 
 function sub(){
     var filter = {};
-    filter["name"] =document.getElementById("NameSelect").value;
-    filter["temp"] =document.getElementById("TemperatureSelect").value;
-    filter["substance"] =document.getElementById("Substance1Select").value;
-    filter["vel"] =document.getElementById("SpeedSelect").value;
+    var filterIn = {};
     
-    filter["startDate"] =document.getElementById("startDate").value;
-    filter["endDate"] =document.getElementById("endDate").value;
+    var filterOut=JSON.parse(JSON.stringify(myArr));
+   
+    var arrayOutLength = Object.keys(filterOut).length;
+
+    filter["Name"] =document.getElementById("NameSelect").value.split(",");
+    filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
+    filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
+    filter["Speed"] =document.getElementById("SpeedSelect").value.split(",");
+    
+     
+    var filterStartDate =document.getElementById("startDate").value;
+    var filterEndDate =document.getElementById("endDate").value;
 
     //filter["subfase"] =document.getElementById("subfase").value;
-    //Remove not given values
+    
+
     for (const [key, value] of Object.entries(filter)) {
-        if (key=="substance"){
-            
+        console.log(key);
+         
+    //Remove not given values
+        if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
+            console.log("nodata")
         }
-    if (value == null || value == "" || value == "any"){
-        filter[key]="";
-    }
-    }
-    
-    //Filter data
-    console.log(filter)
-    
-   // arrOut=filter(myArr,name);
-        var out =jQuery.grep(myArr,function(element,index){
-            var myout=true;
+        else{
+           
+            for (const value2 of value){    //Several values for each type
+                console.log(filterOut);
+                /*
+                var filteredIn= filterOut.filter(function(e) {
+                return e[key] == value2;
+                });
+                */
+               console.log(arrayOutLength)
+            for (var i = 0; i < arrayOutLength; i++) {
+            
              //myout = element.Name==name;
-            //console.log(myArr[0].Name==name)
-            return element.Name==name;
             
-                if (name != null && name != ""){
-                myout = element.Name==name;
-                if (myout==false){return myout;}    
+            if(filterOut[i][key]==value2){filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
+                                         console.log("Assin")};
+        };
                 
-            }
-            return myout; 
+       }
+           //  console.log(filterOut)
+        //console.log(filterIn);
+       filterOut = JSON.parse(JSON.stringify(filterIn));
+        arrayOutLength = Object.keys(filterOut).length;
+    }
+
+    };
             
-          
-
-                           
-                            });
+       
+    //Create div with data
+    if (arrayOutLength>0){
+         var codeOut = createDiv(filterOut);
+    }
+   else{
+       var codeOut = "<h3>No data found! :( </h3>"
+   }
+    document.getElementById("isotherm_button_in").innerHTML=codeOut;
     console.log("The is "+arrayLength )
-
+    console.log(filterOut )
     
-for (var i = 0; i < arrayLength; i++) {
-   // console.log(myArr[i].Name)
-    //Do something
-}
+    
+    
+    
 
 };
 
 /**************************************************/
-
+/*Create filter for header page*/
 function createFilter(arr,parameter){
     var str="<option value='any'>Any</option>";
     var alreadyInput=[];
@@ -175,6 +195,22 @@ function createFilter(arr,parameter){
     return str;
 };
 
+
+/*Create div with data*/
+ function createDiv(arr){
+        var str='<div class="overlay">\
+            <img src="/myIMG" class="button"><div class="button"><a href="/myHTML" class="button"><h2 class="button">mySubstance</h2><br>Date: myDate<br>V= myVol myVolUnit [myConc myUnitConc]<br>T= myTemp °C; speed= mySpeed myUnitSpeed</a></div>\
+        </div>\
+          '
+     var strOut;
+      for (const [key, value] of Object.entries(arr)){
+                      
+          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myUnitSpeed",value["Unit_Speed"])
+          
+      }
+     return strOut;
+     
+ };
 
 
 /*******************************************/
@@ -209,3 +245,7 @@ function ClearSuggest(suggestions,inputID){
     
     
 }
+
+
+
+
