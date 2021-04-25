@@ -70,12 +70,14 @@ function FindSuggest(array,findThis,parameter,alreadyFound){
    alreadyFound= alreadyFound.toUpperCase();
 var srt = "<ul>";
     var found=false;
-    
+    var tempstr;
 for (var [key, value] of Object.entries(array))
 {
   //console.log(value[parameter]+"=>"+alreadyFound.indexOf(value[parameter].toUpperCase())+"=>"+value[parameter].toUpperCase().indexOf(findThis));
     if ((value[parameter].toUpperCase().indexOf(findThis)>=0) && (alreadyFound.indexOf(value[parameter].toUpperCase())<0)){
-        srt += "<li class='suggestion_name' id='suggestion_name' onclick='"+'SetName("suggestion_name","NameSelect"); ClearSuggest("suggestionsName","nameFind")'+"'>" + value[parameter] + "</li>";
+        tempstr= "<li class='suggestion_name' id='myVal' onclick='"+'SetName("myVal","NameSelect"); ClearSuggest("suggestionsName","nameFind")'+"'>myVal</li>";
+        tempstr=tempstr.replaceAll("myVal",value[parameter])
+        srt +=tempstr;
         found=true;
     }
     
