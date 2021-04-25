@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function () {
   myArr = jQuery.parseJSON(this.responseText);
       arrayLength = Object.keys(myArr).length;
       console.log(myArr);
-    //Create Substance selection
+    //Create  selections
     var out=createFilter(myArr,"Substance1");   
     document.getElementById("suggestionsSub").innerHTML=out;
     out=createFilter(myArr,"Temperature");     

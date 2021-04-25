@@ -63,8 +63,8 @@
 						<input type="text" name="nnameFind" id="nameFind">
                         <div id="suggestionsName" style="display: flex"></div>
                             </div>
-                        <input type="text" name="nname" id="nameSelect" readonly style="border:none">
-                        <button onclick="eraseText('nameSelect')">Clear</button>
+                        <input type="text" name="nname" id="NameSelect" readonly style="border:none">
+                        <button class="RemoveButton" onclick="eraseText('NameSelect')">x</button>
 						<div style="height:20px;"></div>
    
                         
@@ -73,7 +73,7 @@
                             <select id="suggestionsSub" name="suggestionsSub" style=""></select>
                                 </div>
                             <input type="text" name="nSubstance1Select" id="Substance1Select" readonly style="border:none">
-                            <button onclick="eraseText('Substance1Select');$('.Substance1Select').show()">Clear</button>
+                            <button class="RemoveButton" onclick="eraseText('Substance1Select');$('.Substance1Select').show()">x</button>
                             <div style="height:20px;"></div>
  
                     <div style="display: inline-block">
@@ -82,7 +82,7 @@
                             <select id="suggestionsTemp" name="suggestionsTemp" style=""></select>
                                 </div>
                             <input type="text" name="nTemperatureSelect" id="TemperatureSelect" readonly style="border:none">
-                            <button onclick="eraseText('TemperatureSelect');$('.TemperatureSelect').show()">Clear</button>
+                            <button class="RemoveButton" onclick="eraseText('TemperatureSelect');$('.TemperatureSelect').show()">x</button>
                             <div style="height:20px;"></div>
 
                         <div style="display: inline-block">
@@ -90,10 +90,9 @@
                             <select id="suggestionsSpeed" name="suggestionsSpeed" style=""></select>
                                 </div>
                             <input type="text" name="SpeedSelect" id="SpeedSelect" readonly style="border:none">
-                            <button onclick="eraseText('SpeedSelect');$('.SpeedSelect').show()">Clear</button>
+                            <button class="RemoveButton" onclick="eraseText('SpeedSelect');$('.SpeedSelect').show()">x</button>
                             <div style="height:20px;"></div>
     
-                          <input type="text" id="txtName" /> Name:
 
                         
 						<label for="startDate">Start date:</label>
@@ -104,12 +103,10 @@
                         <input type="date" id="endDate" name="nend"
                                min="2017-01-01" max="2022-12-31">
 					
-					<input type="button" onclick="sub()" value="Submit">
-<div id="demo"></div>
-
-				    </div>
-    
-    <div id="text"></div>
+                        <input type="button" onclick="sub()" value="Submit" style="background: rgba(46, 123, 207, 0.8)">
+                        <div style="height:20px;"></div>
+    </div>
+				  
         <div class="overlay">
 
             <img src="./Data/Chol_B0414XH/Chol_B0414XH.png" class="button">
