@@ -24,6 +24,9 @@ xmlhttp.onreadystatechange = function () {
     out=createFilter(myArr,"Speed");     
     document.getElementById("suggestionsSpeed").innerHTML=out;
 
+      //Create Div
+      out=createDiv(myArr);
+      document.getElementById("isotherm_button_in").innerHTML=out;
   }
     else{
         console.log ("Problem with JSON file!! =>Stataus: " +this.status );
@@ -105,7 +108,7 @@ function sub(){
     var filterOut=JSON.parse(JSON.stringify(myArr));
    
     var arrayOutLength = Object.keys(filterOut).length;
-
+var arrayOutKeys= Object.keys(filterOut);
     filter["Name"] =document.getElementById("NameSelect").value.split(",");
     filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
     filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
@@ -119,8 +122,9 @@ function sub(){
     
 
     for (const [key, value] of Object.entries(filter)) {
+        filterIn = {};
         console.log(key);
-         
+         if (arrayOutLength == 0) { break; }
     //Remove not given values
         if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
             console.log("nodata")
@@ -134,9 +138,9 @@ function sub(){
                 return e[key] == value2;
                 });
                 */
-               console.log(arrayOutLength)
-            for (var i = 0; i < arrayOutLength; i++) {
-            
+               console.log(arrayOutKeys)
+            for (var i of arrayOutKeys.values()) {
+            console.log(i)
              //myout = element.Name==name;
             
             if(filterOut[i][key]==value2){filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
@@ -148,6 +152,7 @@ function sub(){
         //console.log(filterIn);
        filterOut = JSON.parse(JSON.stringify(filterIn));
         arrayOutLength = Object.keys(filterOut).length;
+        arrayOutKeys= Object.keys(filterOut);
     }
 
     };
@@ -247,5 +252,15 @@ function ClearSuggest(suggestions,inputID){
 }
 
 
-
+function clearAll(){
+    document.getElementById("NameSelect").value="";
+    document.getElementById("Substance1Select").value="";
+    document.getElementById("SpeedSelect").value="";
+    document.getElementById("TemperatureSelect").value="";
+    document.getElementById("startDate").value=null;
+    document.getElementById("endDate").value=null;
+    var out=createDiv(myArr);
+    document.getElementById("isotherm_button_in").innerHTML=out;
+    
+}
 
