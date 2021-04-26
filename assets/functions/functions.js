@@ -14,10 +14,10 @@ xmlhttp.onreadystatechange = function () {
       console.log("Good");
   myArr = jQuery.parseJSON(this.responseText);
       arrayLength = Object.keys(myArr).length;
-      
+     // console.log(JSON.stringify(myArr));
       //Order by date
-          sortByDate(myArr);
-    console.log(myArr);
+          myArr=sortByDate(myArr);
+   // console.log(myArr);
     //Create  selections
     var out=createFilter(myArr,"Substance1");   
     document.getElementById("suggestionsSub").innerHTML=out;
@@ -28,6 +28,7 @@ xmlhttp.onreadystatechange = function () {
 
       //Create Div
       out=createDiv(myArr);
+      //console.log(out);
       document.getElementById("isotherm_button_in").innerHTML=out;
   }
     else{
@@ -252,19 +253,21 @@ function createFilter(arr,parameter){
 /*Order by date*/
 function sortByDate(arr){
     var sortable = [];
+    var arrOut = {};
 
 for (var [key, value] of Object.entries(arr)){
     sortable.push([key, value["Date"]]);
 }
 sortable.sort(function(a, b) {
-    return -(new Date(a[1]) - new Date(b[1]));
+    return -(new parseDate(a[1]) - new parseDate(b[1]));
 });
     //Relace initial array
     var i=0;
         for (const value of sortable) {
-            arr[i]=arr[value[0]];
+            arrOut[i]=arr[value[0]];
             i+=1;
 }   
+    return arrOut;
       
 };
 
@@ -272,7 +275,10 @@ sortable.sort(function(a, b) {
 /******************************************************/
 /*String to date*/
 function parseDate(s) {
-  var b = s.split(/\D/);
+  var b = s.split(" ")[0];
+  b = b.split(/\D/);
+    //console.log(b)
+    //console.log(new Date(b[0], --b[1], b[2]))
   return new Date(b[0], --b[1], b[2]);
 }
 
