@@ -60,6 +60,8 @@ function plotData(x,y) {
     var i;
     var x_arr = []; 
     var y_arr = [];
+    var c
+    var mycolor=nr%color.length;
     //var t = document.getElementById('jxgbox').value;
    // var data = t.split('\n');
     var y0=y[0];
@@ -75,13 +77,13 @@ function plotData(x,y) {
         if (y[i]<minY) minY = y[i];
         x_arr.push(x[i], x[i], NaN);
         y_arr.push(y[i], y[i], NaN);
-        
+        c=brd.create('point',[x[i],y[i]],{size:4,strokeWidth: 0,fillColor:color[mycolor]})
         
     }
     brd.setBoundingBox([-10,maxY+10,maxX+10,-10]);
 
     //Scatter plot
-    var c = brd.create('curve', [x_arr, y_arr], {strokeWidth: 8,strokeColor:color[nr%color.length]})
+    //c = brd.create('curve', [x_arr, y_arr], {strokeWidth: 8,strokeColor:color[mycolor]})
     brd.update();
     
     var d = brd.create('curve',[x,y],{strokeColor:color[nr%color.length],strokeWidth: 3});
