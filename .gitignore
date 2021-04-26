@@ -5,8 +5,10 @@ Data/*/*.xlsx
 Data/*/*.abs
 Data/*/*.pdf
 Data/*/DataRaw
-Data/*/BAMRAW
+
 Data/*/BAM
+Data/*/BAMRAW/*cross*
+Data/*/BAMRAW/*dep*
 Data/*/ABS
 Data/*/BAM_ABS
 .vscode
