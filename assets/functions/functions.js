@@ -15,7 +15,28 @@ xmlhttp.onreadystatechange = function () {
       console.log("Good");
   myArr = jQuery.parseJSON(this.responseText);
       arrayLength = Object.keys(myArr).length;
-      console.log(myArr);
+      
+      //Order by date
+function sortByDate(arr){
+    var sortable = [];
+
+for (var [key, value] of Object.entries(arr)){
+    sortable.push([key, value["Date"]]);
+}
+sortable.sort(function(a, b) {
+    return -(new Date(a[1]) - new Date(b[1]));
+});
+    //Relace initial array
+    var i=0;
+        for (const value of sortable) {
+            arr[i]=arr[value[0]];
+            i+=1;
+}   
+      
+};
+
+          sortByDate(myArr);
+    console.log(myArr);
     //Create  selections
     var out=createFilter(myArr,"Substance1");   
     document.getElementById("suggestionsSub").innerHTML=out;
@@ -194,11 +215,6 @@ function createFilter(arr,parameter){
 }
    str= str.replaceAll('myParam',parameter).replaceAll("Select",parameter+"Select");
 
-    console.log(allFunct)
-
-    //+
-            
-    console.log("create filter");
     return str;
 };
 
@@ -212,7 +228,7 @@ function createFilter(arr,parameter){
      var strOut="";
       for (const [key, value] of Object.entries(arr)){
                       
-          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"]).replace("myUnitSpeed",value["Unit_Speed"])
+          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"])
           
       }
      return strOut;
