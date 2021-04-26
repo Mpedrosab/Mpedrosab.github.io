@@ -9,7 +9,6 @@ var xmlhttp = new XMLHttpRequest();
 //fetch( "/borrar.json").then(response => response.json())
 
 //console.log(response)
-
 xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
       console.log("Good");
@@ -17,24 +16,6 @@ xmlhttp.onreadystatechange = function () {
       arrayLength = Object.keys(myArr).length;
       
       //Order by date
-function sortByDate(arr){
-    var sortable = [];
-
-for (var [key, value] of Object.entries(arr)){
-    sortable.push([key, value["Date"]]);
-}
-sortable.sort(function(a, b) {
-    return -(new Date(a[1]) - new Date(b[1]));
-});
-    //Relace initial array
-    var i=0;
-        for (const value of sortable) {
-            arr[i]=arr[value[0]];
-            i+=1;
-}   
-      
-};
-
           sortByDate(myArr);
     console.log(myArr);
     //Create  selections
@@ -131,7 +112,9 @@ function sub(){
     var filterOut=JSON.parse(JSON.stringify(myArr));
    
     var arrayOutLength = Object.keys(filterOut).length;
-var arrayOutKeys= Object.keys(filterOut);
+    var arrayOutKeys= Object.keys(filterOut);
+    
+    
     filter["Name"] =document.getElementById("NameSelect").value.split(",");
     filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
     filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
@@ -143,6 +126,37 @@ var arrayOutKeys= Object.keys(filterOut);
 
     //filter["subfase"] =document.getElementById("subfase").value;
     
+    
+    //First get time range
+    var filterTime=2;
+    if (filterStartDate== null || filterStartDate == "" || filterStartDate == "any"){
+            console.log("no Start Date")
+        filterStartDate="0000-01-01"
+        filterTime=filterTime-1;
+        }
+    if (filterEndDate== null || filterEndDate == "" || filterEndDate == "any"){
+            console.log("no End Date")
+        filterEndDate="5000-01-01"
+        filterTime=filterTime-1;
+        }
+    filterStartDate=parseDate(filterStartDate);
+    filterEndDate=parseDate(filterEndDate);
+    if (filterTime!=0){
+         for (var i of arrayOutKeys.values()) {
+             var myDate= new Date(filterOut[i]["Date"]);
+              //console.log(myDate+" ............."+filterStartDate)
+             
+              //console.log(myDate>=filterStartDate)
+             if ((myDate>=filterStartDate) && (myDate<=filterEndDate))
+        {filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
+                                         console.log("Assign")};
+             
+         }
+           filterOut = JSON.parse(JSON.stringify(filterIn));
+    arrayOutLength = Object.keys(filterOut).length;
+    arrayOutKeys= Object.keys(filterOut); 
+    
+    }
 
     for (const [key, value] of Object.entries(filter)) {
         filterIn = {};
@@ -167,7 +181,7 @@ var arrayOutKeys= Object.keys(filterOut);
              //myout = element.Name==name;
             
             if(filterOut[i][key]==value2){filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
-                                         console.log("Assin")};
+                                         console.log("Assign")};
         };
                 
        }
@@ -218,7 +232,7 @@ function createFilter(arr,parameter){
     return str;
 };
 
-
+/*****************************************************************/
 /*Create div with data*/
  function createDiv(arr){
         var str='<div class="overlay">\
@@ -228,13 +242,39 @@ function createFilter(arr,parameter){
      var strOut="";
       for (const [key, value] of Object.entries(arr)){
                       
-          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"])
+          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"])  //Remove date time from date
           
       }
      return strOut;
      
  };
+/**************************************************/
+/*Order by date*/
+function sortByDate(arr){
+    var sortable = [];
 
+for (var [key, value] of Object.entries(arr)){
+    sortable.push([key, value["Date"]]);
+}
+sortable.sort(function(a, b) {
+    return -(new Date(a[1]) - new Date(b[1]));
+});
+    //Relace initial array
+    var i=0;
+        for (const value of sortable) {
+            arr[i]=arr[value[0]];
+            i+=1;
+}   
+      
+};
+
+
+/******************************************************/
+/*String to date*/
+function parseDate(s) {
+  var b = s.split(/\D/);
+  return new Date(b[0], --b[1], b[2]);
+}
 
 /*******************************************/
 /* Insert selection*/
