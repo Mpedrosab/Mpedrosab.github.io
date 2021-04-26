@@ -27,14 +27,24 @@ function plotData(data) {
     brd.update();
 };
 
-function loadData(){
-    innerHTML()='<iframe src="urlWithinYourDomain.html" style="display:none"></iframe>';
+function loadData(value){
+    var myDiv= document.getElementById('hiddenData');
+   
+    myDiv.load("/"+value["HTML"]);
+   
 
-}
-function readData(){
-    
-        var oTable = document.getElementById('myTable');
+    /*
+    document.getElementById('hiddenData').innerHTML='<iframe class="myName" src="/myHTML" style="display:none"></iframe>'.replace("myHTML",value["HTML"]).replace("myName",value["Name"]);
+*/
+};
 
+
+function readData(value){
+        loadData(value); //Load the html in a hidden location
+    //var oTable = document.getElementsByClassName('dataframe')
+     var oTable = document.getElementsByClassName('dataframe isotherm_data')[0];
+
+    console.log(oTable)
     //gets rows of table
     var rowLength = oTable.rows.length;
 
@@ -58,3 +68,8 @@ function readData(){
     }
     
 }
+
+var value={}
+value["HTML"]="Data/Chol_B0423Xss/Chol_B0423Xss_tuned.html";
+value["Name"]="n";
+readData(value);
