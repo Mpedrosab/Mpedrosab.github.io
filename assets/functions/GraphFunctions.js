@@ -86,41 +86,65 @@ document.querySelectorAll('.AllNamesSelect').forEach(item => {
     
     var key;
    
- if ( (item.attachEvent) || (notWorks==true)) {                  // For IE 8 and earlier versions
+ if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
   item.attachEvent("onclick",function(){
       key=item.value;
-    console.log(item+" " +key)
-      
+    //console.log(item+" " +key)
+      alreadyInput.push(key)
+      alreadyInput.push(key)
       SetName(key,"AllNamesSelect");
       item.style.display = "none";
         //$('#'+key).hide()
 });
+     notWorks==true
 }
-      else if (item.addEventListener) {                    // For all major browsers, except IE 8 and earlier
+      else if  ((item.addEventListener) && (notWorks==false)) {                    // For all major browsers, except IE 8 and earlier
   item.addEventListener("click",function(){
       key=item.value;
-    console.log(item+" " +key)
+   // console.log(item+" " +key)
       
       SetName(key,"AllNamesSelect");
-        $('#'+key).hide()
+      item.style.display = "none";
+        //$('#'+key).hide()
   });
         notWorks=false;
         
 } 
 });
 
+var item;
+/*********************
+/*Plot button*/
+
+item= document.getElementById("plot");
+ if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
+  item.attachEvent("onclick",function(){
+plotThisNames()
+      notWorks=true;
+});
+}
+      else if  ((item.addEventListener) && (notWorks==false)){                    // For all major browsers, except IE 8 and earlier
+  item.addEventListener("click",function(){
+plotThisNames()
+  });
+        notWorks=false;
+        
+} 
+
 /******************************/
 /*Clear button*/
-var item 
+
 
 item= document.getElementById("ClearAll");
- if ( (item.attachEvent) || (notWorks==true)) {                  // For IE 8 and earlier versions
+ if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
   item.attachEvent("onclick",function(){
    eraseText('AllNamesSelect');
     clearAll();
+      
 });
+     notWorks==true
 }
-      else if (item.addEventListener) {                    // For all major browsers, except IE 8 and earlier
+      else if ((item.addEventListener) && (notWorks==false)) {                    // For all major browsers, except IE 8 and earlier
   item.addEventListener("click",function(){
    eraseText('AllNamesSelect');
     clearAll();
