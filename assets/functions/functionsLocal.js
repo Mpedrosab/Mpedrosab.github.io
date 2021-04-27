@@ -1,28 +1,32 @@
 /*Load Json at start*/
 var myArr;
+var myArrRead;
 var arrayLength;
 
 
 /*****************************************/
 window.onload = function () {
-var xmlhttp = new XMLHttpRequest();
-//fetch( "/borrar.json").then(response => response.json()) 
 
-//console.log(response)
-    xmlhttp.open("GET", "/Data/ParamDB.json", true);
-    
-xmlhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-      console.log("Good");
-  myArr = jQuery.parseJSON(this.responseText);
-      arrayLength = Object.keys(myArr).length;
-     // console.log(JSON.stringify(myArr));
+    var outRead=[];
+   
+   console.log(outRead.length)
+   loadMyFile("/Data/ParamDB.json");
+/*
+    try{
+    myArr = JSON.parse(JSON.stringify(myArrRead));      //dEEP COPY
+    arrayLength = Object.keys(myArr).length;
+    }catch{
+        console.log("no good array")
+}
+*/
+    //myArr=myArrRead;
       //Order by date
-          myArr=sortByDate(myArr);
+//console.log(myArrRead)
+      myArr=sortByDate(myArr);
    // console.log(myArr);
     //Create  selections
     var out=createFilter(myArr,"Substance1");   
-    document.getElementById("suggestionsSub").innerHTML=out;
+      document.getElementById("suggestionsSub").innerHTML=out;
     out=createFilter(myArr,"Temperature");     
     document.getElementById("suggestionsTemp").innerHTML=out;
     out=createFilter(myArr,"Speed");     
@@ -32,15 +36,7 @@ xmlhttp.onreadystatechange = function () {
       out=createDiv(myArr);
       //console.log(out);
       document.getElementById("isotherm_button_in").innerHTML=out;
-  }
-    else{
-        console.log ("Problem with JSON file!! =>Stataus: " +this.status );
-        
-    }
-};
 
-
-xmlhttp.send(); 
     
      $('#suggestionsName').hide(); //Hide name suggestins
     
@@ -48,6 +44,39 @@ xmlhttp.send();
     
 };
 
+
+/**********************************
+/* Function load data from Json*/
+function loadMyFile(jsonpath){
+
+//fetch( "/borrar.json").then(response => response.json())
+ var xmlhttp = new XMLHttpRequest();
+    
+//console.log(response)
+
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+      console.log("Good");
+      myArr = JSON.stringify(myArr);
+       myArr = jQuery.parseJSON(myArr);
+       
+     // console.log(JSON.stringify(myArr));
+      //Order by date
+
+  }
+    else{
+        console.log ("Problem with JSON file!! =>Status: " +this.status+" =>readyState: " +this.readyState );
+       
+       
+    }
+ 
+     
+};
+
+    xmlhttp.open("GET", jsonpath, true);
+xmlhttp.send();
+      
+};
 
 /***********************************************/
 /*Function to show list possible names*/
@@ -172,7 +201,7 @@ function sub(){
         else{
            
             for (const value2 of value){    //Several values for each type
-                //console.log(filterOut);
+                console.log(filterOut);
                 /*
                 var filteredIn= filterOut.filter(function(e) {
                 return e[key] == value2;
