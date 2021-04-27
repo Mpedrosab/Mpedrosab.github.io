@@ -65,7 +65,7 @@ function plotThisNames(){
         var value =document.getElementById("AllNamesSelect").value.split(", ");
     
     if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
-        alert("No data selected");
+        console.log("No data selected");
     }
     else{
          for (const value2 of value){ 
@@ -148,6 +148,37 @@ item= document.getElementById("ClearAll");
   item.addEventListener("click",function(){
    eraseText('AllNamesSelect');
     clearAll();
+  });
+        notWorks=false;
+        
+} 
+
+
+/************************************************/
+/* Erase button */
+item= document.getElementById("RemoveButton");
+ if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
+  item.attachEvent("onclick",function(){
+   eraseText('AllNamesSelect');
+for(var value of alreadyInput){
+        console.log(value)
+         document.getElementById(key).style.display = "block";
+        
+    }
+    alreadyInput=[];
+      
+});
+     notWorks==true
+}
+      else if ((item.addEventListener) && (notWorks==false)) {                    // For all major browsers, except IE 8 and earlier
+  item.addEventListener("click",function(){
+   eraseText('AllNamesSelect');
+for(var value of alreadyInput){
+        console.log(value)
+         document.getElementById(key).style.display = "block";
+        
+    }
+    alreadyInput=[];
   });
         notWorks=false;
         
