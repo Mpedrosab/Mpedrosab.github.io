@@ -1,41 +1,3 @@
-
-
-/*Load Json at start*/
-var myArr;
-var arrayLength;
-var myArrData;
-var arrayDataLength;
-var dataLoaded;
- 
-window.onload = function () {
-var xmlhttpData = new XMLHttpRequest();
-xmlhttpData.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-      console.log("Good");  
-  myArrData = JSON.parse(this.responseText);
-  //myArrData = JSON.stringify(myArrData);
-  //myArrData = jQuery.parseJSON(myArrData);
-      arrayDataLength = Object.keys(myArrData).length;
-      console.log(myArrData);
-      dataLoaded=true;
-        console.log(Object.keys(myArrData));
-        var out=createFilter(myArrData,"AllNames");   document.getElementById("AllNames").innerHTML=out;
-plotMyDB(myArrData['DPPC_B0420Y20']);
-plotMyDB(myArrData['Chol_B0414Y']);
-
-  }
-    else{
-        console.log ("Problem with JSON for data file!! =>Stataus: " +this.status );
-        dataLoaded=false;
-    }
-};
-xmlhttpData.open("GET", "/Data/DataDB.json", true);
-xmlhttpData.send(); 
-
-
-};
-
-
     var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-1,100,300,-10],axis:true});
 var color = ['blue','orange', 'green','red','magenta', 'black','yellow'];
 var nr = 0;
@@ -43,16 +5,17 @@ var maxX = 0.0;
 var minX =  100000.0;
 var maxY = 0.0;
 var minY = 100000.0;
-    
-    
+console.log("HEREEE")
 
+//plotMyDB(myArrData['DPPC_B0420Y20']);
+//plotMyDB(myArrData['Chol_B0414Y']); 
 
 
 function splitData(myData){
     myData=myData.replace("[","").replace("]","")
     var splitArray=myData.split(",")
     splitArray=splitArray.map(Number);
-    console.log(splitArray);
+   // console.log(splitArray);
     return splitArray;
 }
 
@@ -97,7 +60,7 @@ function plotMyDB(dataToPlot){
     var y=splitData(dataToPlot["yData"]);
     plotData(x,y);
 };
-
+ 
 function plotThisNames(){
         var value =document.getElementById("AllNamesSelect").value.split(", ");
     
@@ -106,13 +69,37 @@ function plotThisNames(){
     }
     else{
          for (const value2 of value){ 
-             console.log(value2);
-             console.log(myArrData);
+             //console.log(value2);
+             //console.log(myArrData);
              plotMyDB(myArrData[value2]);
          }
     }
     eraseText("AllNamesSelect") 
 }
+   
+          //document.getElementById("AllNames").addEventListener('click', function() { }, false);
+
+
+    var link = document.getElementById('Chol_B0423X20s');
+console.log(link)
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+        console.log("OLEEEEEEEEE")
+    });
+
+
+
+
+
+
+function addListener(){
+$('.AllNamesSelect').click( function() { 
+    var id = $(this).attr('id');
+    console.log(this);
+    return false;
+});
+}
+
 var alreadyInput=[];
 function createFilter(arr,parameter){
     var str="<option value='any'>Any</option>";
@@ -122,13 +109,22 @@ function createFilter(arr,parameter){
     for (var [key, value] of Object.entries(arr))
 {
     if (alreadyInput.includes(key)==false){
-  str += "<option id='"+key+"' value='"+key+"' class='Select' "+functions+key+"</option>";
+ // str += "<option id='"+key+"' value='"+key+"' class='Select' "+functions+key+"</option>";
+  str += "<option id='"+key+"' value='"+key+"' class='Select' >"+key+"</option>";
         alreadyInput.push(key)
-        str=str.replaceAll("myFunction",allFunct).replaceAll("location",key);
-  }
+        //str=str.replaceAll("myFunction",allFunct).replaceAll("location",key);
+        str=str.replaceAll("location",key);
+  } 
 }
    str= str.replaceAll('myParam',parameter).replaceAll("Select",parameter+"Select");
-
+   /* str+="<script>     \
+            $('.AllNamesSelect').click( function() { \
+    var id = $(this).attr('id'); \
+    console.log(this); \
+    return false; \
+}); \
+    </script>"
+    */
     return str;
 };
 
