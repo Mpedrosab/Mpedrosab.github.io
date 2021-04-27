@@ -80,25 +80,21 @@ function plotThisNames(){
           //document.getElementById("AllNames").addEventListener('click', function() { }, false);
 
 
-    var link = document.getElementById('Chol_B0423X20s');
+//Add event listener
+var link
+for (var [key, value] of Object.entries(myArrData)){
+    link = document.getElementById(key);
 console.log(link)
     // onClick's logic below:
-    link.addEventListener('click', function() {
-        console.log("OLEEEEEEEEE")
-    });
-
-
-
-
-
-
-function addListener(){
-$('.AllNamesSelect').click( function() { 
-    var id = $(this).attr('id');
-    console.log(this);
-    return false;
-});
+    //$('#AllNamesSelect').click( function() {
+    link.addEventListener('click', function(){
+      SetName(key,"AllNamesSelect");
+        $('#location').hide()
+    })
+    
 }
+
+
 
 var alreadyInput=[];
 function createFilter(arr,parameter){
