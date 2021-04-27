@@ -69,7 +69,7 @@ function plotThisNames(){
     }
     else{
          for (const value2 of value){ 
-             //console.log(value2);
+             console.log(value2);
              //console.log(myArrData);
              plotMyDB(myArrData[value2]);
          }
@@ -81,48 +81,71 @@ function plotThisNames(){
 
 
 //Add event listener
-var link
+var notWorks=false;
+document.querySelectorAll('.AllNamesSelect').forEach(item => {
+    
+    var key;
+   
+ if ( (item.attachEvent) || (notWorks==true)) {                  // For IE 8 and earlier versions
+  item.attachEvent("onclick",function(){
+      key=item.value;
+    console.log(item+" " +key)
+      
+      SetName(key,"AllNamesSelect");
+      item.style.display = "none";
+        //$('#'+key).hide()
+});
+}
+      else if (item.addEventListener) {                    // For all major browsers, except IE 8 and earlier
+  item.addEventListener("click",function(){
+      key=item.value;
+    console.log(item+" " +key)
+      
+      SetName(key,"AllNamesSelect");
+        $('#'+key).hide()
+  });
+        notWorks=false;
+        
+} 
+});
+
+/******************************/
+/*Clear button*/
+var item 
+
+item= document.getElementById("ClearAll");
+ if ( (item.attachEvent) || (notWorks==true)) {                  // For IE 8 and earlier versions
+  item.attachEvent("onclick",function(){
+   eraseText('AllNamesSelect');
+    clearAll();
+});
+}
+      else if (item.addEventListener) {                    // For all major browsers, except IE 8 and earlier
+  item.addEventListener("click",function(){
+   eraseText('AllNamesSelect');
+    clearAll();
+  });
+        notWorks=false;
+        
+} 
+
+
+/*
 for (var [key, value] of Object.entries(myArrData)){
-    link = document.getElementById(key);
-console.log(link)
+
     // onClick's logic below:
     //$('#AllNamesSelect').click( function() {
-    link.addEventListener('click', function(){
+    console.log(key)
+    document.getElementById(key).addEventListener('click', function(){
       SetName(key,"AllNamesSelect");
-        $('#location').hide()
+        $('#'+key).hide()
     })
     
 }
+*/
 
 
 
-var alreadyInput=[];
-function createFilter(arr,parameter){
-    var str="<option value='any'>Any</option>";
-    
-    var allFunct="SetName( 'location','Select'); $('#location').hide()"
-    var functions='onclick="myFunction">';                                                 
-    for (var [key, value] of Object.entries(arr))
-{
-    if (alreadyInput.includes(key)==false){
- // str += "<option id='"+key+"' value='"+key+"' class='Select' "+functions+key+"</option>";
-  str += "<option id='"+key+"' value='"+key+"' class='Select' >"+key+"</option>";
-        alreadyInput.push(key)
-        //str=str.replaceAll("myFunction",allFunct).replaceAll("location",key);
-        str=str.replaceAll("location",key);
-  } 
-}
-   str= str.replaceAll('myParam',parameter).replaceAll("Select",parameter+"Select");
-   /* str+="<script>     \
-            $('.AllNamesSelect').click( function() { \
-    var id = $(this).attr('id'); \
-    console.log(this); \
-    return false; \
-}); \
-    </script>"
-    */
-    return str;
-};
 
 /*******************************************/
 /* Insert selection*/
@@ -130,8 +153,10 @@ function SetName(location,output) {
       var txtName = document.getElementById(output);
     //console.log(document.getElementById(output).textContent)
       /*txtName.value = Array.prototype.filter.call( document.getElementById(location).textContent, el => el).map(el => el).join(",");*/
+    var myID=document.getElementById(location).textContent;
+    console.log(myID)
     if (txtName.value ==""){
-        txtName.value =document.getElementById(location).textContent;
+        txtName.value =document.getElementById(myID).textContent;
 
     }
     else{
@@ -155,7 +180,12 @@ maxX = 0.0;
 minX =  100000.0;
 maxY = 0.0;
 minY = 100000.0;
-    
+    console.log(alreadyInput)
+    for(var value of alreadyInput){
+        console.log(value)
+         document.getElementById(key).style.display = "block";
+        
+    }
     alreadyInput=[];
-     out=createFilter(myArrData,"AllNames");   document.getElementById("AllNames").innerHTML=out;
+     //out=createFilter(myArrData,"AllNames");   //document.getElementById("AllNames").innerHTML=out;
 }

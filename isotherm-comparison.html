@@ -109,17 +109,18 @@
           
  <div style="display: inline-block">
                     <label for="vel">Names: </label>
-     <button>Start</button>
+    
                             <select id="AllNames" name="AllNames" style=""></select>
-                                
+                            
                             <input type="text" name="AllNamesSelect" id="AllNamesSelect" readonly style="border:none">
                             <button class="RemoveButton" onclick="eraseText('AllNamesSelect');$('.AllNamesSelect').show()">x</button>
                             <div style="height:20px;"></div>
 
-                                  <input class="submit" type="button" onclick="plotThisNames()" value="Submit" style="background: rgba(46, 123, 207, 0.8)">
+                                  <input type="submit"  onclick="plotThisNames()" value="Submit" style="background: rgba(46, 123, 207, 0.8)">
+            <button  type="submit" id="ClearAll" style="background: rgba(46, 123, 207, 0.8)">Clear All</button>
                         <div style="height:20px;"></div>
                         
-                        <button class="submit" onclick="eraseText('AllNamesSelect');clearAll()" value="Submit" style="background: rgba(46, 123, 207, 0.8)">Clear All</button>
+                       
                         <div style="height:20px;"></div>
 
           
