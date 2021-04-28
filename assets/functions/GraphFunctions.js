@@ -5,11 +5,20 @@ var maxX = 0.0;
 var minX =  100000.0;
 var maxY = 0.0;
 var minY = 100000.0;
-console.log("HEREEE")
 
+var myList=document.getElementById("collapsible");
 //plotMyDB(myArrData['DPPC_B0420Y20']);
 //plotMyDB(myArrData['Chol_B0414Y']); 
-
+ document.getElementById("WaitToPlot").style.display = "none";
+myList.addEventListener("click",function(){
+    var mySibling=myList.querySelector("#AllNamesList")
+    //console.log(mySibling.style.display)
+if (mySibling.style.display == "block"){
+    mySibling.style.display = "none"
+}else{
+    mySibling.style.display = "block"
+}
+});
 
 function splitData(myData){
     myData=myData.replace("[","").replace("]","")
@@ -62,102 +71,99 @@ function plotMyDB(dataToPlot){
 };
  
 function plotThisNames(){
+
         var value =document.getElementById("AllNamesSelect").value.split(", ");
     
     if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
-        console.log("No data selected");
+        alert("No data selected");
     }
     else{
          for (const value2 of value){ 
-             console.log(value2);
+             //console.log(value2);
              //console.log(myArrData);
              plotMyDB(myArrData[value2]);
          }
     }
-    eraseText("AllNamesSelect") 
+    eraseText("AllNamesSelect");
+     document.getElementById("WaitToPlot").style.display = "none";
 }
    
           //document.getElementById("AllNames").addEventListener('click', function() { }, false);
 
-
 //Add event listener
-var notWorks=false;
+var notWorks=true;
 document.querySelectorAll('.AllNamesSelect').forEach(item => {
-    
-    var key;
-   
- if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
-  item.attachEvent("onclick",function(){
-      key=item.value;
-    //console.log(item+" " +key)
-      alreadyInput.push(key)
-      alreadyInput.push(key)
-      SetName(key,"AllNamesSelect");
-      item.style.display = "none";
-        //$('#'+key).hide()
-});
-     notWorks==true
-}
-      else if  ((item.addEventListener) && (notWorks==false)) {                    // For all major browsers, except IE 8 and earlier
-  item.addEventListener("click",function(){
-      key=item.value;
+ var key;
+    item.addEventListener("click",function(){
+      //console.log("Pro")
+      key=item.id;
    // console.log(item+" " +key)
       
       SetName(key,"AllNamesSelect");
       item.style.display = "none";
-        //$('#'+key).hide()
-  });
-        notWorks=false;
-        
-} 
-});
+    });
+    });
+   
 
 var item;
 /*********************
 /*Plot button*/
 
-item= document.getElementById("plot");
- if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
+/*
+ if ( (item.attachEvent)) {                  // For IE 8 and earlier versions
+      console.log("Basic")
   item.attachEvent("onclick",function(){
 plotThisNames()
       notWorks=true;
 });
-}
-      else if  ((item.addEventListener) && (notWorks==false)){                    // For all major browsers, except IE 8 and earlier
+}s
+      else if  ((item.addEventListener) ){   
+           console.log("Basic")// For all major browsers, except IE 8 and earlier
   item.addEventListener("click",function(){
 plotThisNames()
   });
         notWorks=false;
         
-} 
 
+}
+} 
+*/
+item= document.getElementById("plot");
+item.onclick= function(){
+     console.log( document.getElementById("WaitToPlot"))
+     document.getElementById("WaitToPlot").style.display = "block";
+setTimeout(() => {  plotThisNames(); }, 500);
+
+}
 /******************************/
 /*Clear button*/
 
 
 item= document.getElementById("ClearAll");
- if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
-  item.attachEvent("onclick",function(){
-   eraseText('AllNamesSelect');
-    clearAll();
-      
-});
-     notWorks==true
-}
-      else if ((item.addEventListener) && (notWorks==false)) {                    // For all major browsers, except IE 8 and earlier
+
   item.addEventListener("click",function(){
    eraseText('AllNamesSelect');
     clearAll();
   });
-        notWorks=false;
-        
-} 
+
 
 
 /************************************************/
 /* Erase button */
+    item= document.getElementById("RemoveSelect");
+     item.addEventListener("click",function(){
+   eraseText('AllNamesSelect');
+for(var value of alreadyInput){
+        console.log(value)
+         document.getElementById(key).style.display = "block";
+        
+    }
+    alreadyInput=[];
+      });
+    /*
 item= document.getElementById("RemoveButton");
- if ( (item.attachEvent) && (notWorks==true)) {                  // For IE 8 and earlier versions
+ if ( (item.attachEvent)) {                  // For IE 8 and earlier versions
+     
   item.attachEvent("onclick",function(){
    eraseText('AllNamesSelect');
 for(var value of alreadyInput){
@@ -168,9 +174,9 @@ for(var value of alreadyInput){
     alreadyInput=[];
       
 });
-     notWorks==true
+     notWorks=true
 }
-      else if ((item.addEventListener) && (notWorks==false)) {                    // For all major browsers, except IE 8 and earlier
+      else if ((item.addEventListener)) {                    // For all major browsers, except IE 8 and earlier
   item.addEventListener("click",function(){
    eraseText('AllNamesSelect');
 for(var value of alreadyInput){
@@ -183,21 +189,9 @@ for(var value of alreadyInput){
         notWorks=false;
         
 } 
-
-
-/*
-for (var [key, value] of Object.entries(myArrData)){
-
-    // onClick's logic below:
-    //$('#AllNamesSelect').click( function() {
-    console.log(key)
-    document.getElementById(key).addEventListener('click', function(){
-      SetName(key,"AllNamesSelect");
-        $('#'+key).hide()
-    })
-    
-}
 */
+
+
 
 
 
@@ -208,6 +202,7 @@ function SetName(location,output) {
       var txtName = document.getElementById(output);
     //console.log(document.getElementById(output).textContent)
       /*txtName.value = Array.prototype.filter.call( document.getElementById(location).textContent, el => el).map(el => el).join(",");*/
+    console.log(location)
     var myID=document.getElementById(location).textContent;
     console.log(myID)
     if (txtName.value ==""){
@@ -228,6 +223,9 @@ function eraseText(myID) {
     document.getElementById(myID).value = "";
 
 }
+         
+         
+         
 function clearAll(){
 brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-1,100,300,-10],axis:true});
    nr = 0;
@@ -235,12 +233,28 @@ maxX = 0.0;
 minX =  100000.0;
 maxY = 0.0;
 minY = 100000.0;
-    console.log(alreadyInput)
+
     for(var value of alreadyInput){
         console.log(value)
-         document.getElementById(key).style.display = "block";
+         document.getElementById(value).style.display = "block";
         
     }
     alreadyInput=[];
      //out=createFilter(myArrData,"AllNames");   //document.getElementById("AllNames").innerHTML=out;
 }
+/*
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+*/

@@ -51,7 +51,7 @@
  <section id="main-content">
 <div class="isotherm_comparison">
     
-        <div class="livePlot"> <h1>Live Plot:</h1><strong>Coming soon...</strong>
+        <div class="livePlot"> <h1>Live Plot:</h1><strong>Module under construction...</strong>
             <br>
     <div id="jxgbox" class="jxgbox" style="width:600px; max-width:100%; height:350px;margin:50px">
 </div>
@@ -102,26 +102,31 @@
     
     
 
-      </div>
-          </section>
+      </div> 
+          </section> 
 
           <aside id="sidebar">
           
  <div style="display: inline-block">
-                    <label for="vel">Names: </label>
-    
-                            <select id="AllNames" name="AllNames" style=""></select>
-                            
-                            <input type="text" name="AllNamesSelect" id="AllNamesSelect" readonly style="border:none">
-                            <button id="RemoveButton" class= "RemoveButton" >x</button>
-                            <div style="height:20px;"></div>
+                    <p style="font-weight:bold; font-size:20px">Select data to Plot </p>
 
-                                  <input type="submit" id="plot"  value="Submit" style="background: rgba(46, 123, 207, 0.8)">
-            <button  type="submit" id="ClearAll" style="background: rgba(46, 123, 207, 0.8)">Clear All</button>
-                        <div style="height:20px;"></div>
-                        
+                            <div id="collapsible" id="AllNames"  style="display: block" name="AllNames" style="">
+                                <textarea name="AllNamesSelect" id="AllNamesSelect" readonly  placeholder="Click here to select data" style="border:none;"></textarea>
+
+               
+                                <ul id="AllNamesList" style="display:block"></ul>
+                                     
+     </div>
+                              
+  <div style="height:20px;"></div>
+
+
+            <button  type="submit" id="ClearAll" style="background: rgba(46, 123, 207, 0.8)">Clear Plot</button>
+            <button id="RemoveSelect" class= "RemoveSelect" >Clear Selection</button>
+                      
+              <button type="submit" id="plot"  value="Submit">Plot !</button>
                        
-                        <div style="height:20px;"></div>
+                        <div id="WaitToPlot" style="display:block; align-content:center; margin:auto; font-size:20px; text-align:center"><p> Plotting data. <br> Please wait...</p></div>
 
           
      </div>
@@ -131,7 +136,7 @@
         
   </body>
 
-      <script src="/assets/functions/Graphfunctions.js"></script> 
+    
 
    
      
