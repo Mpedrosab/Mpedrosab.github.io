@@ -1,114 +1,163 @@
-/*Load Json at start*/
-var myArr;
-var arrayLength;
 
-
-/*****************************************/
-window.onload = function () {
-var xmlhttp = new XMLHttpRequest();
-//fetch( "/borrar.json").then(response => response.json()) 
-
-//console.log(response)
-    xmlhttp.open("GET", "/Data/ParamDB.json", true);
-    
-xmlhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-      console.log("Good");
-  myArr = jQuery.parseJSON(this.responseText);
-      arrayLength = Object.keys(myArr).length;
-     // console.log(JSON.stringify(myArr));
-      //Order by date
-          myArr=sortByDate(myArr);
-   // console.log(myArr);
-    //Create  selections
-    var out=createFilter(myArr,"Substance1");   
-    document.getElementById("suggestionsSub").innerHTML=out;
-    out=createFilter(myArr,"Temperature");     
-    document.getElementById("suggestionsTemp").innerHTML=out;
-    out=createFilter(myArr,"Speed");     
-    document.getElementById("suggestionsSpeed").innerHTML=out;
-
-      //Create Div
-      out=createDiv(myArr);
-      //console.log(out);
-      document.getElementById("isotherm_button_in").innerHTML=out;
-  }
-    else{
-        console.log ("Problem with JSON file!! =>Stataus: " +this.status );
-        
-    }
-};
-
-
-xmlhttp.send(); 
-    
-     $('#suggestionsName').hide(); //Hide name suggestins
-    
-
-    
-};
-
-
+console.log("functions.js")
 /***********************************************/
 /*Function to show list possible names*/
-$('#nameFind').keyup( function(e) {
+//console.log(document.getElementsByClassName("suggestionNameList"))
+document.querySelectorAll(".suggestionNameList").forEach(item => {
+ var key;
+   //console.log(item)
+    item.addEventListener("click",function(){
+      console.log("Pro") 
+      key=item.id;
+      console.log(item+" " +key)  
+      
+      SetName(key,"SuggestedNameSelect");
+      item.style.display = "none";
+    //document.getElementById("nameFind").value="";
+    });
+    });
+
+
+
+/***************************/
+/* Send all chooses to text box*/
+
+addListenerToDropList("Substance1Suggest");
+addListenerToDropList("TemperatureSuggest");
+addListenerToDropList("SpeedSuggest");
+//addListenerToDropLis(["Substance1Select"]);
+
+function addListenerToDropList(label){
+ 
+       
+ label=label.replace("Suggest","Select"); 
+       //console.log(label)
+       document.querySelectorAll("."+label).forEach(item => {
+ var key;
+         
+    item.addEventListener("click",function(){
+       
+      //console.log("Pro")
+      key=item.id;
+      //console.log(item+" " +key)
+      
+      SetName(key,String(label),true);
+      item.style.display = "none"; 
+console.log(label) 
+    });
+    });  
     
-   var t = e.keyCode;
+}  
+
+
+function ShowNames() {
+    
     var name =document.getElementById("nameFind").value;
-    
-    if (name==""){ $('#suggestionsName').hide();
+     console.log(name)
+    if (name.length<1){ console.log("Tis")
         }
-   else{
+ 
     /*Get list of matches*/
-    var alreadyFound=document.getElementById("NameSelect").value;
+    var alreadyFound=document.getElementById("SuggestedNameSelect").value;
     var myList=FindSuggest(myArr,name,"Name",alreadyFound);
+       console.log(name)
     //console.log("Textarea two was changed. =>"+name+myList);
-   $('#suggestionsName').show();
-    $('#suggestionsName').html(myList);
-   }
+   document.getElementById("suggestionsName").style.display = "block"
+   document.getElementById("suggestionsName").innerHTML = myList;
+   
+   
            
+};
+
+document.getElementById("nameFind").addEventListener('keyup', ShowNames);  //When pressing key
+
+/******************/
+/*Collapsible div*/
+
+
+
+document.getElementById("Namecollapsible").addEventListener("click",function(){
+    var mySibling=document.getElementById("suggestionsName")
+    //console.log(mySibling.style.display)
+if (mySibling.style.display == "block"){
+    mySibling.style.display = "none"
+}else{
+    ShowNames()
+    mySibling.style.display = "block";
+}
 });
 
-function FindSuggest(array,findThis,parameter,alreadyFound){
-    //Parameter => what parameter to compare
-   findThis= findThis.toUpperCase();
-   alreadyFound= alreadyFound.toUpperCase();
-var srt = "<ul>";
-    var found=false;
-    var tempstr;
-for (var [key, value] of Object.entries(array))
-{
-  //console.log(value[parameter]+"=>"+alreadyFound.indexOf(value[parameter].toUpperCase())+"=>"+value[parameter].toUpperCase().indexOf(findThis));
-    if ((value[parameter].toUpperCase().indexOf(findThis)>=0) && (alreadyFound.indexOf(value[parameter].toUpperCase())<0)){
-        tempstr= "<li class='suggestion_name' id='myVal' onclick='"+'SetName("myVal","NameSelect"); ClearSuggest("suggestionsName","nameFind")'+"'>myVal</li>";
-        tempstr=tempstr.replaceAll("myVal",value[parameter])
-        srt +=tempstr;
-        found=true;
-    }
+
+document.querySelectorAll(".dataFilterul").forEach(myList =>{
+    myList.addEventListener("click",function(){
+        //var myList=item.getElementById("dataFilterul")
+    //console.log(mySibling.style.display)
+if (myList.style.display == "block"){
+    myList.style.display = "none"
+}else{
     
+    myList.style.display = "block";
+}
+});
+});
 
-    }
-        if (!found){
-         srt += "<li>No matches found!!</li>";
-        }
-srt += "</ul>";
-return srt;
-    };
+/*Search button*/
+
+document.getElementById("SearchData").addEventListener("click",function(){
+    submitSearch();
+    clearAll();
+});
+document.getElementById("ClearAll").addEventListener("click",function(){
+     clearAll();
+});
+
+/*Drop down buttons*/
+
+document.querySelectorAll('.dropSelect').forEach(item => {
+ var key;
+    item.addEventListener("click",function(){
+      //console.log("Pro")
+      key=item.id.replace("drop","Suggest");
+    console.log(item+" " +key)
+      var mySibling=document.getElementById(key)
+    //console.log(mySibling.style.display)
+if (mySibling.style.display == "block"){
+    mySibling.style.display = "none"
+}else{
+    mySibling.style.display = "block"
+}
+//if (key!="NameSelect"){
+//    $('.'+key).show()
+//}
+    });
+    });    
 
 
-/**************************************/
+//Erase buttons listener
+document.querySelectorAll('.RemoveButton').forEach(item => {
+ var key;
+    item.addEventListener("click",function(){
+      //console.log("Pro")
+      key=item.id.replace("Remove","Select");
+   // console.log(item+" " +key)
+      eraseText(key)
+        this.stopPropagation;
+//if (key!="NameSelect"){ 
+//    $('.'+key).show()
+//}
+    });
+    });
 
-/* Function to add suggestion on click*/
-/*
-var something = document.getElementById('suggestion_name');
-something.onclick=SetName("suggestion_name","name");
-*/
-    
+
+
+
+
 
 /*****************************************/
 /* FIlter the data */
 
-function sub(){
+function submitSearch(){
+    console.log("HEREE")
     var filter = {};
     var filterIn = {};
     
@@ -118,7 +167,7 @@ function sub(){
     var arrayOutKeys= Object.keys(filterOut);
     
     
-    filter["Name"] =document.getElementById("NameSelect").value.split(",");
+    filter["Name"] =document.getElementById("SuggestedNameSelect").value.split(",");
     filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
     filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
     filter["Speed"] =document.getElementById("SpeedSelect").value.split(",");
@@ -215,87 +264,25 @@ function sub(){
 
 };
 
-/**************************************************/
-/*Create filter for header page*/
-function createFilter(arr,parameter){
-    var str="<option value='any'>Any</option>";
-    var alreadyInput=[];
-    var allFunct="SetName( 'location','Select'); $('#location').hide()"
-    var functions='onclick="myFunction">';                                                 
-    for (var [key, value] of Object.entries(arr))
-{
-    if (alreadyInput.includes(value[parameter])==false){
-  str += "<option id='"+value[parameter]+"' value='"+value[parameter]+"' class='Select' "+functions+value[parameter]+"</option>";
-        alreadyInput.push(value[parameter])
-        str=str.replaceAll("myFunction",allFunct).replaceAll("location",value[parameter]);
-  }
-}
-   str= str.replaceAll('myParam',parameter).replaceAll("Select",parameter+"Select");
-
-    return str;
-};
-
-/*****************************************************************/
-/*Create div with data*/
- function createDiv(arr){
-        var str='<div class="overlay">\
-            <img src="/myIMG" class="button"><div class="button"><a href="/myHTML" class="button"><h2 class="button">mySubstance</h2><br>Date: myDate<br>V= myVol myVolUnit [myConc myUnitConc]<br>T= myTemp °C; speed= mySpeed myUnitSpeed</a></div>\
-        </div>\
-          '
-     var strOut="";
-      for (const [key, value] of Object.entries(arr)){
-                      
-          strOut+=str.replace("myIMG",value["IMG"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"])  //Remove date time from date
-          
-      }
-     return strOut;
-     
- };
-/**************************************************/
-/*Order by date*/
-function sortByDate(arr){
-    var sortable = [];
-    var arrOut = {};
-
-for (var [key, value] of Object.entries(arr)){
-    sortable.push([key, value["Date"]]);
-}
-sortable.sort(function(a, b) {
-    return -(new parseDate(a[1]) - new parseDate(b[1]));
-});
-    //Relace initial array
-    var i=0;
-        for (const value of sortable) {
-            arrOut[i]=arr[value[0]];
-            i+=1;
-}   
-    return arrOut;
-      
-};
-
-
-/******************************************************/
-/*String to date*/
-function parseDate(s) {
-  var b = s.split(" ")[0];
-  b = b.split(/\D/);
-    //console.log(b)
-    //console.log(new Date(b[0], --b[1], b[2]))
-  return new Date(b[0], --b[1], b[2]);
-}
-
 /*******************************************/
 /* Insert selection*/
-function SetName(location,output) {
+function SetName(location,output,fromList=false) {
+    if (fromList==false){
+        var textOut=document.getElementById(location).textContent;
+    }
+    else{
+         var textOut=location;
+        
+    }
       var txtName = document.getElementById(output);
-    //console.log(document.getElementById(output).textContent)
-      /*txtName.value = Array.prototype.filter.call( document.getElementById(location).textContent, el => el).map(el => el).join(",");*/
+    console.log(output)
+
     if (txtName.value ==""){
-        txtName.value =document.getElementById(location).textContent;
+        txtName.value =textOut;
 
     }
     else{
-              txtName.value = txtName.value.concat(", "+document.getElementById(location).textContent);
+              txtName.value = txtName.value.concat(", "+textOut);
         //console.log(document.getElementById(location).textContent);
     }
 
@@ -311,7 +298,7 @@ function eraseText(myID) {
 /************************************/
 /* Hide suggestion and clear input*/
 function ClearSuggest(suggestions,inputID){
-    $('#'+suggestions).hide();
+    document.getElementById(suggestions).style.display="none";
     eraseText(inputID);
     
     
@@ -319,7 +306,7 @@ function ClearSuggest(suggestions,inputID){
 
 
 function clearAll(){
-    document.getElementById("NameSelect").value="";
+    document.getElementById("SuggestedNameSelect").value="";
     document.getElementById("Substance1Select").value="";
     document.getElementById("SpeedSelect").value="";
     document.getElementById("TemperatureSelect").value="";

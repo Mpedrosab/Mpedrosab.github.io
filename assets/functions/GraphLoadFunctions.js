@@ -88,7 +88,7 @@ document.getElementsByTagName("body")[0].appendChild(tag);
     var str="";
     
     var allFunct="SetName( 'location','Select'); $('#location').hide()"
-    var functions='onclick="myFunction">';                                                  
+    //var functions='onclick="myFunction">';                                                  
     for (var [key, value] of Object.entries(arr))
 {
     if (alreadyInput.includes(key)==false){

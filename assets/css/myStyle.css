@@ -64,38 +64,42 @@ width: 49%;
 
 /********************/
 /*Filter */
-#suggestionsName, #AllNamesList{
+ul{
     border: 1px solid #AAAAAA;
 display: none;
+    position: absolute;
     max-width: 150px;
+    
     overflow:auto;
 max-height:150px;
 margin-right: 6px;
 margin-top: 1px;
-margin-left: 45px;
-font-size: 11px;
-background: #fff;
-    
-}
 
-AllNamesList
-#suggestionsName ul, #AllNamesList{
     width:100%;
     margin-left:0px;
-    list-style-position: outside;
+font-size: 11px; 
+background: #fff;
+      list-style-position: outside;
     list-style-type:none;
+     
 }
 
-.suggestion_name, #AllNamesList li{
+.dataFilter>ul{
+    width:inherit !important;
+    padding-right:10px;
+}
+
+li{
     width:100%;
     margin-left:-5px;
+    
 }
-.suggestion_name:hover,.AllNamesSelect:hover{
+li:hover{
     color:white;
 background:#2879d0;
 }
 
-#AllNamesSelect{
+li{
     display:block;
 width:100%;
 height:50%;

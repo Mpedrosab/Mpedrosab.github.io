@@ -1,4 +1,4 @@
-    var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-1,100,300,-10],axis:true});
+    var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
 var color = ['blue','orange', 'green','red','magenta', 'black','yellow'];
 var nr = 0;
 var maxX = 0.0;
@@ -78,7 +78,7 @@ function plotThisNames(){
         alert("No data selected");
     }
     else{
-         for (const value2 of value){ 
+         for (var value2 of value){ 
              //console.log(value2);
              //console.log(myArrData);
              plotMyDB(myArrData[value2]);
@@ -132,7 +132,7 @@ item= document.getElementById("plot");
 item.onclick= function(){
      console.log( document.getElementById("WaitToPlot"))
      document.getElementById("WaitToPlot").style.display = "block";
-setTimeout(() => {  plotThisNames(); }, 500);
+setTimeout(() => {  plotThisNames(); }, 50);
 
 }
 /******************************/
@@ -155,7 +155,7 @@ item= document.getElementById("ClearAll");
    eraseText('AllNamesSelect');
 for(var value of alreadyInput){
         console.log(value)
-         document.getElementById(key).style.display = "block";
+         document.getElementById(value).style.display = "block";
         
     }
     alreadyInput=[];
@@ -227,7 +227,7 @@ function eraseText(myID) {
          
          
 function clearAll(){
-brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-1,100,300,-10],axis:true});
+brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
    nr = 0;
 maxX = 0.0;
 minX =  100000.0;
