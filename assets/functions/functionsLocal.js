@@ -38,7 +38,7 @@ window.onload = function () {
       document.getElementById("isotherm_button_in").innerHTML=out;
 
     
-     $('#suggestionsName').hide(); //Hide name suggestins
+     $('#NameSuggest').hide(); //Hide name suggestins
     
 
     
@@ -85,15 +85,15 @@ $('#nameFind').keyup( function(e) {
    var t = e.keyCode;
     var name =document.getElementById("nameFind").value;
     
-    if (name==""){ $('#suggestionsName').hide();
+    if (name==""){ $('#NameSuggest').hide();
         }
    else{
     /*Get list of matches*/
     var alreadyFound=document.getElementById("NameSelect").value;
     var myList=FindSuggest(myArr,name,"Name",alreadyFound);
     //console.log("Textarea two was changed. =>"+name+myList);
-   $('#suggestionsName').show();
-    $('#suggestionsName').html(myList);
+   $('#NameSuggest').show();
+    $('#NameSuggest').html(myList);
    }
            
 });
@@ -109,7 +109,7 @@ for (var [key, value] of Object.entries(array))
 {
   //console.log(value[parameter]+"=>"+alreadyFound.indexOf(value[parameter].toUpperCase())+"=>"+value[parameter].toUpperCase().indexOf(findThis));
     if ((value[parameter].toUpperCase().indexOf(findThis)>=0) && (alreadyFound.indexOf(value[parameter].toUpperCase())<0)){
-        tempstr= "<li class='suggestion_name' id='myVal' onclick='"+'SetName("myVal","NameSelect"); ClearSuggest("suggestionsName","nameFind")'+"'>myVal</li>";
+        tempstr= "<li class='suggestion_name' id='myVal' onclick='"+'SetName("myVal","NameSelect"); ClearSuggest("NameSuggest","nameFind")'+"'>myVal</li>";
         tempstr=tempstr.replaceAll("myVal",value[parameter])
         srt +=tempstr;
         found=true;

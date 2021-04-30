@@ -2,8 +2,9 @@
 console.log("functions.js")
 /***********************************************/
 /*Function to show list possible names*/
-//console.log(document.getElementsByClassName("suggestionNameList"))
-document.querySelectorAll(".suggestionNameList").forEach(item => {
+//console.log(document.getElementsByClassName("NameSelect"))
+/*
+document.querySelectorAll(".NameSelect").forEach(item => {
  var key;
    //console.log(item)
     item.addEventListener("click",function(){
@@ -15,8 +16,8 @@ document.querySelectorAll(".suggestionNameList").forEach(item => {
       item.style.display = "none";
     //document.getElementById("nameFind").value="";
     });
-    });
-
+    }); 
+*/
 
 
 /***************************/
@@ -49,27 +50,27 @@ console.log(label)
     
 }  
 
-
+ 
 function ShowNames() {
     
     var name =document.getElementById("nameFind").value;
      console.log(name)
-    if (name.length<1){ console.log("Tis")
+    if (name.length<1){ console.log("This")
         }
  
     /*Get list of matches*/
-    var alreadyFound=document.getElementById("SuggestedNameSelect").value;
-    var myList=FindSuggest(myArr,name,"Name",alreadyFound);
+    console.log(document.getElementById("SuggestedNameSelect"))
+    var alreadyFound=document.getElementById("SuggestedNameSelect").textContent;
+    var myList=FindSuggest("NameSelect",alreadyFound);
        console.log(name)
     //console.log("Textarea two was changed. =>"+name+myList);
-   document.getElementById("suggestionsName").style.display = "block"
-   document.getElementById("suggestionsName").innerHTML = myList;
-   
    
            
 };
 
 document.getElementById("nameFind").addEventListener('keyup', ShowNames);  //When pressing key
+
+
 
 /******************/
 /*Collapsible div*/
@@ -77,17 +78,18 @@ document.getElementById("nameFind").addEventListener('keyup', ShowNames);  //Whe
 
 
 document.getElementById("Namecollapsible").addEventListener("click",function(){
-    var mySibling=document.getElementById("suggestionsName")
+    var mySibling=document.getElementById("NameSuggest")
     //console.log(mySibling.style.display)
 if (mySibling.style.display == "block"){
     mySibling.style.display = "none"
 }else{
+    console.log("HERE")
     ShowNames()
     mySibling.style.display = "block";
 }
 });
 
-
+/*
 document.querySelectorAll(".dataFilterul").forEach(myList =>{
     myList.addEventListener("click",function(){
         //var myList=item.getElementById("dataFilterul")
@@ -101,11 +103,31 @@ if (myList.style.display == "block"){
 });
 });
 
+*/
+
+document.querySelectorAll('.NameSelect').forEach(item => {
+
+ var key;
+          
+    item.addEventListener("click",function(){
+        
+      console.log("Pro")
+      key=item.id;
+      //console.log(item+" " +key)
+      
+      SetName(key,"SuggestedNameSelect");
+      item.style.display = "none"; 
+//console.log(label) 
+    });
+    });  
+    
+
 /*Search button*/
 
 document.getElementById("SearchData").addEventListener("click",function(){
     submitSearch();
-    clearAll();
+    setTimeout(() => {  clearAll(); }, 500);
+  
 });
 document.getElementById("ClearAll").addEventListener("click",function(){
      clearAll();
@@ -158,6 +180,7 @@ document.querySelectorAll('.RemoveButton').forEach(item => {
 
 function submitSearch(){
     console.log("HEREE")
+    console.log(document.getElementById("SuggestedNameSelect"))
     var filter = {};
     var filterIn = {};
     
@@ -167,7 +190,7 @@ function submitSearch(){
     var arrayOutKeys= Object.keys(filterOut);
     
     
-    filter["Name"] =document.getElementById("SuggestedNameSelect").value.split(",");
+    filter["Name"] =document.getElementById("SuggestedNameSelect").textContent.split(",");
     filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
     filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
     filter["Speed"] =document.getElementById("SpeedSelect").value.split(",");
@@ -178,7 +201,7 @@ function submitSearch(){
 
     //filter["subfase"] =document.getElementById("subfase").value;
     
-    
+    console.log(document.getElementById("SuggestedNameSelect").textContent)
     //First get time range
     var filterTime=2;
     if (filterStartDate== null || filterStartDate == "" || filterStartDate == "any"){
@@ -213,6 +236,7 @@ function submitSearch(){
     for (const [key, value] of Object.entries(filter)) {
         filterIn = {};
         console.log(key);
+        console.log(value);
          if (arrayOutLength == 0) { break; }
     //Remove not given values
         if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
@@ -264,6 +288,48 @@ function submitSearch(){
 
 };
 
+
+
+
+
+function FindSuggest(classLi,findThis,alreadyFound){
+        if (findThis.length<1){
+        return 
+    }
+    /*ulItem is the ul list*/
+    //Parameter => what parameter to compare
+   findThis= findThis.toUpperCase();
+   alreadyFound= alreadyFound.toUpperCase();
+var srt = "";
+    var found=false;
+    var tempstr=[];     //Items to remove
+
+
+    console.log(findThis)
+    document.querySelectorAll("."+classLi).forEach(myList =>{
+       
+if ((value.toUpperCase().indexOf(findThis)<0) || (alreadyFound.indexOf(value.toUpperCase())>=0)){
+    myList.style.display="none";
+}
+        else{
+            myList.style.display="block";
+            found=true
+        }
+  })
+
+        if (!found){
+         document.getElementById("noMatchesName").style.display="block";
+        }
+else{
+      document.getElementById("noMatchesName").style.display="none";
+}
+    console.log(document.getElementById(classLi.replace("Select","Suggest")))
+    document.getElementById(classLi.replace("Select","Suggest")).style.display="block"
+return;
+    };
+
+
+
 /*******************************************/
 /* Insert selection*/
 function SetName(location,output,fromList=false) {
@@ -306,7 +372,7 @@ function ClearSuggest(suggestions,inputID){
 
 
 function clearAll(){
-    document.getElementById("SuggestedNameSelect").value="";
+    document.getElementById("SuggestedNameSelect").textContent="";
     document.getElementById("Substance1Select").value="";
     document.getElementById("SpeedSelect").value="";
     document.getElementById("TemperatureSelect").value="";

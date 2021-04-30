@@ -34,9 +34,9 @@ xmlhttp.onreadystatechange = function () {
       out=createDiv(myArr);
       //console.log(out);
       document.getElementById("isotherm_button_in").innerHTML=out;
-     out= FindSuggest(myArr,"","Name"," ")
+     out= CreateSuggest(myArr,"Name")
      
-     document.getElementById("suggestionsName").innerHTML=out;
+     document.getElementById("NameSuggest").innerHTML=out;
      
           $(document).ready(function(){ 
 
@@ -46,7 +46,7 @@ xmlhttp.onreadystatechange = function () {
     $.getScript("/assets/functions/functions.js");
 
     
-       document.getElementById("suggestionsName").style.display = "none"
+       document.getElementById("NameSuggest").style.display = "none"
        document.getElementById("Substance1Suggest").style.display = "none"
        document.getElementById("TemperatureSuggest").style.display = "none"
        document.getElementById("SpeedSuggest").style.display = "none"
@@ -62,7 +62,7 @@ xmlhttp.onreadystatechange = function () {
 
 xmlhttp.send(); 
     
-     document.getElementById('suggestionsName').style.display = "none"; //Hide name suggestins
+     document.getElementById('NameSuggest').style.display = "none"; //Hide name suggestins
     
 
     
@@ -73,7 +73,7 @@ xmlhttp.send();
     function createFilter(arr,parameter){
     var str="";
     
-    var allFunct="SetName( 'location','Select'); $('#location').hide()"
+   // var allFunct="SetName( 'location','Select'); $('#location').hide()"
     //var functions='onclick="myFunction">';                                                  
     for (var [key, value] of Object.entries(arr))
 {
@@ -86,14 +86,7 @@ xmlhttp.send();
   } 
 }
    str= str.replaceAll('myParam',parameter).replaceAll("Select",parameter+"Select");
-   /* str+="<script>     \
-            $('.AllNamesSelect').click( function() { \
-    var id = $(this).attr('id'); \
-    console.log(this); \
-    return false; \
-}); \
-    </script>"
-    */
+
     return str;
 };
 
@@ -118,38 +111,22 @@ xmlhttp.send();
 
 /**************************************/
 /*Create list of suggestions*/
-function FindSuggest(array,findThis,parameter,alreadyFound){
+function CreateSuggest(array,parameter){
     //Parameter => what parameter to compare
-   findThis= findThis.toUpperCase();
-   alreadyFound= alreadyFound.toUpperCase();
 var srt = "";
-    var found=false;
     var tempstr;
-    console.log(findThis)
+    
 for (var [key, value] of Object.entries(array))
 {
-  
-  //console.log(value[parameter]+"=>"+alreadyFound.indexOf(value[parameter].toUpperCase())+"=>"+value[parameter].toUpperCase().indexOf(findThis));
-    if (findThis.length<1){
         //console.log("HERE")
-           tempstr= "<li class='suggestionNameList' id='myVal' style='display:block' >myVal</li>";
+           tempstr= "<li class='NameSelect' id='myVal' style='display:block' >myVal</li>";
         tempstr=tempstr.replaceAll("myVal",value[parameter])
-        srt +=tempstr;
-        found=true;     
-    } 
-    
-   else if ((value[parameter].toUpperCase().indexOf(findThis)>=0) && (alreadyFound.indexOf(value[parameter].toUpperCase())<0)){ 
-        tempstr= "<li class='suggestionNameList' id='myVal' style='display:block'>myVal</li>";
-        tempstr=tempstr.replaceAll("myVal",value[parameter])
-        srt +=tempstr;
-        found=true;
-    }
-    
+        srt +=tempstr;  
  
     }
-        if (!found){
-         srt += "<li>No matches found!!</li>";
-        }
+ 
+         srt += "<li id='noMatchesName' style='display:none'>No matches found!!</li>";
+     
 
 return srt;
     };
