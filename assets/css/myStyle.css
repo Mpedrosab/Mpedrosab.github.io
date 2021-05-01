@@ -71,6 +71,7 @@ display: none;
     max-width: 150px;
     
     overflow:auto;
+       overflow-x: hidden;
 max-height:150px;
 margin-right: 6px;
 margin-top: 1px;
@@ -84,7 +85,25 @@ background: #fff;
      z-index:999999;
      
 }
+.comparisonBody ul{
+    width:auto;
+    overflow-x: hidden;
+    padding-right:0px;
+    padding-left:0px;
+    max-width:none;
+}
 
+.comparisonBody li{
+    padding-right:10px;
+    padding-left:20px;
+}
+.comparisonBody #NameSuggest{
+      position: relative;
+
+}
+#sidebar .comparisonWebPage {
+    font-size:13px;
+}
 .dataFilter>ul{
     width:inherit !important;
     padding-right:10px;
@@ -166,9 +185,44 @@ table.isotherm-filter{
 
      
 }
+
 .overlay img{    display: block;}
 
+.comparisonBody .Selected{
+    width:60% !important;
+}
+.comparisonBody .isotherm-filter td{
+    padding:0px;
+    padding-bottom:20px;
+}
+.comparisonBody td.Secondtd{
+    width:30%;
+    padding-right:5px;
+    padding-left:7px;
+}
 
+.comparisonBody #SuggestedNameSelect{
+    width:100% !important;
+    min-height:50px;
+    overflow:visible !important;
+}
+.comparisonBody #main-content{
+    width:60%
+}
+.comparisonBody #sidebar{
+    width:35%
+}
+.comparisonBody .clearfix{
+    width:1200px;
+}
+.comparisonWebPage{
+      width: 100%;
+    
+} 
+.NameFilter{
+    width: 75%;
+}
+  
 .Selected{
     width:70%
 }

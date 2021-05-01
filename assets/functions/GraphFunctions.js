@@ -1,4 +1,6 @@
-    var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
+console.log("GraphFunctions")    
+ console.log(filter)
+var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
 var color = ['blue','orange', 'green','red','magenta', 'black','yellow'];
 var nr = 0;
 var maxX = 0.0;
@@ -6,19 +8,94 @@ var minX =  100000.0;
 var maxY = 0.0;
 var minY = 100000.0;
 
-var myList=document.getElementById("collapsible");
-//plotMyDB(myArrData['DPPC_B0420Y20']);
-//plotMyDB(myArrData['Chol_B0414Y']); 
- document.getElementById("WaitToPlot").style.display = "none";
-myList.addEventListener("click",function(){
-    var mySibling=myList.querySelector("#AllNamesList")
+
+
+
+
+
+document.querySelectorAll('.dropSelect').forEach(item => {
+ var key;
+    item.addEventListener("click",function(){
+      //console.log("Pro")
+      key=item.id.replace("drop","Suggest");
+    console.log(item+" " +key)
+      var mySibling=document.getElementById(key)
     //console.log(mySibling.style.display)
 if (mySibling.style.display == "block"){
     mySibling.style.display = "none"
 }else{
     mySibling.style.display = "block"
 }
-});
+//if (key!="NameSelect"){
+//    $('.'+key).show()
+//}
+    });
+    })
+
+
+document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
+
+ var key;
+          
+    item.addEventListener("click",function(){
+        
+     // console.log("Pro")
+   key=item.id;
+      console.log(item+" " +key)
+
+      SetName(key,"SuggestedNameSelect",true);
+      item.style.display = "none"; 
+//console.log(label) 
+    });
+    });  
+  
+
+addListenerToDropList("Substance1Suggest");
+addListenerToDropList("TemperatureSuggest");
+addListenerToDropList("SpeedSuggest");
+//addListenerToDropLis(["Substance1Select"]);
+
+function addListenerToDropList(label1){
+ 
+       
+ var label=label1.replace("Suggest","Select"); 
+ var myParam=label1.replace("Suggest",""); 
+       //console.log(label)
+       document.querySelectorAll("."+label).forEach(item => {
+ var key;
+         
+    item.addEventListener("click",function(){
+       
+      //console.log("Pro")
+      key=item.id;
+        var previousKey=String(document.getElementById(label).value);
+        var parent=document.querySelector('#'+label1);
+        console.log('#\\'+previousKey+" ")
+        if ((previousKey!="Any") &&(myParam=="Temperature")){
+            previousKey='\\00003'+previousKey+" "
+        }
+         var child = parent ? parent.querySelector('#'+previousKey) : null;
+        if (child!=null){
+            child.style.display = "block"; 
+        }
+        else{
+            console.log("PROBLEM WITH THOS ID!!")
+        }
+      
+      SetName(key,String(label));
+      item.style.display = "none"; 
+        document.getElementById(label1).style.display = "none";
+console.log(label) 
+        myArrOut=FilterNames(key,myParam,filter);
+    });
+    });  
+     
+}  
+//ARREGLAR QUERY SELECTOR CON DECIMALES!!!
+    
+
+/**************************************/
+/*Plot data*/
 
 function splitData(myData){
     myData=myData.replace("[","").replace("]","")
@@ -72,7 +149,7 @@ function plotMyDB(dataToPlot){
  
 function plotThisNames(){
 
-        var value =document.getElementById("AllNamesSelect").value.split(", ");
+        var value =document.getElementById("SuggestedNameSelect").value.split(", ");
     
     if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
         alert("No data selected");
@@ -84,25 +161,14 @@ function plotThisNames(){
              plotMyDB(myArrData[value2]);
          }
     }
-    eraseText("AllNamesSelect");
+    eraseText("SuggestedNameSelect");
      document.getElementById("WaitToPlot").style.display = "none";
 }
    
           //document.getElementById("AllNames").addEventListener('click', function() { }, false);
 
-//Add event listener
-var notWorks=true;
-document.querySelectorAll('.AllNamesSelect').forEach(item => {
- var key;
-    item.addEventListener("click",function(){
-      //console.log("Pro")
-      key=item.id;
-   // console.log(item+" " +key)
-      
-      SetName(key,"AllNamesSelect");
-      item.style.display = "none";
-    });
-    });
+
+
    
 
 var item;
@@ -135,37 +201,24 @@ item.onclick= function(){
 setTimeout(() => {  plotThisNames(); }, 50);
 
 }
+
+document.getElementById("SuggestedNameRemove").addEventListener("click",function(){
+    eraseText();
+});
 /******************************/
 /*Clear button*/
 
 
-item= document.getElementById("ClearAll");
-
-  item.addEventListener("click",function(){
-   eraseText('AllNamesSelect');
-    clearAll();
-  });
 
 
 
-/************************************************/
-/* Erase button */
-    item= document.getElementById("RemoveSelect");
-     item.addEventListener("click",function(){
-   eraseText('AllNamesSelect');
-for(var value of alreadyInput){
-        console.log(value)
-         document.getElementById(value).style.display = "block";
-        
-    }
-    alreadyInput=[];
-      });
+
     /*
 item= document.getElementById("RemoveButton");
  if ( (item.attachEvent)) {                  // For IE 8 and earlier versions
      
   item.attachEvent("onclick",function(){
-   eraseText('AllNamesSelect');
+   eraseText('SuggestedNameSelect');
 for(var value of alreadyInput){
         console.log(value)
          document.getElementById(key).style.display = "block";
@@ -178,7 +231,7 @@ for(var value of alreadyInput){
 }
       else if ((item.addEventListener)) {                    // For all major browsers, except IE 8 and earlier
   item.addEventListener("click",function(){
-   eraseText('AllNamesSelect');
+   eraseText('SuggestedNameSelect');
 for(var value of alreadyInput){
         console.log(value)
          document.getElementById(key).style.display = "block";
@@ -192,41 +245,153 @@ for(var value of alreadyInput){
 */
 
 
+function FilterNames(key,paramFilter,filter){
+        var myHTMLNow=document.querySelector('#NameSuggest');
+    //No change from previous
+    console.log(filter)
+    if (filter[paramFilter] == key  ){
+        return myArrNow;
+    }
+       //Add to global filter
+    console.log("HEREE")
+    console.log(filter)
 
+    if (filter[paramFilter] =="Any"){       //Previous was any, so dont have to filter again
+            var filterOut=JSON.parse(JSON.stringify(myArrNow));
+            filter[paramFilter] = key; 
+        for (var TotalArrKey of Object.keys(filterOut).values()){ 
+            if(filterOut[TotalArrKey][paramFilter]!=key){
+                delete filterOut[TotalArrKey];
+             child = myHTMLNow ? myHTMLNow.querySelector('#'+myArr[TotalArrKey]["Name"]) : null; 
+                     //UPDATE TO 1 JS!
+                     
+                     if (child!="null"){
+                        document.querySelector('#'+myArr[TotalArrKey]["Name"]).style.display="none";
+                         
+                     }
+                     else{
+                         console.log("NO CHILD FOUND")
+                     }   
+        }
+    }
+    
+    
+
+}
+    
+   // var child;
+   // filterStartDate=parseDate(filterStartDate);
+   // filterEndDate=parseDate(filterEndDate);
+ 
+   else{
+        console.log("ISNOTANY")
+       var filterOut=JSON.parse(JSON.stringify(myArr))
+       for (var TotalArrKey of Object.keys(filterOut).values()){    //Restore all values and then filter
+           child = myHTMLNow ? myHTMLNow.querySelector('#'+filterOut[TotalArrKey]["Name"]) : null;
+              if(child==null){
+                         console.log("NO CHILD FOUND") 
+             }
+             else{
+                 
+                 console.log("restore")
+                 console.log(child.style.display)
+                   document.querySelector('#'+filterOut[TotalArrKey]["Name"]).style.display="block";
+                 console.log(child.style.display)
+             }
+       }
+       for (var TotalArrKey of Object.keys(filterOut).values()){ 
+         for (const [paramFilter2, value] of Object.entries(filter)) {
+             child = myHTMLNow ? myHTMLNow.querySelector('#'+myArr[TotalArrKey]["Name"]) : null;
+              if(child==null){
+                         console.log("NO CHILD FOUND")
+             }
+             else{
+             if (value == "Any"){
+             
+                console.log("noFilter "+paramFilter2)
+        }
+             else{
+                 if(myArr[TotalArrKey][paramFilter2]!=value){
+                     delete filterOut[TotalArrKey];                    
+                     //UPDATE TO 1 JS!
+                    document.querySelector('#'+myArr[TotalArrKey]["Name"]).style.display="none";
+                 }
+
+             }
+         }
+         }
+    }
+    
+    }
+
+    return filterOut;
+}
 
 
 
 /*******************************************/
 /* Insert selection*/
-function SetName(location,output) {
-      var txtName = document.getElementById(output);
-    //console.log(document.getElementById(output).textContent)
-      /*txtName.value = Array.prototype.filter.call( document.getElementById(location).textContent, el => el).map(el => el).join(",");*/
-    console.log(location)
-    var myID=document.getElementById(location).textContent;
-    console.log(myID)
+function SetName(location,output,fromName=false) {
+    var textOut=document.getElementById(location).textContent;
+     var txtName = document.getElementById(output);
+if (fromName!=true){
+         
+    txtName.value =textOut;
+    }
+    else{
+
+     
+    console.log(output)
+    console.log(txtName.value)
+
     if (txtName.value ==""){
-        txtName.value =document.getElementById(myID).textContent;
+        txtName.value =textOut;
 
     }
     else{
-              txtName.value = txtName.value.concat(", "+document.getElementById(location).textContent);
+              txtName.value = txtName.value.concat(", "+textOut);
         //console.log(document.getElementById(location).textContent);
     }
 
-    };
-
+    }};
 
 /***********************************/
+document.getElementById("ClearPlot").addEventListener("click",function(){
+     clearPlot();
+});  
 /* Clear text*/
-function eraseText(myID) {
-    document.getElementById(myID).value = "";
-
+function eraseText() {
+       document.getElementById("SuggestedNameSelect").value="";
+document.querySelectorAll('.SuggestedNameSelect').forEach(item => {item.style.display == "block"});
 }
          
-         
-         
+ document.getElementById("ClearAll").addEventListener("click",function(){
+     clearAll();
+});  
+
+      
+
 function clearAll(){
+    document.querySelectorAll('.Substance1Select').forEach(item => {item.style.display = "block"});
+document.querySelectorAll('.TemperatureSelect').forEach(item => {item.style.display = "block"});
+document.querySelectorAll('.SpeedSelect').forEach(item => {item.style.display = "block"});
+document.querySelectorAll('.SuggestedNameSelect').forEach(item => {item.style.display = "block"; console.log("HEREEE")});
+    
+            document.getElementById("SuggestedNameSelect").value="";
+    document.getElementById("Substance1Select").value="Any";
+    document.getElementById("SpeedSelect").value="Any";
+    document.getElementById("TemperatureSelect").value="Any";
+    document.getElementById("startDate").value=null;
+    document.getElementById("endDate").value=null;
+    
+
+        
+
+    alreadyInput=[];
+    
+}
+         
+function clearPlot(){
 brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
    nr = 0;
 maxX = 0.0;
@@ -234,12 +399,13 @@ minX =  100000.0;
 maxY = 0.0;
 minY = 100000.0;
 
-    for(var value of alreadyInput){
-        console.log(value)
-         document.getElementById(value).style.display = "block";
-        
-    }
-    alreadyInput=[];
+
+
+//if (key!="NameSelect"){
+//    $('.'+key).show()
+//}
+
+clearAll();
      //out=createFilter(myArrData,"AllNames");   //document.getElementById("AllNames").innerHTML=out;
 }
 /*

@@ -387,5 +387,6 @@ function clearAll(){
     var out=createDiv(myArr);
     document.getElementById("isotherm_button_in").innerHTML=out;
     
+
 }
 

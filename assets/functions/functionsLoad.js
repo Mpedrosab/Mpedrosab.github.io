@@ -15,7 +15,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
       console.log("Good");
-     var myURL= window.location.href;
+    
   myArr = jQuery.parseJSON(this.responseText);
       arrayLength = Object.keys(myArr).length;
      // console.log(JSON.stringify(myArr));
@@ -42,7 +42,7 @@ xmlhttp.onreadystatechange = function () {
 
       console.log("HOLA")
          //Create Div
-              
+      var myURL= window.location.href; 
       if (myURL.indexOf("comparison")<0){
        out=createDiv(myArr);
       //console.log(out);
@@ -53,7 +53,12 @@ xmlhttp.onreadystatechange = function () {
     $.getScript("/assets/functions/functions.js");
 
      }
-       document.getElementById("NameSuggest").style.display = "none"
+              else{
+                  console.log(myURL)
+      $.getScript("https://code.jquery.com/jquery-3.2.1.min.js");
+    $.getScript("/assets/functions/GraphLoadFunctions.js");
+              }
+       document.getElementById("NameSuggest").style.display = "block"
        document.getElementById("Substance1Suggest").style.display = "none"
        document.getElementById("TemperatureSuggest").style.display = "none"
        document.getElementById("SpeedSuggest").style.display = "none"
@@ -89,7 +94,7 @@ xmlhttp.send();
   str += "<li id='"+value[parameter]+"'  class='Select' style='display:block'>"+value[parameter]+"</li>";
         alreadyInput.push(value[parameter])
         //str=str.replaceAll("myFunction",allFunct).replaceAll("location",key);
-        str=str.replaceAll("location",value[parameter]);
+       // str=str.replaceAll("location",value[parameter]);
   } 
 }
    str= str.replaceAll('myParam',parameter).replaceAll("Select",parameter+"Select");

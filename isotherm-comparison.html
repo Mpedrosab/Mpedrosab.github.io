@@ -29,10 +29,14 @@
 <script type="application/ld+json">
 {"@type":"WebSite","url":"http://localhost:4000/","headline":"María Pedrosa Bustos","description":"Physicist, PhD Student at the Department of Applied Physics UGR","name":"María Pedrosa Bustos","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<script src="/assets/functions/GraphLoadFunctions.js"></script> 
+
+<script src="/assets/functions/functionsLoad.js"></script> 
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
   </head>
 
-  <body>
+  <body class="comparisonBody">
     <header>
       <div class="inner">
         <a href="./isotherm-data.html">
@@ -107,24 +111,123 @@
 
           <aside id="sidebar">
           
- <div style="display: inline-block">
-                    <p style="font-weight:bold; font-size:20px">Select data to Plot </p>
-
-                            <div id="collapsible" style="display: block" name="AllNames" style="">
-                                <textarea name="AllNamesSelect" id="AllNamesSelect" readonly  placeholder="Click here to select data" style="border:none;"></textarea>
-
+ <div class="comparisonWebPage" style="display: inline-block">
+     
+            <div class="isotherm-filter" id="filterSelect" style=" display: block;" >
                
-                                <ul id="AllNamesList" style="display:block"></ul>
-                                     
-     </div>
+   
+               
+            <div class="NameFilter" id="Namecollapsible"  name="SuggestedNames" style="">
+              
+                <label for="nameFind">Name:</label>
+
+   <div style="position:relative">
+              <textarea type="text" name="nname" id="SuggestedNameSelect" class="Selected" readonly style="border:none"></textarea> 
+            <button class="RemoveButton" id="SuggestedNameRemove" style="position:absolute;     bottom: 7px; right: 4px;"><i class="fa fa-times"></i></button>
+                    
+                
+                    </div>
+        <ul class="dataFilterul" id="NameSuggest" style="display:block;" ></ul>
+                </div>
+                
+  <p><strong> Filters</strong></p>
+            <table class="isotherm-filter" style=" display: block;" >
+               
+    <tbody id="filterSelect"> 
+                 <tr class="dataFilter">      
+            <td class="Firsttd">      
+          <label for="sub">Temperature: </label>
+                 </td> 
+ <td class="Secondtd">
+
+
+              <input type="text" id="TemperatureSelect" class="Selected" readonly style="border:none">
+                                <button class="dropSelect"  id="Temperaturedrop"><i  class="fa fa-caret-down"></i></button>              
+            <ul class="dataFilterul" id="TemperatureSuggest" name="suggestionsSub" style="position: absolute;"></ul>
+        </td>       
+            <td colspan=2>
+
+            <label for="startDate">Start date:</label>
+                <input type="date" id="startDate" name="nstart" min="2017-01-01" max="2022-12-31">
+               </td>
+                    
+
+                    
+
+   
+        </tr>     
+            <tr class="dataFilter">
+        <td class="Firsttd">
+                    <label for="sub">Substance: </label>
+
+     
+                    </td>
+   <td  class="Secondtd">
+            <input type="text" id="Substance1Select" class="Selected" readonly style="border:none;">
+       
+            <button type="text" id="Substance1drop" class="dropSelect" style="border:none"><i  class="fa fa-caret-down"></i></button>
+              <ul class="dataFilterul" id="Substance1Suggest" name="suggestionsSub" style="position: absolute;"></ul>
+              </td>     
+                
+                           <td colspan=2>
+                    
+            <label for="endDate">End date:</label>
+            <input type="date" id="endDate" name="nend"
+                               min="2017-01-01" max="2022-12-31">
+				 </td>	
+        </tr>   
+                            
+   
+ 
+
+ <tr class="dataFilter">  
+     
+<td class="Firsttd">
+               
+      <label for="sub">Velocity: </label>
+                 </td>
+                 <td class="Secondtd">
+              <input type="text" id="SpeedSelect" class="Selected" readonly style="border:none">
+                <button type="text" id="Speeddrop" class="dropSelect" style="border:none"><i  class="fa fa-caret-down"></i></button>
+                <ul class="dataFilterul" id="SpeedSuggest"  style=""></ul>
+                            
+        </td>
+     
+       </tr> 
+         <tr class="dataFilter"> 
+
+
+                 </tr>    
+                                </tbody>
+    </table>
+              
+                     <div class="dataFilter">                      
+                    <div colspan=4>
+                          
+                   
+                   <button id="ClearAll" style="display=block; background: rgba(46, 123, 207, 0.8)">Clear Selection</button>
+                        </div>
+             <button  type="submit" id="ClearPlot" style="background: rgba(46, 123, 207, 0.8)">Clear Plot</button>
+
+        <div>
+ 
+                 </div>
+                  
+         </div>
+                
+        
+    </div>
+    
+
+    
+     
+
                               
   <div style="height:20px;"></div>
 
+              <button type="submit" id="plot"  value="Submit">Plot !</button> 
 
-            <button  type="submit" id="ClearAll" style="background: rgba(46, 123, 207, 0.8)">Clear Plot</button>
-            <button id="RemoveSelect" class= "RemoveSelect" >Clear Selection</button>
-                      
-              <button type="submit" id="plot"  value="Submit">Plot !</button>
+
                        
                         <div id="WaitToPlot" style="display:block; align-content:center; margin:auto; font-size:20px; text-align:center"><p> Plotting data. <br> Please wait...</p></div>
 
