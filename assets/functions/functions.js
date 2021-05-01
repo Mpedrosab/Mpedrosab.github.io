@@ -28,10 +28,10 @@ addListenerToDropList("TemperatureSuggest");
 addListenerToDropList("SpeedSuggest");
 //addListenerToDropLis(["Substance1Select"]);
 
-function addListenerToDropList(label){
+function addListenerToDropList(label1){
  
        
- label=label.replace("Suggest","Select"); 
+ var label=label1.replace("Suggest","Select"); 
        //console.log(label)
        document.querySelectorAll("."+label).forEach(item => {
  var key;
@@ -44,10 +44,11 @@ function addListenerToDropList(label){
       
       SetName(key,String(label),true);
       item.style.display = "none"; 
+        document.getElementById(label1).style.display = "none";
 console.log(label) 
     });
     });  
-    
+     
 }  
 
  
@@ -61,7 +62,7 @@ function ShowNames() {
     /*Get list of matches*/
     console.log(document.getElementById("SuggestedNameSelect"))
     var alreadyFound=document.getElementById("SuggestedNameSelect").textContent;
-    var myList=FindSuggest("NameSelect",alreadyFound);
+    var myList=FindSuggest("SuggestedNameSelect",alreadyFound);
        console.log(name)
     //console.log("Textarea two was changed. =>"+name+myList);
    
@@ -105,13 +106,13 @@ if (myList.style.display == "block"){
 
 */
 
-document.querySelectorAll('.NameSelect').forEach(item => {
+document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
 
  var key;
           
     item.addEventListener("click",function(){
         
-      console.log("Pro")
+     // console.log("Pro")
       key=item.id;
       //console.log(item+" " +key)
       
@@ -126,7 +127,7 @@ document.querySelectorAll('.NameSelect').forEach(item => {
 
 document.getElementById("SearchData").addEventListener("click",function(){
     submitSearch();
-    setTimeout(() => {  clearAll(); }, 500);
+  //  setTimeout(() => {  clearAll(); }, 500);
   
 });
 document.getElementById("ClearAll").addEventListener("click",function(){
@@ -163,7 +164,11 @@ document.querySelectorAll('.RemoveButton').forEach(item => {
       key=item.id.replace("Remove","Select");
    // console.log(item+" " +key)
       eraseText(key)
+        document.querySelectorAll('.'+key).forEach(item2 => {
+           item2.style.display = "block"
+        });
         this.stopPropagation;
+        
 //if (key!="NameSelect"){ 
 //    $('.'+key).show()
 //}
@@ -190,7 +195,7 @@ function submitSearch(){
     var arrayOutKeys= Object.keys(filterOut);
     
     
-    filter["Name"] =document.getElementById("SuggestedNameSelect").textContent.split(",");
+    filter["Name"] =document.getElementById("SuggestedNameSelect").value.split(",");
     filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
     filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
     filter["Speed"] =document.getElementById("SpeedSelect").value.split(",");
@@ -224,7 +229,7 @@ function submitSearch(){
               //console.log(myDate>=filterStartDate)
              if ((myDate>=filterStartDate) && (myDate<=filterEndDate))
         {filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
-                                         console.log("Assign")};
+        console.log("Assign")};
              
          }
            filterOut = JSON.parse(JSON.stringify(filterIn));
@@ -251,13 +256,13 @@ function submitSearch(){
                 return e[key] == value2;
                 });
                 */
-               console.log(arrayOutKeys)
+              // console.log(arrayOutKeys)
             for (var i of arrayOutKeys.values()) {
-            console.log(i)
+            //console.log(i)
              //myout = element.Name==name;
             
             if(filterOut[i][key]==value2){filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
-                                         console.log("Assign")};
+             console.log("Assign")};
         };
                 
        }
@@ -280,7 +285,7 @@ function submitSearch(){
    }
     document.getElementById("isotherm_button_in").innerHTML=codeOut;
     console.log("The is "+arrayLength )
-    console.log(filterOut )
+    console.log( document.getElementById("isotherm_button_in") )
     
     
     
@@ -342,6 +347,7 @@ function SetName(location,output,fromList=false) {
     }
       var txtName = document.getElementById(output);
     console.log(output)
+    console.log(txtName.value)
 
     if (txtName.value ==""){
         txtName.value =textOut;
@@ -372,7 +378,7 @@ function ClearSuggest(suggestions,inputID){
 
 
 function clearAll(){
-    document.getElementById("SuggestedNameSelect").textContent="";
+    document.getElementById("SuggestedNameSelect").value="";
     document.getElementById("Substance1Select").value="";
     document.getElementById("SpeedSelect").value="";
     document.getElementById("TemperatureSelect").value="";
