@@ -2,7 +2,7 @@
 
 /*Load Json at start*/
 
-var myArrData;
+var myArrData=[];
 var myArrNow;
 var arrayDataLength;
 var arrayNowDataLength;
@@ -15,16 +15,23 @@ var xmlhttpData = new XMLHttpRequest();
 xmlhttpData.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
       console.log("Good");  
-  myArrData = JSON.parse(this.responseText); 
+  var myArrDataPrev = JSON.parse(this.responseText); 
   //myArrData = JSON.stringify(myArrData);
   //myArrData = jQuery.parseJSON(myArrData);
-      arrayDataLength = Object.keys(myArrData).length;
+      arrayDataLength = Object.keys(myArrDataPrev).length;
     
       console.log(myArrData);
       myArrNow=JSON.parse(JSON.stringify(myArr));       //Copy array is being 
         arrayNowDataLength = Object.keys(myArrNow).length;
       dataLoaded=true; 
-        console.log(Object.keys(myArrData));
+        console.log(Object.keys(myArrDataPrev));
+      
+      //Sort by date
+      for(var [key, value] of Object.entries(myArr)){
+myArrData[value["Name"]]=[]
+          myArrData[value["Name"]]["xData"]=myArrDataPrev[value["Name"]]["xData"]
+          myArrData[value["Name"]]["yData"]=myArrDataPrev[value["Name"]]["yData"]
+      }
         //var out=createFilter(myArrData,"AllNames");   
      //    document.getElementById("AllNamesList").style.display = "none"
      // document.getElementById("AllNamesList").innerHTML=out;
