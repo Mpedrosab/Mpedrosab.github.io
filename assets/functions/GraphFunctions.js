@@ -1,6 +1,6 @@
 console.log("GraphFunctions")    
  console.log(filter)
-var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
+var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-15,100,100,-10],axis:true});
 var color = ['blue','orange', 'green','red','magenta', 'black','yellow'];
 var nr = 0;
 var maxX = 0.0;
@@ -460,7 +460,7 @@ function createLabel(myName, myColor){
     
 
 function clearPlot(){
-brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
+brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-15,100,100,-10],axis:true});
    nr = 0;
 maxX = 0.0;
 minX =  100000.0;
