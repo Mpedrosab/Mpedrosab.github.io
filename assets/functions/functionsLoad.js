@@ -43,7 +43,8 @@ xmlhttp.onreadystatechange = function () {
       console.log("HOLA")
          //Create Div
       var myURL= window.location.href; 
-      if (myURL.indexOf("comparison")<0){
+              console.log(myURL.indexOf("comparison"))
+      if (myURL.indexOf("isotherm-data")>=0){
        out=createDiv(myArr);
       //console.log(out);
       document.getElementById("isotherm_button_in").innerHTML=out;
@@ -56,15 +57,16 @@ xmlhttp.onreadystatechange = function () {
     $.getScript("/assets/functions/functions.js");
 
      }
-              else{
+      else if(myURL.indexOf("isotherm-comparison")>=0){
                   console.log(myURL)
       $.getScript("https://code.jquery.com/jquery-3.2.1.min.js");
     $.getScript("/assets/functions/GraphLoadFunctions.js");
-              }
+              
        document.getElementById("NameSuggest").style.display = "block"
        document.getElementById("Substance1Suggest").style.display = "none"
        document.getElementById("TemperatureSuggest").style.display = "none"
        document.getElementById("SpeedSuggest").style.display = "none"
+      }
        
       });
   }

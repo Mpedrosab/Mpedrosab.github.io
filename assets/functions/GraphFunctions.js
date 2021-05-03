@@ -143,7 +143,7 @@ function plotData(x,y) {
         if (y[i]<minY) minY = y[i];
         x_arr.push(x[i], x[i], NaN);
         y_arr.push(y[i], y[i], NaN);
-        c=brd.create('point',[x[i],y[i]],{size:4,strokeWidth: 0,fillColor:color[mycolor]})
+        //c=brd.create('point',[x[i],y[i]],{size:4,strokeWidth: 0,fillColor:color[mycolor]})
         
     }
     brd.setBoundingBox([-10,maxY+10,maxX+10,-10]);
@@ -153,6 +153,42 @@ function plotData(x,y) {
     brd.update();
     
     var d = brd.create('curve',[x,y],{strokeColor:color[nr%color.length],strokeWidth: 3});
+    
+
+    var A= brd.create('glider',[0, 0,d])
+    	A.hideElement() 
+    d.on('mouseover', function(e) {
+
+   var myCords= getMouseCoords(e);
+       
+       // brd.create('point', [coords.usrCoords[1], coords.usrCoords[2]]);
+        A = brd.create('glider',[myCords[0], myCords[1],d], {name:'['+myCords[2]+','+myCords[3]+']', strokeColor:"black",fillColor:'white'});
+    //var point = brd.create('point', [0, 0], {withLabel: false, size: 1});
+        if (d.mousemove){
+        
+            brd.removeObject(A);
+
+        }
+         
+});  
+    
+    d.on('mousemove', function(e) {
+  console.log("MOVED")
+          A.hideElement();
+   var myCords= getMouseCoords(e);
+   A = brd.create('glider',[myCords[0], myCords[1],d], {name:'['+myCords[2]+','+myCords[3]+']', strokeColor:"black",fillColor:'white'});
+     
+
+       
+}); 
+     d.on('mouseout', function(e) {
+  console.log("HERE PLOT")
+              A.hideElement();
+     
+
+       
+}); 
+
     nr++;
     brd.update();
 };
@@ -183,6 +219,19 @@ function plotThisNames(){
    
           //document.getElementById("AllNames").addEventListener('click', function() { }, false);
 
+
+function getMouseCoords(e) {
+    var i;
+        var cPos = brd.getCoordsTopLeftCorner(e, i),
+            absPos = JXG.getPosition(e, i),
+            dx = absPos[0]-cPos[0],
+            dy = absPos[1]-cPos[1];
+   
+        var obj=new JXG.Coords(JXG.COORDS_BY_SCREEN, [dx, dy], brd)
+      
+            var label=[Math.round((obj.usrCoords[1] + Number.EPSILON) * 100) / 100,Math.round((obj.usrCoords[2] + Number.EPSILON) * 100) / 100]
+        return [obj.usrCoords[1], obj.usrCoords[2], label[0],label[1]];
+    }
 
 
    
