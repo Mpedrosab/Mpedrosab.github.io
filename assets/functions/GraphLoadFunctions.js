@@ -42,6 +42,11 @@ document.getElementById("Substance1Select").value="Any";
 document.getElementById("SpeedSelect").value="Any";
       console.log(filter)
       document.getElementById("WaitToPlot").style.display = "none"
+      
+      var divSnapshot=createDivSnapshot(myArr);
+     document.getElementById("snapShot-container").innerHTML=divSnapshot;
+      document.getElementById("snapShot-container").style.display="none";
+         document.getElementById("WaitToPlot").style.display = "none"
 
     console.log("LoadGraphFunctions")
     $.getScript("/assets/functions/GraphFunctions.js");
@@ -61,4 +66,36 @@ xmlhttpData.send();
     
 })
 
- 
+
+/*****************************************************************/
+/*Create snapShot with data*/
+ function createDivSnapshot(arr){
+        var str='<div class="snapShot" id="myName_snapShot">\
+            <a href="/myHTML" class="">\
+            <img src="/myIMG" class="button snapShot-img"><div class="snapShot-data button"><span class="substance">mySubstance:</span><span> T= myTemp °C</span><br><span>V= myVol myVolUnit [myConc myUnitConc]</span><br><span>speed= mySpeed myUnitSpeed </span><br><span>Date: myDate</span></div>\
+       </a> </div>\
+          '
+     var strOut="<p class='snapShot-preview'>Preview:</p>";
+      for (const [key, value] of Object.entries(arr)){
+                      
+          strOut+=str.replace("myIMG",value["IMG"]).replace("myName",value["Name"]).replace("myHTML",value["HTML"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"])  //Remove date time from date
+          
+      }
+     console.log("createDiv")
+     //console.log(strOut)
+     return strOut;
+     
+ };
+
+
+/******************************************/
+function ShowDivSnapshot(key){
+    document.querySelectorAll(".snapShot").forEach(item=>{
+        
+        item.style.display="none";
+        
+    })
+   console.log(key+"snapShot");
+    document.getElementById(key+"_snapShot").style.display="block"
+    
+}

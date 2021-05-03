@@ -47,7 +47,10 @@ xmlhttp.onreadystatechange = function () {
        out=createDiv(myArr);
       //console.log(out);
       document.getElementById("isotherm_button_in").innerHTML=out;
-          
+                 document.getElementById("NameSuggest").style.display = "none"
+       document.getElementById("Substance1Suggest").style.display = "none"
+       document.getElementById("TemperatureSuggest").style.display = "none"
+       document.getElementById("SpeedSuggest").style.display = "none"
      
     $.getScript("https://code.jquery.com/jquery-3.2.1.min.js");
     $.getScript("/assets/functions/functions.js");
@@ -91,7 +94,7 @@ xmlhttp.send();
 {
     if (alreadyInput.includes(value[parameter])==false){
  // str += "<option id='"+key+"' value='"+key+"' class='Select' "+functions+key+"</option>";
-  str += "<li id='"+value[parameter]+"'  class='Select' style='display:block'>"+value[parameter]+"</li>";
+  str += "<li id='"+FixID(value[parameter])+"'  class='Select' style='display:block'>"+value[parameter]+"</li>";
         alreadyInput.push(value[parameter])
         //str=str.replaceAll("myFunction",allFunct).replaceAll("location",key);
        // str=str.replaceAll("location",value[parameter]);
@@ -133,7 +136,7 @@ var srt = "";
 for (var [key, value] of Object.entries(array))
 {
         //console.log("HERE")
-           tempstr= "<li class='SuggestedNameSelect' id='myVal' style='display:block' >myVal</li>";
+           tempstr= "<li class='SuggestedNameSelect' id='"+FixID(value[parameter])+"' style='display:block' >myVal</li>";
         tempstr=tempstr.replaceAll("myVal",value[parameter])
         srt +=tempstr;  
  
@@ -177,4 +180,26 @@ function parseDate(s) {
     //console.log(b)
     //console.log(new Date(b[0], --b[1], b[2]))
   return new Date(b[0], --b[1], b[2]);
+}
+
+
+/*******************************************************/
+/* Fix numbers for ID  */
+
+function FixID(value){
+    value=String(value)
+    var firstChar = value.charAt(0);
+if( firstChar <='9' && firstChar >='0') {
+      value="number-"+value;
+}
+    value=value.replace(".","_");
+    return value;
+    
+}
+function RestoreID(value){
+    if (value.indexOf("number-")>=0){
+            value=value.replace("number-","");
+     value=value.replace("_","."); 
+    }
+    return value
 }

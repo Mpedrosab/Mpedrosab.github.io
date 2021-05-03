@@ -36,19 +36,33 @@ if (mySibling.style.display == "block"){
 document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
 
  var key;
-          
+           key=RestoreID(item.id);
     item.addEventListener("click",function(){
         
      // console.log("Pro")
-   key=item.id;
+  
       console.log(item+" " +key)
 
       SetName(key,"SuggestedNameSelect",true);
       item.style.display = "none"; 
 //console.log(label) 
     });
+    
+    item.addEventListener("mouseover",function(){
+        
+        ShowDivSnapshot(key);
+         document.getElementById("buttons_Plot").style.display="none";
+        document.getElementById("snapShot-container").style.display="inline-block";
+       
+    })
+     
+      item.addEventListener("mouseleave",function(){
+    
+        
+        document.getElementById("snapShot-container").style.display="none";
+        document.getElementById("buttons_Plot").style.display="inline-block";
+    })
     });  
-  
 
 addListenerToDropList("Substance1Suggest");
 addListenerToDropList("TemperatureSuggest");
@@ -67,8 +81,8 @@ function addListenerToDropList(label1){
     item.addEventListener("click",function(){
        
       //console.log("Pro")
-      key=item.id;
-        var previousKey=String(document.getElementById(label).value);
+      key=RestoreID(item.id);
+        var previousKey=String(document.getElementById(FixID(label)).value);
         var parent=document.querySelector('#'+label1);
         console.log('#\\'+previousKey+" ")
         if ((previousKey!="Any") &&(myParam=="Temperature")){
@@ -84,15 +98,17 @@ function addListenerToDropList(label1){
       
       SetName(key,String(label));
       item.style.display = "none"; 
-        document.getElementById(label1).style.display = "none";
-console.log(label) 
+        document.getElementById(FixID(label1)).style.display = "none";
+console.log(key) 
         myArrOut=FilterNames(key,myParam,filter);
     });
     });  
      
 }  
+//??
 //ARREGLAR QUERY SELECTOR CON DECIMALES!!!
-    
+//NO VUELVE A MOSTRAR LOS NOMBRES CON CLEARALL()!!
+//QUE MUESTRE PLOT EN PEQUEÑO CON DATOS
 
 /**************************************/
 /*Plot data*/
@@ -175,25 +191,7 @@ var item;
 /*********************
 /*Plot button*/
 
-/*
- if ( (item.attachEvent)) {                  // For IE 8 and earlier versions
-      console.log("Basic")
-  item.attachEvent("onclick",function(){
-plotThisNames()
-      notWorks=true;
-});
-}s
-      else if  ((item.addEventListener) ){   
-           console.log("Basic")// For all major browsers, except IE 8 and earlier
-  item.addEventListener("click",function(){
-plotThisNames()
-  });
-        notWorks=false;
-        
 
-}
-} 
-*/
 item= document.getElementById("plot");
 item.onclick= function(){
      console.log( document.getElementById("WaitToPlot"))
@@ -206,43 +204,7 @@ document.getElementById("SuggestedNameRemove").addEventListener("click",function
     eraseText();
 });
 /******************************/
-/*Clear button*/
-
-
-
-
-
-
-    /*
-item= document.getElementById("RemoveButton");
- if ( (item.attachEvent)) {                  // For IE 8 and earlier versions
-     
-  item.attachEvent("onclick",function(){
-   eraseText('SuggestedNameSelect');
-for(var value of alreadyInput){
-        console.log(value)
-         document.getElementById(key).style.display = "block";
-        
-    }
-    alreadyInput=[];
-      
-});
-     notWorks=true
-}
-      else if ((item.addEventListener)) {                    // For all major browsers, except IE 8 and earlier
-  item.addEventListener("click",function(){
-   eraseText('SuggestedNameSelect');
-for(var value of alreadyInput){
-        console.log(value)
-         document.getElementById(key).style.display = "block";
-        
-    }
-    alreadyInput=[];
-  });
-        notWorks=false;
-        
-} 
-*/
+/*Filter Names*/
 
 
 function FilterNames(key,paramFilter,filter){
@@ -255,13 +217,18 @@ function FilterNames(key,paramFilter,filter){
        //Add to global filter
     console.log("HEREE")
     console.log(filter)
-
+var deletedKeys=[];
     if (filter[paramFilter] =="Any"){       //Previous was any, so dont have to filter again
             var filterOut=JSON.parse(JSON.stringify(myArrNow));
-            filter[paramFilter] = key; 
+            filter[paramFilter] = key;
+        console.log(filter)
         for (var TotalArrKey of Object.keys(filterOut).values()){ 
+            if (deletedKeys.includes(TotalArrKey)){
+                break;
+            }
             if(filterOut[TotalArrKey][paramFilter]!=key){
                 delete filterOut[TotalArrKey];
+                deletedKeys.push(TotalArrKey);
              child = myHTMLNow ? myHTMLNow.querySelector('#'+myArr[TotalArrKey]["Name"]) : null; 
                      //UPDATE TO 1 JS!
                      
@@ -285,9 +252,11 @@ function FilterNames(key,paramFilter,filter){
  
    else{
         console.log("ISNOTANY")
+       filter[paramFilter] = key;
        var filterOut=JSON.parse(JSON.stringify(myArr))
-       for (var TotalArrKey of Object.keys(filterOut).values()){    //Restore all values and then filter
-           child = myHTMLNow ? myHTMLNow.querySelector('#'+filterOut[TotalArrKey]["Name"]) : null;
+       for (var TotalArrKey of Object.keys(myArr).values()){    //Restore all values and then filter
+
+           child = myHTMLNow ? myHTMLNow.querySelector('#'+myArr[TotalArrKey]["Name"]) : null;
               if(child==null){
                          console.log("NO CHILD FOUND") 
              }
@@ -295,11 +264,14 @@ function FilterNames(key,paramFilter,filter){
                  
                  console.log("restore")
                  console.log(child.style.display)
-                   document.querySelector('#'+filterOut[TotalArrKey]["Name"]).style.display="block";
+                   document.querySelector('#'+myArr[TotalArrKey]["Name"]).style.display="block";
                  console.log(child.style.display)
              }
        }
-       for (var TotalArrKey of Object.keys(filterOut).values()){ 
+       for (var TotalArrKey of Object.keys(myArr).values()){ 
+                  if (deletedKeys.includes(TotalArrKey)){
+                break;
+        }
          for (const [paramFilter2, value] of Object.entries(filter)) {
              child = myHTMLNow ? myHTMLNow.querySelector('#'+myArr[TotalArrKey]["Name"]) : null;
               if(child==null){
@@ -311,10 +283,18 @@ function FilterNames(key,paramFilter,filter){
                 console.log("noFilter "+paramFilter2)
         }
              else{
-                 if(myArr[TotalArrKey][paramFilter2]!=value){
-                     delete filterOut[TotalArrKey];                    
+                 if(filterOut[TotalArrKey][paramFilter2]!=value){
+                                        
                      //UPDATE TO 1 JS!
-                    document.querySelector('#'+myArr[TotalArrKey]["Name"]).style.display="none";
+                document.querySelector('#'+myArr[TotalArrKey]["Name"]).style.display="none";
+                     console.log("Removed:")  
+                     console.log(document.querySelector('#'+myArr[TotalArrKey]["Name"])) 
+                     delete filterOut[TotalArrKey]; 
+                     deletedKeys.push(TotalArrKey);
+                 }
+                 else{
+                      console.log("Saved:") 
+                      console.log(document.querySelector('#'+myArr[TotalArrKey]["Name"])) 
                  }
 
              }
@@ -323,7 +303,7 @@ function FilterNames(key,paramFilter,filter){
     }
     
     }
-
+console.log(filterOut)
     return filterOut;
 }
 
@@ -332,8 +312,8 @@ function FilterNames(key,paramFilter,filter){
 /*******************************************/
 /* Insert selection*/
 function SetName(location,output,fromName=false) {
-    var textOut=document.getElementById(location).textContent;
-     var txtName = document.getElementById(output);
+    var textOut=document.getElementById(FixID(location)).textContent;
+     var txtName = document.getElementById(FixID(output));
 if (fromName!=true){
          
     txtName.value =textOut;

@@ -6,6 +6,8 @@ body h3{
     
     font-weight: bolder;
 }
+
+/*Blue buttons wih data*/
 .isotherm_button a.button{
 
 
@@ -60,6 +62,7 @@ width: 49%;
 	height: inherit;
 	width: 100%;
 }
+
 
 
 /********************/
@@ -166,6 +169,65 @@ table.isotherm-filter{
     padding-bottom:20px;
 }
 
+
+/*Submit buttons*/
+
+.buttons_Plot{
+    position:relative;
+    margin-top:15%;
+    text-align: center;
+}
+.buttons_Plot #ClearAll, .buttons_Plot #ClearPlot{
+    max-width:40%;
+}
+
+/********************/
+/* Snapshots isotherms*/
+.snapShot{
+    margin-top:5%;
+}
+.snapShot-preview{
+    margin:10%;
+    margin-bottom:0px;
+    font-weight:bolder;
+}
+.snapShot-container{
+    width:50%;
+        position:relative;
+      
+}
+.snapShot-container img{
+    width:100%;
+         position:absolute;
+  
+}
+.snapShot-data{
+ 
+         position:absolute;
+  
+       width:inherit;
+    right:0px;
+    margin:5%;
+    padding:3%;
+        font-size:11px;
+    font-weight: bolder;
+    text-align:right;
+     
+}
+
+.snapShot-data span{
+    padding:0px;
+    margin:0px;
+    background:rgb(255,255,255);
+    padding-right:5px;
+    padding-left:5px;
+   
+}
+.snapShot-data span.substance{
+    text-decoration: underline
+   
+}
+/***************************/
 /*Div with isotherm data*/
 
 #isotherm_button_in{
@@ -201,11 +263,6 @@ table.isotherm-filter{
     padding-left:7px;
 }
 
-.comparisonBody #SuggestedNameSelect{
-    width:100% !important;
-    min-height:50px;
-    overflow:visible !important;
-}
 .comparisonBody #main-content{
     width:60%
 }
@@ -220,12 +277,18 @@ table.isotherm-filter{
     
 } 
 .NameFilter{
-    width: 75%;
+    width: 45%;
 }
   
+.comparisonBody #SuggestedNameSelect{
+    width:100% !important;
+    min-height:50px;
+    overflow:visible !important;
+}
 .Selected{
     width:70%
 }
+
 .RemoveButton{
 display:inline-block;
   
@@ -262,7 +325,7 @@ button#plot{
     font-size:30px;
     margin:auto;
     margin-top:10px;
-    margin-bottom:30px;
+    margin-bottom:10px;
 }
 .RemoveButton:hover, .submit {
   opacity: 1;

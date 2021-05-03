@@ -39,7 +39,7 @@ function addListenerToDropList(label1){
     item.addEventListener("click",function(){
        
       //console.log("Pro")
-      key=item.id;
+      key=RestoreID(item.id);
       //console.log(item+" " +key)
       
       SetName(key,String(label),true);
@@ -55,21 +55,24 @@ console.log(label)
 function ShowNames() {
     
     var name =document.getElementById("nameFind").value;
-     console.log(name)
+    // console.log(name)
     if (name.length<1){ console.log("This")
         }
  
     /*Get list of matches*/
-    console.log(document.getElementById("SuggestedNameSelect"))
-    var alreadyFound=document.getElementById("SuggestedNameSelect").textContent;
-    var myList=FindSuggest("SuggestedNameSelect",alreadyFound);
-       console.log(name)
+   // console.log(document.getElementById("SuggestedNameSelect"))
+    var alreadyFound=document.getElementById("SuggestedNameSelect").value;
+    var myList=FindSuggest("SuggestedNameSelect",name,alreadyFound);
+       console.log(alreadyFound)
     //console.log("Textarea two was changed. =>"+name+myList);
    
            
 };
 
-document.getElementById("nameFind").addEventListener('keyup', ShowNames);  //When pressing key
+document.getElementById("nameFind").addEventListener('keyup', function(){
+    
+    ShowNames()
+});  //When pressing key
 
 
 
@@ -113,7 +116,7 @@ document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
     item.addEventListener("click",function(){
         
      // console.log("Pro")
-      key=item.id;
+      key=RestoreID(item.id);
       //console.log(item+" " +key)
       
       SetName(key,"SuggestedNameSelect");
@@ -142,7 +145,7 @@ document.querySelectorAll('.dropSelect').forEach(item => {
       //console.log("Pro")
       key=item.id.replace("drop","Suggest");
     console.log(item+" " +key)
-      var mySibling=document.getElementById(key)
+      var mySibling=document.getElementById(FixID(key))
     //console.log(mySibling.style.display)
 if (mySibling.style.display == "block"){
     mySibling.style.display = "none"
@@ -195,10 +198,10 @@ function submitSearch(){
     var arrayOutKeys= Object.keys(filterOut);
     
     
-    filter["Name"] =document.getElementById("SuggestedNameSelect").value.split(",");
-    filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(",");
-    filter["Substance1"] =document.getElementById("Substance1Select").value.split(",");
-    filter["Speed"] =document.getElementById("SpeedSelect").value.split(",");
+    filter["Name"] =document.getElementById("SuggestedNameSelect").value.split(", ");
+    filter["Temperature"] =document.getElementById("TemperatureSelect").value.split(", ");
+    filter["Substance1"] =document.getElementById("Substance1Select").value.split(", ");
+    filter["Speed"] =document.getElementById("SpeedSelect").value.split(", ");
     
      
     var filterStartDate =document.getElementById("startDate").value;
@@ -206,7 +209,7 @@ function submitSearch(){
 
     //filter["subfase"] =document.getElementById("subfase").value;
     
-    console.log(document.getElementById("SuggestedNameSelect").textContent)
+   // console.log(document.getElementById("SuggestedNameSelect").value)
     //First get time range
     var filterTime=2;
     if (filterStartDate== null || filterStartDate == "" || filterStartDate == "any"){
@@ -241,7 +244,7 @@ function submitSearch(){
     for (const [key, value] of Object.entries(filter)) {
         filterIn = {};
         console.log(key);
-        console.log(value);
+        //console.log(value);
          if (arrayOutLength == 0) { break; }
     //Remove not given values
         if ((Object.keys(value).length==1) && ((value[0] == null || value[0] == "" || value[0] == "any"))){
@@ -250,7 +253,7 @@ function submitSearch(){
         else{
            
             for (const value2 of value){    //Several values for each type
-                //console.log(filterOut);
+                console.log(value2);
                 /*
                 var filteredIn= filterOut.filter(function(e) {
                 return e[key] == value2;
@@ -258,11 +261,11 @@ function submitSearch(){
                 */
               // console.log(arrayOutKeys)
             for (var i of arrayOutKeys.values()) {
-            //console.log(i)
+            
              //myout = element.Name==name;
             
             if(filterOut[i][key]==value2){filterIn[i]=JSON.parse(JSON.stringify(filterOut[i]));
-             console.log("Assign")};
+             console.log("Assign "+value2)};
         };
                 
        }
@@ -299,6 +302,7 @@ function submitSearch(){
 
 function FindSuggest(classLi,findThis,alreadyFound){
         if (findThis.length<1){
+              console.log("SHORT VALUE")
         return 
     }
     /*ulItem is the ul list*/
@@ -310,25 +314,28 @@ var srt = "";
     var tempstr=[];     //Items to remove
 
 
-    console.log(findThis)
+  console.log(classLi)
     document.querySelectorAll("."+classLi).forEach(myList =>{
        
-if ((value.toUpperCase().indexOf(findThis)<0) || (alreadyFound.indexOf(value.toUpperCase())>=0)){
+if ((myList.id.toUpperCase().indexOf(findThis)<0) || (alreadyFound.indexOf(myList.id.toUpperCase())>=0)){       //The element has already be found
     myList.style.display="none";
+    //console.log("NOFOUND")
 }
         else{
             myList.style.display="block";
             found=true
+           // console.log("FOUND")
         }
   })
 
         if (!found){
          document.getElementById("noMatchesName").style.display="block";
-        }
+        } 
 else{
       document.getElementById("noMatchesName").style.display="none";
 }
-    console.log(document.getElementById(classLi.replace("Select","Suggest")))
+    //console.log(document.getElementById(classLi.replace("Select","Suggest")))
+   classLi=classLi.replace("SuggestedName","Name");
     document.getElementById(classLi.replace("Select","Suggest")).style.display="block"
 return;
     };
@@ -345,9 +352,9 @@ function SetName(location,output,fromList=false) {
          var textOut=location;
         
     }
-      var txtName = document.getElementById(output);
-    console.log(output)
-    console.log(txtName.value)
+      var txtName = document.getElementById(FixID(output));
+    //console.log(output)
+    //console.log(txtName.value)
 
     if (txtName.value ==""){
         txtName.value =textOut;

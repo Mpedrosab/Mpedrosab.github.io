@@ -116,8 +116,8 @@
             <div class="isotherm-filter" id="filterSelect" style=" display: block;" >
                
    
-               
-            <div class="NameFilter" id="Namecollapsible"  name="SuggestedNames" style="">
+<div class="nameAndSnapShot" style="display:flex; width:100%">
+            <div class="NameFilter" id="Namecollapsible"  name="SuggestedNames" style="display:inline-block;float:left">
               
                 <label for="nameFind">Name:</label>
 
@@ -129,7 +129,23 @@
                     </div>
         <ul class="dataFilterul" id="NameSuggest" style="display:block;" ></ul>
                 </div>
-                
+    <div class="buttons_Plot" id="buttons_Plot">
+                   
+           <button id="ClearAll" style="display: inline-block; background: rgba(46, 123, 207, 0.8)">Clear Selection</button>
+                     
+             <button  type="submit" id="ClearPlot" style="background: rgba(46, 123, 207, 0.8);display: inline-block">Clear Plot</button>
+                     
+
+                <button type="submit" id="plot"  value="Submit">Plot !</button> 
+<div id="WaitToPlot" style="display:block; align-content:center; margin:auto; font-size:18px; text-align:center"><p> Plotting data. <br> Please wait...</p></div>
+        
+           
+  
+        </div>
+    <div class="snapShot-container" id="snapShot-container" style="display:none; float:right"></div>
+    </div>
+                <br>
+                <div id="Filters_div">
   <p><strong> Filters</strong></p>
             <table class="isotherm-filter" style=" display: block;" >
                
@@ -194,26 +210,14 @@
         </td>
      
        </tr> 
-         <tr class="dataFilter"> 
-
-
-                 </tr>    
+   
                                 </tbody>
     </table>
               
-                     <div class="dataFilter">                      
-                    <div colspan=4>
-                          
-                   
-                   <button id="ClearAll" style="display=block; background: rgba(46, 123, 207, 0.8)">Clear Selection</button>
-                        </div>
-             <button  type="submit" id="ClearPlot" style="background: rgba(46, 123, 207, 0.8)">Clear Plot</button>
-
-        <div>
- 
-                 </div>
-                  
-         </div>
+ </div>
+                       
+                        
+   
                 
         
     </div>
@@ -225,11 +229,7 @@
                               
   <div style="height:20px;"></div>
 
-              <button type="submit" id="plot"  value="Submit">Plot !</button> 
 
-
-                       
-                        <div id="WaitToPlot" style="display:block; align-content:center; margin:auto; font-size:20px; text-align:center"><p> Plotting data. <br> Please wait...</p></div>
 
           
      </div>
