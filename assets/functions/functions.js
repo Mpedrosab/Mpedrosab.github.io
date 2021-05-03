@@ -93,6 +93,27 @@ if (mySibling.style.display == "block"){
 }
 });
 
+
+/************************************/
+/*Close suggestions when clicked outside*/
+
+window.addEventListener('click', function(e){   
+    console.log(document.getElementById("Namecollapsible").contains(e.target))
+  if (document.getElementById("Namecollapsible").contains(e.target)==false){
+   
+    document.getElementById("NameSuggest").style.display = "none";
+  } 
+    
+   document.querySelectorAll('.dropSelect').forEach(item => {
+       var key;
+      key=item.id.replace("drop","Suggest"); 
+      if (item.contains(e.target)==false){
+     
+    document.getElementById(key).style.display = "none";
+  } 
+   }); 
+});
+
 /*
 document.querySelectorAll(".dataFilterul").forEach(myList =>{
     myList.addEventListener("click",function(){

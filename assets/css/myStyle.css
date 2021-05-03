@@ -7,6 +7,10 @@ body h3{
     font-weight: bolder;
 }
 
+header .header-general{
+    width: 100%
+}
+
 /*Blue buttons wih data*/
 .isotherm_button a.button{
 

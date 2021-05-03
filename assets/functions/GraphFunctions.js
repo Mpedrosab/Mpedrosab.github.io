@@ -32,7 +32,17 @@ if (mySibling.style.display == "block"){
     });
     })
 
-
+window.addEventListener('click', function(e){   
+    
+   document.querySelectorAll('.dropSelect').forEach(item => {
+       var key;
+      key=item.id.replace("drop","Suggest"); 
+      if (item.contains(e.target)==false){
+     
+    document.getElementById(key).style.display = "none";
+  } 
+   }); 
+});
 document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
 
  var key;
