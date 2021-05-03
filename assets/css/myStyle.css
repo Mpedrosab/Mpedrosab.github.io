@@ -297,6 +297,7 @@ font-size:15px;
 } 
 .NameFilter{
     width: 45%;
+    min-height: 180px;
 }
   
 .comparisonBody #SuggestedNameSelect{
