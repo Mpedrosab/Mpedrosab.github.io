@@ -7,6 +7,9 @@ var maxX = 0.0;
 var minX =  100000.0;
 var maxY = 0.0;
 var minY = 100000.0;
+var colorLegend=[];
+var labelLegend=[];
+var labelLegend=[];
 
 
 
@@ -52,7 +55,7 @@ document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
      // console.log("Pro")
   
       console.log(item+" " +key)
-
+document.getElementById("snapShot-container").style.display="none";
       SetName(key,"SuggestedNameSelect",true);
       item.style.display = "none"; 
 //console.log(label) 
@@ -132,7 +135,7 @@ function splitData(myData){
 }
 
 
-function plotData(x,y) {
+function plotData(x,y,myName) {
     var i;
     var x_arr = []; 
     var y_arr = [];
@@ -163,7 +166,8 @@ function plotData(x,y) {
     brd.update();
     
     var d = brd.create('curve',[x,y],{strokeColor:color[nr%color.length],strokeWidth: 3});
-    
+     //colorLegend.push(nr%color.length);
+
 
     var A= brd.create('glider',[0, 0,d])
     	A.hideElement() 
@@ -199,14 +203,20 @@ function plotData(x,y) {
        
 }); 
 
+    
+    //Create legend
+    //brd.create('legend', [0,-20], {labels:labelLegend, colors: colorLegend, strokeWidth:10} );
+    labelLegend+=createLabel(myName,color[nr%color.length])
+    document.getElementById("legend-plot").innerHTML=labelLegend;
     nr++;
+    
     brd.update();
 };
 
-function plotMyDB(dataToPlot){
+function plotMyDB(dataToPlot,nameData){
     var x=splitData(dataToPlot["xData"]);
     var y=splitData(dataToPlot["yData"]);
-    plotData(x,y);
+    plotData(x,y,nameData);
 };
  
 function plotThisNames(){
@@ -220,7 +230,7 @@ function plotThisNames(){
          for (var value2 of value){ 
              //console.log(value2);
              //console.log(myArrData);
-             plotMyDB(myArrData[value2]);
+             plotMyDB(myArrData[value2],value2);
          }
     }
     eraseText("SuggestedNameSelect");
@@ -426,10 +436,29 @@ document.querySelectorAll('.SuggestedNameSelect').forEach(item => {item.style.di
 
         
 
-    alreadyInput=[];
+    alreadyInput=[]; 
     
 }
+
+function createLabel(myName, myColor){
+        
+
+        var strOut='<p><hr style="background: myColor">&nbsp mySubstance: myTemp °C; myVol myVolUnit [myConc myUnitConc]; mySpeed myUnitSpeed; (myDate)</p>'
+      for (const [key, value] of Object.entries(myArr)){
+            if(value["Name"]==myName){
+                 strOut=strOut.replace("myName",value["Name"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"]).replace("myColor",myColor) //Remove date time from date
+          
+                 return strOut;
+            }          
          
+      }
+     console.log("createDiv")
+     //console.log(strOut)
+   
+     
+ };
+    
+
 function clearPlot(){
 brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-10],axis:true});
    nr = 0;
@@ -437,6 +466,8 @@ maxX = 0.0;
 minX =  100000.0;
 maxY = 0.0;
 minY = 100000.0;
+    labelLegend="";
+document.getElementById("legend-plot").innerHTML=labelLegend;
 
 
 

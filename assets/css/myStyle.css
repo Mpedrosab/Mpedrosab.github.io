@@ -189,6 +189,7 @@ table.isotherm-filter{
 /* Snapshots isotherms*/
 .snapShot{
     margin-top:5%;
+   
 }
 .snapShot-preview{
     margin:10%;
@@ -197,6 +198,7 @@ table.isotherm-filter{
 }
 .snapShot-container{
     width:50%;
+     margin-left:3%;
         position:relative;
       
 }
@@ -230,6 +232,19 @@ table.isotherm-filter{
 .snapShot-data span.substance{
     text-decoration: underline
    
+}
+
+/*******************************/
+/*Legend isotherms*/
+#legend-plot p{
+font-size:15px;
+    margin-bottom:0px;
+}
+#legend-plot hr{
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
 }
 /***************************/
 /*Div with isotherm data*/
