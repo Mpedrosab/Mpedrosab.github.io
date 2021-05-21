@@ -1,6 +1,6 @@
 console.log("GraphFunctions")    
  console.log(filter)
-var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-15,100,100,-10],axis:true});
+var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-15],axis:true});
 var color = ['blue','orange', 'green','red','magenta', 'black','yellow'];
 var nr = 0;
 var maxX = 0.0;
@@ -116,12 +116,26 @@ console.log(key)
         myArrOut=FilterNames(key,myParam,filter);
     });
     });  
-     
 }  
-//??
-//ARREGLAR QUERY SELECTOR CON DECIMALES!!!
-//NO VUELVE A MOSTRAR LOS NOMBRES CON CLEARALL()!!
-//QUE MUESTRE PLOT EN PEQUEÑO CON DATOS
+
+document.getElementById("endDate").addEventListener("change",function(){
+    
+    var key=this.value;
+    myArrOut=FilterNames(key,"endDate",filter);
+})
+
+//Add listener to start date
+function filterTime(value, param, arr){
+    
+    value=parseDate(value);
+    for (var i of arrayOutKeys.values()) {
+  var myDate= new Date(arr[i]["Date"]);
+         if ((myDate>=filterStartDate) && (myDate<=filterEndDate)){
+             
+         }
+    }
+    
+};
 
 /**************************************/
 /*Plot data*/
@@ -170,7 +184,7 @@ function plotData(x,y,myName) {
 
 
     var A= brd.create('glider',[0, 0,d])
-    	A.hideElement() 
+    A.hideElement() 
     d.on('mouseover', function(e) {
 
    var myCords= getMouseCoords(e);
@@ -286,16 +300,26 @@ function FilterNames(key,paramFilter,filter){
        //Add to global filter
     console.log("HEREE")
     console.log(filter)
+    
+    
 var deletedKeys=[];
     if (filter[paramFilter] =="Any"){       //Previous was any, so dont have to filter again
+
             var filterOut=JSON.parse(JSON.stringify(myArrNow));
-            filter[paramFilter] = key;
+            filter[paramFilter] = key;7
+        
         console.log(filter)
+
+        if ((paramFilter=="endDate") || (paramFilter=="startDate")){
+                filterTime(key,paramFilter,filterOut);
+        }
+                    
         for (var TotalArrKey of Object.keys(filterOut).values()){ 
             if (deletedKeys.includes(TotalArrKey)){
                 break;
             }
-            if(filterOut[TotalArrKey][paramFilter]!=key){
+
+           if(filterOut[TotalArrKey][paramFilter]!=key){
                 delete filterOut[TotalArrKey];
                 deletedKeys.push(TotalArrKey);
              child = myHTMLNow ? myHTMLNow.querySelector('#'+myArr[TotalArrKey]["Name"]) : null; 
@@ -320,6 +344,7 @@ var deletedKeys=[];
    // filterEndDate=parseDate(filterEndDate);
  
    else{
+       
         console.log("ISNOTANY")
        filter[paramFilter] = key;
        var filterOut=JSON.parse(JSON.stringify(myArr))
@@ -443,7 +468,7 @@ document.querySelectorAll('.SuggestedNameSelect').forEach(item => {item.style.di
 function createLabel(myName, myColor){
         
 
-        var strOut='<p><hr style="background: myColor">&nbsp mySubstance: myTemp °C; myVol myVolUnit [myConc myUnitConc]; mySpeed myUnitSpeed; (myDate)</p>'
+        var strOut='<p><hr style="background: myColor">&nbsp mySubstance: myTemp °C; myVol myVolUnit [myConc myUnitConc]; mySpeed myUnitSpeed; (myDate, myName) </p>'
       for (const [key, value] of Object.entries(myArr)){
             if(value["Name"]==myName){
                  strOut=strOut.replace("myName",value["Name"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"]).replace("myColor",myColor) //Remove date time from date
