@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charseT= 'utf-8'>
+    <meta http-equiv="X-UA-Compatible" contenT= "IE=edge">
+    <meta name="viewport" contenT= "width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/myStyle.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+ <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js">
+     <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+      </script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+<!-- End Jekyll SEO tag -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="/borrar.json"></script> -->
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>María Pedrosa Bustos | Physicist, PhD Student at the Department of Applied Physics UGR</title>
+<meta name="generator" contenT= "Jekyll v4.1.1" />
+<meta property="og:title" contenT= "Architect theme" />
+<meta property="og:locale" contenT= "en_US" />
+<meta name="description" contenT= "Physicist, PhD Student at the Department of Applied Physics UGR" />
+<meta property="og:description" contenT= "Physicist, PhD Student at the Department of Applied Physics UGR" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" contenT= "http://localhost:4000/" />
+<meta property="og:site_name" contenT= "Architect theme" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"http://localhost:4000/","headline":"María Pedrosa Bustos","description":"Physicist, PhD Student at the Department of Applied Physics UGR","name":"María Pedrosa Bustos","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="./assets/functions/functionsLoad.js"></script> 
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+  </head>
+
+  <body class="comparisonBody">
+    <header>
+      <div class="inner">
+        <a href="./isotherm-comparison.html">
+          <h1 class="header-general">Compare isotherms</h1>
+        </a>
+        <a href="."><h2>By María Pedrosa Bustos </h2>
+		<h3 style="color: white">Physicist, PhD Student at the Department of Applied Physics. UGR</h3>
+        </a>
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+    
+ <section id="main-content">
+<div class="isotherm_comparison">
+    
+        <div class="livePlot"> <h1>Live Plot:</h1>
+            <br>
+    <div id="jxgbox" class="jxgbox" style="width:600px; max-width:100%; height:350px;margin:50px">
+</div>
+            <div id="legend-plot"></div>
+    </div>
+
+			
+<h2><a href=".">Go back to main page</a></h2>
+
+
+    
+    
+
+      </div> 
+          </section> 
+
+          <aside id="sidebar">
+          
+ <div class="comparisonWebPage" style="display: inline-block">
+     
+            <div class="isotherm-filter" id="filterSelect" style=" display: block;" >
+               
+   
+<div class="nameAndSnapShot" style="display:flex; width:100%">
+            <div class="NameFilter" id="Namecollapsible"  name="SuggestedNames" style="display:inline-block;float:left">
+              
+                <label for="nameFind">Name:</label>
+
+   <div style="position:relative">
+              <textarea type="text" name="nname" id="SuggestedNameSelect" class="Selected" readonly style="border:none"></textarea> 
+            <button class="RemoveButton" id="SuggestedNameRemove" style="position:absolute;     bottom: 7px; right: 4px;"><i class="fa fa-times"></i></button>
+                    
+                
+                    </div>
+        <ul class="dataFilterul" id="NameSuggest" style="display:block;" ></ul>
+                </div>
+    <div class="buttons_Plot" id="buttons_Plot">
+                   
+           <button id="ClearAll" style="display: inline-block; background: rgba(46, 123, 207, 0.8)">Clear Selection</button>
+                     
+             <button  type="submit" id="ClearPlot" style="background: rgba(46, 123, 207, 0.8);display: inline-block">Clear Plot</button>
+                     
+
+                <button type="submit" id="plot"  value="Submit">Plot !</button> 
+<div id="WaitToPlot" style="display:block; align-content:center; margin:auto; font-size:18px; text-align:center"><p> Plotting data. <br> Please wait...</p></div>
+        
+           
+  
+        </div>
+    <div class="snapShot-container" id="snapShot-container" style="display:none; float:right"></div>
+    </div>
+                <br>
+                <div id="Filters_div">
+  <p><strong> Filters</strong></p>
+            <table class="isotherm-filter" style=" display: block;" >
+               
+    <tbody id="filterSelect"> 
+                 <tr class="dataFilter">      
+            <td class="Firsttd">      
+          <label for="sub">Temperature: </label>
+                 </td> 
+ <td class="Secondtd">
+
+
+              <input type="text" id="TemperatureSelect" class="Selected" readonly style="border:none">
+                                <button class="dropSelect"  id="Temperaturedrop"><i  class="fa fa-caret-down"></i></button>              
+            <ul class="dataFilterul" id="TemperatureSuggest" name="suggestionsSub" style="position: absolute;"></ul>
+        </td>       
+            <td colspan=2>
+
+            <label for="startDate">Start date:</label>
+                <input type="date" id="startDate" name="nstart" min="2017-01-01" max="2022-12-31">
+               </td>
+                    
+
+                    
+
+   
+        </tr>     
+            <tr class="dataFilter"> 
+        <td class="Firsttd">
+                    <label for="sub">Substance: </label>
+
+     
+                    </td>
+   <td  class="Secondtd">
+            <input type="text" id="Substance1Select" class="Selected" readonly style="border:none;">
+       
+            <button type="text" id="Substance1drop" class="dropSelect" style="border:none"><i  class="fa fa-caret-down"></i></button>
+              <ul class="dataFilterul" id="Substance1Suggest" name="suggestionsSub" style="position: absolute;"></ul>
+              </td>     
+                
+                           <td colspan=2>
+                    
+            <label for="endDate">End date:</label>
+            <input type="date" id="endDate" name="nend"
+                               min="2017-01-01" max="2022-12-31">
+				 </td>	
+        </tr>   
+                            
+   
+ 
+
+ <tr class="dataFilter">  
+     
+<td class="Firsttd">
+               
+      <label for="sub">Velocity: </label>
+                 </td>
+                 <td class="Secondtd">
+              <input type="text" id="SpeedSelect" class="Selected" readonly style="border:none">
+                <button type="text" id="Speeddrop" class="dropSelect" style="border:none"><i  class="fa fa-caret-down"></i></button>
+                <ul class="dataFilterul" id="SpeedSuggest"  style=""></ul>
+                            
+        </td>
+     
+       </tr> 
+   
+                                </tbody>
+    </table>
+              
+ </div>
+                       
+                        
+   
+                
+        
+    </div>
+    
+
+    
+     
+
+                              
+  <div style="height:20px;"></div>
+
+
+
+          
+     </div>
+     </aside>
+        </div>
+        </div>
+        
+  </body>
+
+    
+
+   
+     
+</html>
+
+
+<!--
+ for file in *; do echo '<div class="comparison-div">
+<img src="./Data/Compare/'.$file.'" class="button">
+</div>
+'; done > borrar.txt
+
+-->
