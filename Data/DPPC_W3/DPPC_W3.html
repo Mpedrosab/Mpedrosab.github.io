@@ -1,0 +1,4039 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head><title>HTML Pandas Dataframe with CSS</title></head>
+        <link rel="stylesheet" type="text/css" href="../../Codes/df_style.css"/>      
+ <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js">
+     <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script src="/assets/functions/functionsLoadIndividual.js"></script> 
+      </script>
+        <body>
+        <div class="title isotherm_data"><h2>
+        DPPC_W3
+        </h2>
+        <div id="myIsothermPlot" style="display:none">
+        DPPC_W3
+        </div>
+
+<div id="headerIMG">
+        <div id="jxgbox" class="jxgbox_Data" style="width:600px; max-width:100%; height:350px;margin:50px"></div>
+
+<div id="BAMimg"></div>
+<div id="Slider"></div>
+</div>
+
+        <div class="div_isotherm_data">
+            <table border="1" class="dataframe isotherm_data">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Mma[A^2/molec]</th>
+      <th>SP[mN/m]</th>
+      <th>IMG</th>
+      <th>BamFile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>116.27</td>
+      <td>0.0000</td>
+      <td><img src="BAMRAW/106485530767500.jpg" ></td>
+      <td>106485530767500.jpg</td>
+    </tr>
+    <tr>
+      <td>116.22</td>
+      <td>0.0233</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>116.09</td>
+      <td>0.0484</td>
+      <td><img src="BAMRAW/106485530791600.jpg" ></td>
+      <td>106485530791600.jpg</td>
+    </tr>
+    <tr>
+      <td>115.97</td>
+      <td>0.0474</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>115.88</td>
+      <td>0.0437</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>115.75</td>
+      <td>0.0335</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>115.62</td>
+      <td>0.0419</td>
+      <td><img src="BAMRAW/106485530840100.jpg" ></td>
+      <td>106485530840100.jpg</td>
+    </tr>
+    <tr>
+      <td>115.49</td>
+      <td>0.0381</td>
+      <td><img src="BAMRAW/106485530852500.jpg" ></td>
+      <td>106485530852500.jpg</td>
+    </tr>
+    <tr>
+      <td>115.36</td>
+      <td>0.0605</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>115.23</td>
+      <td>0.0558</td>
+      <td><img src="BAMRAW/106485530876800.jpg" ></td>
+      <td>106485530876800.jpg</td>
+    </tr>
+    <tr>
+      <td>115.10</td>
+      <td>0.0670</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.97</td>
+      <td>0.0642</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.84</td>
+      <td>0.0605</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.71</td>
+      <td>0.0474</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.59</td>
+      <td>0.0530</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.46</td>
+      <td>0.0744</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.33</td>
+      <td>0.0865</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>114.20</td>
+      <td>0.0781</td>
+      <td><img src="BAMRAW/106485530974700.jpg" ></td>
+      <td>106485530974700.jpg</td>
+    </tr>
+    <tr>
+      <td>114.07</td>
+      <td>0.0744</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>113.94</td>
+      <td>0.0781</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>113.81</td>
+      <td>0.0754</td>
+      <td><img src="BAMRAW/106485531011500.jpg" ></td>
+      <td>106485531011500.jpg</td>
+    </tr>
+    <tr>
+      <td>113.69</td>
+      <td>0.0856</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>113.56</td>
+      <td>0.0819</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>113.43</td>
+      <td>0.0791</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>113.30</td>
+      <td>0.0856</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>113.17</td>
+      <td>0.0968</td>
+      <td><img src="BAMRAW/106485531072200.jpg" ></td>
+      <td>106485531072200.jpg</td>
+    </tr>
+    <tr>
+      <td>113.05</td>
+      <td>0.0921</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.92</td>
+      <td>0.0921</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.79</td>
+      <td>0.0893</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.67</td>
+      <td>0.0865</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.54</td>
+      <td>0.0847</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.41</td>
+      <td>0.0800</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.28</td>
+      <td>0.0744</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.16</td>
+      <td>0.0837</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>112.03</td>
+      <td>0.0865</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.91</td>
+      <td>0.0847</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.79</td>
+      <td>0.0837</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.67</td>
+      <td>0.0828</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.54</td>
+      <td>0.0893</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.41</td>
+      <td>0.1070</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.28</td>
+      <td>0.1256</td>
+      <td><img src="BAMRAW/106485531251800.jpg" ></td>
+      <td>106485531251800.jpg</td>
+    </tr>
+    <tr>
+      <td>111.15</td>
+      <td>0.1358</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111.02</td>
+      <td>0.1265</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>110.89</td>
+      <td>0.1479</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>110.76</td>
+      <td>0.1563</td>
+      <td><img src="BAMRAW/106485531301100.jpg" ></td>
+      <td>106485531301100.jpg</td>
+    </tr>
+    <tr>
+      <td>110.63</td>
+      <td>0.1600</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>110.50</td>
+      <td>0.1470</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>110.37</td>
+      <td>0.1368</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>110.24</td>
+      <td>0.1302</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>110.11</td>
+      <td>0.1219</td>
+      <td><img src="BAMRAW/106485531362900.jpg" ></td>
+      <td>106485531362900.jpg</td>
+    </tr>
+    <tr>
+      <td>109.99</td>
+      <td>0.1256</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.86</td>
+      <td>0.1181</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.73</td>
+      <td>0.1237</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.60</td>
+      <td>0.1275</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.47</td>
+      <td>0.1330</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.34</td>
+      <td>0.1163</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.22</td>
+      <td>0.1200</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>109.09</td>
+      <td>0.1265</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.96</td>
+      <td>0.1228</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.83</td>
+      <td>0.1237</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.70</td>
+      <td>0.1275</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.57</td>
+      <td>0.1284</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.45</td>
+      <td>0.1349</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.32</td>
+      <td>0.1247</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.19</td>
+      <td>0.1144</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>108.07</td>
+      <td>0.1451</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.95</td>
+      <td>0.1544</td>
+      <td><img src="BAMRAW/106485531568400.jpg" ></td>
+      <td>106485531568400.jpg</td>
+    </tr>
+    <tr>
+      <td>107.83</td>
+      <td>0.1563</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.69</td>
+      <td>0.1628</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.57</td>
+      <td>0.1647</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.44</td>
+      <td>0.1386</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.32</td>
+      <td>0.1414</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.20</td>
+      <td>0.1535</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>107.08</td>
+      <td>0.1572</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.95</td>
+      <td>0.1395</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.82</td>
+      <td>0.1433</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.69</td>
+      <td>0.1330</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.56</td>
+      <td>0.1507</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.42</td>
+      <td>0.1609</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.29</td>
+      <td>0.1712</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.16</td>
+      <td>0.1656</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>106.04</td>
+      <td>0.1554</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>105.91</td>
+      <td>0.1609</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>105.78</td>
+      <td>0.1637</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>105.66</td>
+      <td>0.1656</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>105.53</td>
+      <td>0.1554</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>105.41</td>
+      <td>0.1526</td>
+      <td><img src="BAMRAW/106485531809300.jpg" ></td>
+      <td>106485531809300.jpg</td>
+    </tr>
+    <tr>
+      <td>105.29</td>
+      <td>0.1526</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>105.16</td>
+      <td>0.1181</td>
+      <td><img src="BAMRAW/106485531833100.jpg" ></td>
+      <td>106485531833100.jpg</td>
+    </tr>
+    <tr>
+      <td>105.04</td>
+      <td>0.1209</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>104.91</td>
+      <td>0.1209</td>
+      <td><img src="BAMRAW/106485531857200.jpg" ></td>
+      <td>106485531857200.jpg</td>
+    </tr>
+    <tr>
+      <td>104.78</td>
+      <td>0.1209</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>104.65</td>
+      <td>0.1247</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>104.53</td>
+      <td>0.1405</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>104.40</td>
+      <td>0.1740</td>
+      <td><img src="BAMRAW/106485531905700.jpg" ></td>
+      <td>106485531905700.jpg</td>
+    </tr>
+    <tr>
+      <td>104.27</td>
+      <td>0.1740</td>
+      <td><img src="BAMRAW/106485531918000.jpg" ></td>
+      <td>106485531918000.jpg</td>
+    </tr>
+    <tr>
+      <td>104.14</td>
+      <td>0.1730</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>104.01</td>
+      <td>0.1730</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.89</td>
+      <td>0.1712</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.76</td>
+      <td>0.1609</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.64</td>
+      <td>0.1600</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.52</td>
+      <td>0.1535</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.40</td>
+      <td>0.1479</td>
+      <td><img src="BAMRAW/106485532000900.jpg" ></td>
+      <td>106485532000900.jpg</td>
+    </tr>
+    <tr>
+      <td>103.27</td>
+      <td>0.1479</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.15</td>
+      <td>0.1368</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>103.02</td>
+      <td>0.1293</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.89</td>
+      <td>0.1368</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.77</td>
+      <td>0.1358</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.65</td>
+      <td>0.1395</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.52</td>
+      <td>0.1358</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.39</td>
+      <td>0.1284</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.26</td>
+      <td>0.1237</td>
+      <td><img src="BAMRAW/106485532108600.jpg" ></td>
+      <td>106485532108600.jpg</td>
+    </tr>
+    <tr>
+      <td>102.14</td>
+      <td>0.1275</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>102.01</td>
+      <td>0.1265</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.88</td>
+      <td>0.1154</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.75</td>
+      <td>0.1154</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.62</td>
+      <td>0.1163</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.49</td>
+      <td>0.1107</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.36</td>
+      <td>0.0986</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.23</td>
+      <td>0.0930</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>101.10</td>
+      <td>0.0949</td>
+      <td><img src="BAMRAW/106485532218800.jpg" ></td>
+      <td>106485532218800.jpg</td>
+    </tr>
+    <tr>
+      <td>100.97</td>
+      <td>0.1237</td>
+      <td><img src="BAMRAW/106485532231200.jpg" ></td>
+      <td>106485532231200.jpg</td>
+    </tr>
+    <tr>
+      <td>100.85</td>
+      <td>0.1191</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>100.72</td>
+      <td>0.1591</td>
+      <td><img src="BAMRAW/106485532254700.jpg" ></td>
+      <td>106485532254700.jpg</td>
+    </tr>
+    <tr>
+      <td>100.59</td>
+      <td>0.1702</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>100.47</td>
+      <td>0.1916</td>
+      <td><img src="BAMRAW/106485532278700.jpg" ></td>
+      <td>106485532278700.jpg</td>
+    </tr>
+    <tr>
+      <td>100.34</td>
+      <td>0.1991</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>100.21</td>
+      <td>0.2000</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>100.09</td>
+      <td>0.1963</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.96</td>
+      <td>0.2112</td>
+      <td><img src="BAMRAW/106485532327400.jpg" ></td>
+      <td>106485532327400.jpg</td>
+    </tr>
+    <tr>
+      <td>99.83</td>
+      <td>0.2065</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.70</td>
+      <td>0.1972</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.57</td>
+      <td>0.2037</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.44</td>
+      <td>0.2019</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.32</td>
+      <td>0.2102</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.19</td>
+      <td>0.2177</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>99.06</td>
+      <td>0.2316</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.93</td>
+      <td>0.2205</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.80</td>
+      <td>0.2075</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.67</td>
+      <td>0.2037</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.54</td>
+      <td>0.2149</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.41</td>
+      <td>0.2168</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.29</td>
+      <td>0.2223</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.16</td>
+      <td>0.2344</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98.03</td>
+      <td>0.2344</td>
+      <td><img src="BAMRAW/106485532510300.jpg" ></td>
+      <td>106485532510300.jpg</td>
+    </tr>
+    <tr>
+      <td>97.91</td>
+      <td>0.2437</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>97.78</td>
+      <td>0.2670</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>97.66</td>
+      <td>0.2586</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>97.53</td>
+      <td>0.2707</td>
+      <td><img src="BAMRAW/106485532558100.jpg" ></td>
+      <td>106485532558100.jpg</td>
+    </tr>
+    <tr>
+      <td>97.40</td>
+      <td>0.2949</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>97.27</td>
+      <td>0.2977</td>
+      <td><img src="BAMRAW/106485532582500.jpg" ></td>
+      <td>106485532582500.jpg</td>
+    </tr>
+    <tr>
+      <td>97.15</td>
+      <td>0.3033</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>97.03</td>
+      <td>0.2921</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>96.90</td>
+      <td>0.2716</td>
+      <td><img src="BAMRAW/106485532618200.jpg" ></td>
+      <td>106485532618200.jpg</td>
+    </tr>
+    <tr>
+      <td>96.77</td>
+      <td>0.2419</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>96.64</td>
+      <td>0.2465</td>
+      <td><img src="BAMRAW/106485532642500.jpg" ></td>
+      <td>106485532642500.jpg</td>
+    </tr>
+    <tr>
+      <td>96.51</td>
+      <td>0.2447</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>96.39</td>
+      <td>0.2670</td>
+      <td><img src="BAMRAW/106485532666600.jpg" ></td>
+      <td>106485532666600.jpg</td>
+    </tr>
+    <tr>
+      <td>96.26</td>
+      <td>0.2819</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>96.14</td>
+      <td>0.3079</td>
+      <td><img src="BAMRAW/106485532690300.jpg" ></td>
+      <td>106485532690300.jpg</td>
+    </tr>
+    <tr>
+      <td>96.01</td>
+      <td>0.3284</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.87</td>
+      <td>0.3396</td>
+      <td><img src="BAMRAW/106485532715300.jpg" ></td>
+      <td>106485532715300.jpg</td>
+    </tr>
+    <tr>
+      <td>95.75</td>
+      <td>0.3386</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.62</td>
+      <td>0.3349</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.50</td>
+      <td>0.3293</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.38</td>
+      <td>0.3358</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.25</td>
+      <td>0.3330</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.13</td>
+      <td>0.3330</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>95.01</td>
+      <td>0.3312</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.89</td>
+      <td>0.3228</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.76</td>
+      <td>0.3265</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.63</td>
+      <td>0.3200</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.51</td>
+      <td>0.3061</td>
+      <td><img src="BAMRAW/106485532845000.jpg" ></td>
+      <td>106485532845000.jpg</td>
+    </tr>
+    <tr>
+      <td>94.38</td>
+      <td>0.2949</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.25</td>
+      <td>0.3033</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.13</td>
+      <td>0.3033</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>94.00</td>
+      <td>0.2977</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>93.88</td>
+      <td>0.3135</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>93.75</td>
+      <td>0.3191</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>93.63</td>
+      <td>0.3265</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>93.50</td>
+      <td>0.3610</td>
+      <td><img src="BAMRAW/106485532940800.jpg" ></td>
+      <td>106485532940800.jpg</td>
+    </tr>
+    <tr>
+      <td>93.37</td>
+      <td>0.4056</td>
+      <td><img src="BAMRAW/106485532953100.jpg" ></td>
+      <td>106485532953100.jpg</td>
+    </tr>
+    <tr>
+      <td>93.24</td>
+      <td>0.4205</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>93.12</td>
+      <td>0.4205</td>
+      <td><img src="BAMRAW/106485532977000.jpg" ></td>
+      <td>106485532977000.jpg</td>
+    </tr>
+    <tr>
+      <td>93.00</td>
+      <td>0.4279</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>92.87</td>
+      <td>0.4131</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>92.74</td>
+      <td>0.3814</td>
+      <td><img src="BAMRAW/106485533012600.jpg" ></td>
+      <td>106485533012600.jpg</td>
+    </tr>
+    <tr>
+      <td>92.62</td>
+      <td>0.3712</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>92.49</td>
+      <td>0.3517</td>
+      <td><img src="BAMRAW/106485533036600.jpg" ></td>
+      <td>106485533036600.jpg</td>
+    </tr>
+    <tr>
+      <td>92.37</td>
+      <td>0.3610</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>92.24</td>
+      <td>0.3647</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>92.12</td>
+      <td>0.3619</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>91.99</td>
+      <td>0.3675</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>91.87</td>
+      <td>0.3712</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>91.74</td>
+      <td>0.3786</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>91.62</td>
+      <td>0.3972</td>
+      <td><img src="BAMRAW/106485533119800.jpg" ></td>
+      <td>106485533119800.jpg</td>
+    </tr>
+    <tr>
+      <td>91.49</td>
+      <td>0.4214</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>91.37</td>
+      <td>0.4456</td>
+      <td><img src="BAMRAW/106485533143600.jpg" ></td>
+      <td>106485533143600.jpg</td>
+    </tr>
+    <tr>
+      <td>91.24</td>
+      <td>0.4763</td>
+      <td><img src="BAMRAW/106485533155600.jpg" ></td>
+      <td>106485533155600.jpg</td>
+    </tr>
+    <tr>
+      <td>91.11</td>
+      <td>0.4856</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>90.99</td>
+      <td>0.5089</td>
+      <td><img src="BAMRAW/106485533179400.jpg" ></td>
+      <td>106485533179400.jpg</td>
+    </tr>
+    <tr>
+      <td>90.86</td>
+      <td>0.5368</td>
+      <td><img src="BAMRAW/106485533191700.jpg" ></td>
+      <td>106485533191700.jpg</td>
+    </tr>
+    <tr>
+      <td>90.74</td>
+      <td>0.5563</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>90.61</td>
+      <td>0.5684</td>
+      <td><img src="BAMRAW/106485533215600.jpg" ></td>
+      <td>106485533215600.jpg</td>
+    </tr>
+    <tr>
+      <td>90.48</td>
+      <td>0.5879</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>90.35</td>
+      <td>0.6084</td>
+      <td><img src="BAMRAW/106485533240200.jpg" ></td>
+      <td>106485533240200.jpg</td>
+    </tr>
+    <tr>
+      <td>90.23</td>
+      <td>0.6224</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>90.10</td>
+      <td>0.6252</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>89.97</td>
+      <td>0.6279</td>
+      <td><img src="BAMRAW/106485533275900.jpg" ></td>
+      <td>106485533275900.jpg</td>
+    </tr>
+    <tr>
+      <td>89.85</td>
+      <td>0.6419</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>89.72</td>
+      <td>0.6652</td>
+      <td><img src="BAMRAW/106485533299600.jpg" ></td>
+      <td>106485533299600.jpg</td>
+    </tr>
+    <tr>
+      <td>88.99</td>
+      <td>0.7489</td>
+      <td><img src="BAMRAW/106485533369900.jpg" ></td>
+      <td>106485533369900.jpg</td>
+    </tr>
+    <tr>
+      <td>88.85</td>
+      <td>0.7805</td>
+      <td><img src="BAMRAW/106485533382300.jpg" ></td>
+      <td>106485533382300.jpg</td>
+    </tr>
+    <tr>
+      <td>88.72</td>
+      <td>0.8121</td>
+      <td><img src="BAMRAW/106485533395100.jpg" ></td>
+      <td>106485533395100.jpg</td>
+    </tr>
+    <tr>
+      <td>88.59</td>
+      <td>0.8466</td>
+      <td><img src="BAMRAW/106485533407500.jpg" ></td>
+      <td>106485533407500.jpg</td>
+    </tr>
+    <tr>
+      <td>88.46</td>
+      <td>0.8670</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>88.33</td>
+      <td>0.8791</td>
+      <td><img src="BAMRAW/106485533431700.jpg" ></td>
+      <td>106485533431700.jpg</td>
+    </tr>
+    <tr>
+      <td>88.20</td>
+      <td>0.9145</td>
+      <td><img src="BAMRAW/106485533444400.jpg" ></td>
+      <td>106485533444400.jpg</td>
+    </tr>
+    <tr>
+      <td>88.07</td>
+      <td>0.9526</td>
+      <td><img src="BAMRAW/106485533456600.jpg" ></td>
+      <td>106485533456600.jpg</td>
+    </tr>
+    <tr>
+      <td>87.94</td>
+      <td>0.9870</td>
+      <td><img src="BAMRAW/106485533469000.jpg" ></td>
+      <td>106485533469000.jpg</td>
+    </tr>
+    <tr>
+      <td>87.82</td>
+      <td>1.0066</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>87.69</td>
+      <td>1.0140</td>
+      <td><img src="BAMRAW/106485533492800.jpg" ></td>
+      <td>106485533492800.jpg</td>
+    </tr>
+    <tr>
+      <td>87.56</td>
+      <td>1.0531</td>
+      <td><img src="BAMRAW/106485533504800.jpg" ></td>
+      <td>106485533504800.jpg</td>
+    </tr>
+    <tr>
+      <td>87.43</td>
+      <td>1.0847</td>
+      <td><img src="BAMRAW/106485533517300.jpg" ></td>
+      <td>106485533517300.jpg</td>
+    </tr>
+    <tr>
+      <td>87.30</td>
+      <td>1.1312</td>
+      <td><img src="BAMRAW/106485533529200.jpg" ></td>
+      <td>106485533529200.jpg</td>
+    </tr>
+    <tr>
+      <td>87.18</td>
+      <td>1.1787</td>
+      <td><img src="BAMRAW/106485533541500.jpg" ></td>
+      <td>106485533541500.jpg</td>
+    </tr>
+    <tr>
+      <td>87.05</td>
+      <td>1.2215</td>
+      <td><img src="BAMRAW/106485533553600.jpg" ></td>
+      <td>106485533553600.jpg</td>
+    </tr>
+    <tr>
+      <td>86.93</td>
+      <td>1.2466</td>
+      <td><img src="BAMRAW/106485533565400.jpg" ></td>
+      <td>106485533565400.jpg</td>
+    </tr>
+    <tr>
+      <td>86.80</td>
+      <td>1.2903</td>
+      <td><img src="BAMRAW/106485533577500.jpg" ></td>
+      <td>106485533577500.jpg</td>
+    </tr>
+    <tr>
+      <td>86.67</td>
+      <td>1.3312</td>
+      <td><img src="BAMRAW/106485533589600.jpg" ></td>
+      <td>106485533589600.jpg</td>
+    </tr>
+    <tr>
+      <td>86.55</td>
+      <td>1.3629</td>
+      <td><img src="BAMRAW/106485533601200.jpg" ></td>
+      <td>106485533601200.jpg</td>
+    </tr>
+    <tr>
+      <td>86.42</td>
+      <td>1.3880</td>
+      <td><img src="BAMRAW/106485533612900.jpg" ></td>
+      <td>106485533612900.jpg</td>
+    </tr>
+    <tr>
+      <td>86.30</td>
+      <td>1.3889</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>86.17</td>
+      <td>1.4327</td>
+      <td><img src="BAMRAW/106485533636700.jpg" ></td>
+      <td>106485533636700.jpg</td>
+    </tr>
+    <tr>
+      <td>86.05</td>
+      <td>1.4810</td>
+      <td><img src="BAMRAW/106485533648700.jpg" ></td>
+      <td>106485533648700.jpg</td>
+    </tr>
+    <tr>
+      <td>85.92</td>
+      <td>1.5192</td>
+      <td><img src="BAMRAW/106485533661200.jpg" ></td>
+      <td>106485533661200.jpg</td>
+    </tr>
+    <tr>
+      <td>85.79</td>
+      <td>1.5517</td>
+      <td><img src="BAMRAW/106485533673000.jpg" ></td>
+      <td>106485533673000.jpg</td>
+    </tr>
+    <tr>
+      <td>85.26</td>
+      <td>1.6513</td>
+      <td><img src="BAMRAW/106485533724000.jpg" ></td>
+      <td>106485533724000.jpg</td>
+    </tr>
+    <tr>
+      <td>85.13</td>
+      <td>1.6922</td>
+      <td><img src="BAMRAW/106485533736000.jpg" ></td>
+      <td>106485533736000.jpg</td>
+    </tr>
+    <tr>
+      <td>85.01</td>
+      <td>1.7303</td>
+      <td><img src="BAMRAW/106485533747600.jpg" ></td>
+      <td>106485533747600.jpg</td>
+    </tr>
+    <tr>
+      <td>84.88</td>
+      <td>1.7731</td>
+      <td><img src="BAMRAW/106485533759700.jpg" ></td>
+      <td>106485533759700.jpg</td>
+    </tr>
+    <tr>
+      <td>84.74</td>
+      <td>1.7871</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>84.62</td>
+      <td>1.8150</td>
+      <td><img src="BAMRAW/106485533784400.jpg" ></td>
+      <td>106485533784400.jpg</td>
+    </tr>
+    <tr>
+      <td>84.49</td>
+      <td>1.8438</td>
+      <td><img src="BAMRAW/106485533796200.jpg" ></td>
+      <td>106485533796200.jpg</td>
+    </tr>
+    <tr>
+      <td>84.37</td>
+      <td>1.8811</td>
+      <td><img src="BAMRAW/106485533808400.jpg" ></td>
+      <td>106485533808400.jpg</td>
+    </tr>
+    <tr>
+      <td>84.24</td>
+      <td>1.9331</td>
+      <td><img src="BAMRAW/106485533820500.jpg" ></td>
+      <td>106485533820500.jpg</td>
+    </tr>
+    <tr>
+      <td>84.11</td>
+      <td>1.9732</td>
+      <td><img src="BAMRAW/106485533833000.jpg" ></td>
+      <td>106485533833000.jpg</td>
+    </tr>
+    <tr>
+      <td>83.98</td>
+      <td>2.0011</td>
+      <td><img src="BAMRAW/106485533844900.jpg" ></td>
+      <td>106485533844900.jpg</td>
+    </tr>
+    <tr>
+      <td>83.85</td>
+      <td>2.0364</td>
+      <td><img src="BAMRAW/106485533856900.jpg" ></td>
+      <td>106485533856900.jpg</td>
+    </tr>
+    <tr>
+      <td>83.73</td>
+      <td>2.0643</td>
+      <td><img src="BAMRAW/106485533868800.jpg" ></td>
+      <td>106485533868800.jpg</td>
+    </tr>
+    <tr>
+      <td>83.60</td>
+      <td>2.0978</td>
+      <td><img src="BAMRAW/106485533881300.jpg" ></td>
+      <td>106485533881300.jpg</td>
+    </tr>
+    <tr>
+      <td>83.47</td>
+      <td>2.1462</td>
+      <td><img src="BAMRAW/106485533893100.jpg" ></td>
+      <td>106485533893100.jpg</td>
+    </tr>
+    <tr>
+      <td>83.35</td>
+      <td>2.1862</td>
+      <td><img src="BAMRAW/106485533905100.jpg" ></td>
+      <td>106485533905100.jpg</td>
+    </tr>
+    <tr>
+      <td>83.23</td>
+      <td>2.2169</td>
+      <td><img src="BAMRAW/106485533916700.jpg" ></td>
+      <td>106485533916700.jpg</td>
+    </tr>
+    <tr>
+      <td>83.10</td>
+      <td>2.2504</td>
+      <td><img src="BAMRAW/106485533929100.jpg" ></td>
+      <td>106485533929100.jpg</td>
+    </tr>
+    <tr>
+      <td>82.96</td>
+      <td>2.2783</td>
+      <td><img src="BAMRAW/106485533941900.jpg" ></td>
+      <td>106485533941900.jpg</td>
+    </tr>
+    <tr>
+      <td>82.83</td>
+      <td>2.3304</td>
+      <td><img src="BAMRAW/106485533954000.jpg" ></td>
+      <td>106485533954000.jpg</td>
+    </tr>
+    <tr>
+      <td>82.70</td>
+      <td>2.3704</td>
+      <td><img src="BAMRAW/106485533966500.jpg" ></td>
+      <td>106485533966500.jpg</td>
+    </tr>
+    <tr>
+      <td>82.58</td>
+      <td>2.4169</td>
+      <td><img src="BAMRAW/106485533978200.jpg" ></td>
+      <td>106485533978200.jpg</td>
+    </tr>
+    <tr>
+      <td>82.45</td>
+      <td>2.4690</td>
+      <td><img src="BAMRAW/106485533990700.jpg" ></td>
+      <td>106485533990700.jpg</td>
+    </tr>
+    <tr>
+      <td>82.32</td>
+      <td>2.4895</td>
+      <td><img src="BAMRAW/106485534003500.jpg" ></td>
+      <td>106485534003500.jpg</td>
+    </tr>
+    <tr>
+      <td>82.19</td>
+      <td>2.5360</td>
+      <td><img src="BAMRAW/106485534015400.jpg" ></td>
+      <td>106485534015400.jpg</td>
+    </tr>
+    <tr>
+      <td>82.06</td>
+      <td>2.5732</td>
+      <td><img src="BAMRAW/106485534027400.jpg" ></td>
+      <td>106485534027400.jpg</td>
+    </tr>
+    <tr>
+      <td>81.93</td>
+      <td>2.6123</td>
+      <td><img src="BAMRAW/106485534040000.jpg" ></td>
+      <td>106485534040000.jpg</td>
+    </tr>
+    <tr>
+      <td>81.79</td>
+      <td>2.6551</td>
+      <td><img src="BAMRAW/106485534052500.jpg" ></td>
+      <td>106485534052500.jpg</td>
+    </tr>
+    <tr>
+      <td>81.67</td>
+      <td>2.6662</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>81.55</td>
+      <td>2.7109</td>
+      <td><img src="BAMRAW/106485534076100.jpg" ></td>
+      <td>106485534076100.jpg</td>
+    </tr>
+    <tr>
+      <td>81.42</td>
+      <td>2.7639</td>
+      <td><img src="BAMRAW/106485534088100.jpg" ></td>
+      <td>106485534088100.jpg</td>
+    </tr>
+    <tr>
+      <td>81.29</td>
+      <td>2.8132</td>
+      <td><img src="BAMRAW/106485534100200.jpg" ></td>
+      <td>106485534100200.jpg</td>
+    </tr>
+    <tr>
+      <td>81.17</td>
+      <td>2.8486</td>
+      <td><img src="BAMRAW/106485534112000.jpg" ></td>
+      <td>106485534112000.jpg</td>
+    </tr>
+    <tr>
+      <td>81.05</td>
+      <td>2.8802</td>
+      <td><img src="BAMRAW/106485534124000.jpg" ></td>
+      <td>106485534124000.jpg</td>
+    </tr>
+    <tr>
+      <td>80.91</td>
+      <td>2.9425</td>
+      <td><img src="BAMRAW/106485534137000.jpg" ></td>
+      <td>106485534137000.jpg</td>
+    </tr>
+    <tr>
+      <td>80.78</td>
+      <td>2.9816</td>
+      <td><img src="BAMRAW/106485534149300.jpg" ></td>
+      <td>106485534149300.jpg</td>
+    </tr>
+    <tr>
+      <td>80.65</td>
+      <td>3.0141</td>
+      <td><img src="BAMRAW/106485534161400.jpg" ></td>
+      <td>106485534161400.jpg</td>
+    </tr>
+    <tr>
+      <td>80.52</td>
+      <td>3.0504</td>
+      <td><img src="BAMRAW/106485534173500.jpg" ></td>
+      <td>106485534173500.jpg</td>
+    </tr>
+    <tr>
+      <td>80.39</td>
+      <td>3.0821</td>
+      <td><img src="BAMRAW/106485534185900.jpg" ></td>
+      <td>106485534185900.jpg</td>
+    </tr>
+    <tr>
+      <td>80.26</td>
+      <td>3.1295</td>
+      <td><img src="BAMRAW/106485534198300.jpg" ></td>
+      <td>106485534198300.jpg</td>
+    </tr>
+    <tr>
+      <td>80.14</td>
+      <td>3.1714</td>
+      <td><img src="BAMRAW/106485534210000.jpg" ></td>
+      <td>106485534210000.jpg</td>
+    </tr>
+    <tr>
+      <td>80.01</td>
+      <td>3.2169</td>
+      <td><img src="BAMRAW/106485534222500.jpg" ></td>
+      <td>106485534222500.jpg</td>
+    </tr>
+    <tr>
+      <td>79.87</td>
+      <td>3.2467</td>
+      <td><img src="BAMRAW/106485534234800.jpg" ></td>
+      <td>106485534234800.jpg</td>
+    </tr>
+    <tr>
+      <td>79.75</td>
+      <td>3.2886</td>
+      <td><img src="BAMRAW/106485534247500.jpg" ></td>
+      <td>106485534247500.jpg</td>
+    </tr>
+    <tr>
+      <td>79.62</td>
+      <td>3.3342</td>
+      <td><img src="BAMRAW/106485534259200.jpg" ></td>
+      <td>106485534259200.jpg</td>
+    </tr>
+    <tr>
+      <td>79.49</td>
+      <td>3.3835</td>
+      <td><img src="BAMRAW/106485534271100.jpg" ></td>
+      <td>106485534271100.jpg</td>
+    </tr>
+    <tr>
+      <td>79.37</td>
+      <td>3.4105</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.25</td>
+      <td>3.4430</td>
+      <td><img src="BAMRAW/106485534294500.jpg" ></td>
+      <td>106485534294500.jpg</td>
+    </tr>
+    <tr>
+      <td>79.12</td>
+      <td>3.4793</td>
+      <td><img src="BAMRAW/106485534306200.jpg" ></td>
+      <td>106485534306200.jpg</td>
+    </tr>
+    <tr>
+      <td>79.00</td>
+      <td>3.5128</td>
+      <td><img src="BAMRAW/106485534317800.jpg" ></td>
+      <td>106485534317800.jpg</td>
+    </tr>
+    <tr>
+      <td>78.87</td>
+      <td>3.5621</td>
+      <td><img src="BAMRAW/106485534329800.jpg" ></td>
+      <td>106485534329800.jpg</td>
+    </tr>
+    <tr>
+      <td>78.75</td>
+      <td>3.6123</td>
+      <td><img src="BAMRAW/106485534341400.jpg" ></td>
+      <td>106485534341400.jpg</td>
+    </tr>
+    <tr>
+      <td>78.63</td>
+      <td>3.6505</td>
+      <td><img src="BAMRAW/106485534353300.jpg" ></td>
+      <td>106485534353300.jpg</td>
+    </tr>
+    <tr>
+      <td>78.50</td>
+      <td>3.6979</td>
+      <td><img src="BAMRAW/106485534365400.jpg" ></td>
+      <td>106485534365400.jpg</td>
+    </tr>
+    <tr>
+      <td>78.38</td>
+      <td>3.7351</td>
+      <td><img src="BAMRAW/106485534377100.jpg" ></td>
+      <td>106485534377100.jpg</td>
+    </tr>
+    <tr>
+      <td>78.25</td>
+      <td>3.7658</td>
+      <td><img src="BAMRAW/106485534388800.jpg" ></td>
+      <td>106485534388800.jpg</td>
+    </tr>
+    <tr>
+      <td>78.13</td>
+      <td>3.7788</td>
+      <td><img src="BAMRAW/106485534400600.jpg" ></td>
+      <td>106485534400600.jpg</td>
+    </tr>
+    <tr>
+      <td>78.01</td>
+      <td>3.8198</td>
+      <td><img src="BAMRAW/106485534412200.jpg" ></td>
+      <td>106485534412200.jpg</td>
+    </tr>
+    <tr>
+      <td>77.88</td>
+      <td>3.8682</td>
+      <td><img src="BAMRAW/106485534424200.jpg" ></td>
+      <td>106485534424200.jpg</td>
+    </tr>
+    <tr>
+      <td>77.76</td>
+      <td>3.8961</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.63</td>
+      <td>3.9389</td>
+      <td><img src="BAMRAW/106485534447800.jpg" ></td>
+      <td>106485534447800.jpg</td>
+    </tr>
+    <tr>
+      <td>77.50</td>
+      <td>3.9854</td>
+      <td><img src="BAMRAW/106485534460400.jpg" ></td>
+      <td>106485534460400.jpg</td>
+    </tr>
+    <tr>
+      <td>77.37</td>
+      <td>4.0300</td>
+      <td><img src="BAMRAW/106485534472600.jpg" ></td>
+      <td>106485534472600.jpg</td>
+    </tr>
+    <tr>
+      <td>77.25</td>
+      <td>4.0710</td>
+      <td><img src="BAMRAW/106485534484500.jpg" ></td>
+      <td>106485534484500.jpg</td>
+    </tr>
+    <tr>
+      <td>77.10</td>
+      <td>4.1035</td>
+      <td><img src="BAMRAW/106485534498100.jpg" ></td>
+      <td>106485534498100.jpg</td>
+    </tr>
+    <tr>
+      <td>76.95</td>
+      <td>4.1565</td>
+      <td><img src="BAMRAW/106485534512600.jpg" ></td>
+      <td>106485534512600.jpg</td>
+    </tr>
+    <tr>
+      <td>76.83</td>
+      <td>4.1938</td>
+      <td><img src="BAMRAW/106485534524200.jpg" ></td>
+      <td>106485534524200.jpg</td>
+    </tr>
+    <tr>
+      <td>76.71</td>
+      <td>4.2356</td>
+      <td><img src="BAMRAW/106485534536000.jpg" ></td>
+      <td>106485534536000.jpg</td>
+    </tr>
+    <tr>
+      <td>76.57</td>
+      <td>4.2924</td>
+      <td><img src="BAMRAW/106485534548500.jpg" ></td>
+      <td>106485534548500.jpg</td>
+    </tr>
+    <tr>
+      <td>76.45</td>
+      <td>4.3491</td>
+      <td><img src="BAMRAW/106485534560300.jpg" ></td>
+      <td>106485534560300.jpg</td>
+    </tr>
+    <tr>
+      <td>76.33</td>
+      <td>4.3938</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.20</td>
+      <td>4.4273</td>
+      <td><img src="BAMRAW/106485534583900.jpg" ></td>
+      <td>106485534583900.jpg</td>
+    </tr>
+    <tr>
+      <td>76.08</td>
+      <td>4.4775</td>
+      <td><img src="BAMRAW/106485534595600.jpg" ></td>
+      <td>106485534595600.jpg</td>
+    </tr>
+    <tr>
+      <td>75.95</td>
+      <td>4.4868</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.82</td>
+      <td>4.5342</td>
+      <td><img src="BAMRAW/106485534619800.jpg" ></td>
+      <td>106485534619800.jpg</td>
+    </tr>
+    <tr>
+      <td>75.69</td>
+      <td>4.5845</td>
+      <td><img src="BAMRAW/106485534631900.jpg" ></td>
+      <td>106485534631900.jpg</td>
+    </tr>
+    <tr>
+      <td>75.57</td>
+      <td>4.6440</td>
+      <td><img src="BAMRAW/106485534643800.jpg" ></td>
+      <td>106485534643800.jpg</td>
+    </tr>
+    <tr>
+      <td>75.44</td>
+      <td>4.6924</td>
+      <td><img src="BAMRAW/106485534656000.jpg" ></td>
+      <td>106485534656000.jpg</td>
+    </tr>
+    <tr>
+      <td>75.32</td>
+      <td>4.7184</td>
+      <td><img src="BAMRAW/106485534667700.jpg" ></td>
+      <td>106485534667700.jpg</td>
+    </tr>
+    <tr>
+      <td>75.19</td>
+      <td>4.7510</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.06</td>
+      <td>4.7817</td>
+      <td><img src="BAMRAW/106485534692100.jpg" ></td>
+      <td>106485534692100.jpg</td>
+    </tr>
+    <tr>
+      <td>74.93</td>
+      <td>4.8226</td>
+      <td><img src="BAMRAW/106485534704600.jpg" ></td>
+      <td>106485534704600.jpg</td>
+    </tr>
+    <tr>
+      <td>74.80</td>
+      <td>4.8524</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.67</td>
+      <td>4.8784</td>
+      <td><img src="BAMRAW/106485534728700.jpg" ></td>
+      <td>106485534728700.jpg</td>
+    </tr>
+    <tr>
+      <td>74.54</td>
+      <td>4.9166</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.42</td>
+      <td>4.9780</td>
+      <td><img src="BAMRAW/106485534753200.jpg" ></td>
+      <td>106485534753200.jpg</td>
+    </tr>
+    <tr>
+      <td>74.29</td>
+      <td>5.0236</td>
+      <td><img src="BAMRAW/106485534765200.jpg" ></td>
+      <td>106485534765200.jpg</td>
+    </tr>
+    <tr>
+      <td>74.17</td>
+      <td>5.0599</td>
+      <td><img src="BAMRAW/106485534777100.jpg" ></td>
+      <td>106485534777100.jpg</td>
+    </tr>
+    <tr>
+      <td>74.03</td>
+      <td>5.1073</td>
+      <td><img src="BAMRAW/106485534789600.jpg" ></td>
+      <td>106485534789600.jpg</td>
+    </tr>
+    <tr>
+      <td>73.91</td>
+      <td>5.1361</td>
+      <td><img src="BAMRAW/106485534801200.jpg" ></td>
+      <td>106485534801200.jpg</td>
+    </tr>
+    <tr>
+      <td>73.79</td>
+      <td>5.1427</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.65</td>
+      <td>5.1706</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.53</td>
+      <td>5.2087</td>
+      <td><img src="BAMRAW/106485534837700.jpg" ></td>
+      <td>106485534837700.jpg</td>
+    </tr>
+    <tr>
+      <td>73.40</td>
+      <td>5.2441</td>
+      <td><img src="BAMRAW/106485534849400.jpg" ></td>
+      <td>106485534849400.jpg</td>
+    </tr>
+    <tr>
+      <td>73.28</td>
+      <td>5.2701</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.15</td>
+      <td>5.3138</td>
+      <td><img src="BAMRAW/106485534873700.jpg" ></td>
+      <td>106485534873700.jpg</td>
+    </tr>
+    <tr>
+      <td>73.03</td>
+      <td>5.3631</td>
+      <td><img src="BAMRAW/106485534885600.jpg" ></td>
+      <td>106485534885600.jpg</td>
+    </tr>
+    <tr>
+      <td>72.90</td>
+      <td>5.4189</td>
+      <td><img src="BAMRAW/106485534897700.jpg" ></td>
+      <td>106485534897700.jpg</td>
+    </tr>
+    <tr>
+      <td>72.76</td>
+      <td>5.4506</td>
+      <td><img src="BAMRAW/106485534910200.jpg" ></td>
+      <td>106485534910200.jpg</td>
+    </tr>
+    <tr>
+      <td>72.64</td>
+      <td>5.4841</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.51</td>
+      <td>5.5194</td>
+      <td><img src="BAMRAW/106485534934300.jpg" ></td>
+      <td>106485534934300.jpg</td>
+    </tr>
+    <tr>
+      <td>72.38</td>
+      <td>5.5548</td>
+      <td><img src="BAMRAW/106485534946700.jpg" ></td>
+      <td>106485534946700.jpg</td>
+    </tr>
+    <tr>
+      <td>72.01</td>
+      <td>5.6478</td>
+      <td><img src="BAMRAW/106485534982300.jpg" ></td>
+      <td>106485534982300.jpg</td>
+    </tr>
+    <tr>
+      <td>71.60</td>
+      <td>5.7455</td>
+      <td><img src="BAMRAW/106485535020800.jpg" ></td>
+      <td>106485535020800.jpg</td>
+    </tr>
+    <tr>
+      <td>71.27</td>
+      <td>5.8432</td>
+      <td><img src="BAMRAW/106485535053400.jpg" ></td>
+      <td>106485535053400.jpg</td>
+    </tr>
+    <tr>
+      <td>71.13</td>
+      <td>5.8906</td>
+      <td><img src="BAMRAW/106485535065900.jpg" ></td>
+      <td>106485535065900.jpg</td>
+    </tr>
+    <tr>
+      <td>71.01</td>
+      <td>5.9297</td>
+      <td><img src="BAMRAW/106485535077500.jpg" ></td>
+      <td>106485535077500.jpg</td>
+    </tr>
+    <tr>
+      <td>70.74</td>
+      <td>5.9920</td>
+      <td><img src="BAMRAW/106485535103200.jpg" ></td>
+      <td>106485535103200.jpg</td>
+    </tr>
+    <tr>
+      <td>70.60</td>
+      <td>6.0488</td>
+      <td><img src="BAMRAW/106485535115500.jpg" ></td>
+      <td>106485535115500.jpg</td>
+    </tr>
+    <tr>
+      <td>70.48</td>
+      <td>6.0748</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.35</td>
+      <td>6.0860</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.22</td>
+      <td>6.1055</td>
+      <td><img src="BAMRAW/106485535151300.jpg" ></td>
+      <td>106485535151300.jpg</td>
+    </tr>
+    <tr>
+      <td>70.10</td>
+      <td>6.1371</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.97</td>
+      <td>6.1678</td>
+      <td><img src="BAMRAW/106485535175100.jpg" ></td>
+      <td>106485535175100.jpg</td>
+    </tr>
+    <tr>
+      <td>69.85</td>
+      <td>6.1902</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.73</td>
+      <td>6.2218</td>
+      <td><img src="BAMRAW/106485535198400.jpg" ></td>
+      <td>106485535198400.jpg</td>
+    </tr>
+    <tr>
+      <td>69.61</td>
+      <td>6.2562</td>
+      <td><img src="BAMRAW/106485535210100.jpg" ></td>
+      <td>106485535210100.jpg</td>
+    </tr>
+    <tr>
+      <td>69.48</td>
+      <td>6.2804</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.36</td>
+      <td>6.3241</td>
+      <td><img src="BAMRAW/106485535233800.jpg" ></td>
+      <td>106485535233800.jpg</td>
+    </tr>
+    <tr>
+      <td>69.23</td>
+      <td>6.3706</td>
+      <td><img src="BAMRAW/106485535245600.jpg" ></td>
+      <td>106485535245600.jpg</td>
+    </tr>
+    <tr>
+      <td>69.11</td>
+      <td>6.3939</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.98</td>
+      <td>6.4199</td>
+      <td><img src="BAMRAW/106485535269200.jpg" ></td>
+      <td>106485535269200.jpg</td>
+    </tr>
+    <tr>
+      <td>68.86</td>
+      <td>6.4358</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.74</td>
+      <td>6.4395</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.61</td>
+      <td>6.4525</td>
+      <td><img src="BAMRAW/106485535304400.jpg" ></td>
+      <td>106485535304400.jpg</td>
+    </tr>
+    <tr>
+      <td>68.49</td>
+      <td>6.4832</td>
+      <td><img src="BAMRAW/106485535316100.jpg" ></td>
+      <td>106485535316100.jpg</td>
+    </tr>
+    <tr>
+      <td>68.37</td>
+      <td>6.5120</td>
+      <td><img src="BAMRAW/106485535327700.jpg" ></td>
+      <td>106485535327700.jpg</td>
+    </tr>
+    <tr>
+      <td>68.24</td>
+      <td>6.5279</td>
+      <td><img src="BAMRAW/106485535339800.jpg" ></td>
+      <td>106485535339800.jpg</td>
+    </tr>
+    <tr>
+      <td>68.12</td>
+      <td>6.5669</td>
+      <td><img src="BAMRAW/106485535351400.jpg" ></td>
+      <td>106485535351400.jpg</td>
+    </tr>
+    <tr>
+      <td>67.99</td>
+      <td>6.5986</td>
+      <td><img src="BAMRAW/106485535363900.jpg" ></td>
+      <td>106485535363900.jpg</td>
+    </tr>
+    <tr>
+      <td>67.87</td>
+      <td>6.6544</td>
+      <td><img src="BAMRAW/106485535375600.jpg" ></td>
+      <td>106485535375600.jpg</td>
+    </tr>
+    <tr>
+      <td>67.74</td>
+      <td>6.6972</td>
+      <td><img src="BAMRAW/106485535387300.jpg" ></td>
+      <td>106485535387300.jpg</td>
+    </tr>
+    <tr>
+      <td>67.61</td>
+      <td>6.7307</td>
+      <td><img src="BAMRAW/106485535399300.jpg" ></td>
+      <td>106485535399300.jpg</td>
+    </tr>
+    <tr>
+      <td>67.48</td>
+      <td>6.7576</td>
+      <td><img src="BAMRAW/106485535411800.jpg" ></td>
+      <td>106485535411800.jpg</td>
+    </tr>
+    <tr>
+      <td>67.35</td>
+      <td>6.7800</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.22</td>
+      <td>6.7902</td>
+      <td><img src="BAMRAW/106485535436400.jpg" ></td>
+      <td>106485535436400.jpg</td>
+    </tr>
+    <tr>
+      <td>67.10</td>
+      <td>6.8460</td>
+      <td><img src="BAMRAW/106485535448400.jpg" ></td>
+      <td>106485535448400.jpg</td>
+    </tr>
+    <tr>
+      <td>66.98</td>
+      <td>6.8758</td>
+      <td><img src="BAMRAW/106485535460000.jpg" ></td>
+      <td>106485535460000.jpg</td>
+    </tr>
+    <tr>
+      <td>66.85</td>
+      <td>6.9186</td>
+      <td><img src="BAMRAW/106485535472200.jpg" ></td>
+      <td>106485535472200.jpg</td>
+    </tr>
+    <tr>
+      <td>66.72</td>
+      <td>6.9307</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.60</td>
+      <td>6.9521</td>
+      <td><img src="BAMRAW/106485535495800.jpg" ></td>
+      <td>106485535495800.jpg</td>
+    </tr>
+    <tr>
+      <td>66.48</td>
+      <td>6.9772</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.35</td>
+      <td>6.9856</td>
+      <td><img src="BAMRAW/106485535519400.jpg" ></td>
+      <td>106485535519400.jpg</td>
+    </tr>
+    <tr>
+      <td>66.22</td>
+      <td>7.0042</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.09</td>
+      <td>7.0423</td>
+      <td><img src="BAMRAW/106485535543800.jpg" ></td>
+      <td>106485535543800.jpg</td>
+    </tr>
+    <tr>
+      <td>65.97</td>
+      <td>7.0684</td>
+      <td><img src="BAMRAW/106485535556100.jpg" ></td>
+      <td>106485535556100.jpg</td>
+    </tr>
+    <tr>
+      <td>65.84</td>
+      <td>7.0963</td>
+      <td><img src="BAMRAW/106485535567700.jpg" ></td>
+      <td>106485535567700.jpg</td>
+    </tr>
+    <tr>
+      <td>65.71</td>
+      <td>7.1353</td>
+      <td><img src="BAMRAW/106485535580500.jpg" ></td>
+      <td>106485535580500.jpg</td>
+    </tr>
+    <tr>
+      <td>65.58</td>
+      <td>7.1651</td>
+      <td><img src="BAMRAW/106485535592400.jpg" ></td>
+      <td>106485535592400.jpg</td>
+    </tr>
+    <tr>
+      <td>65.45</td>
+      <td>7.2060</td>
+      <td><img src="BAMRAW/106485535604500.jpg" ></td>
+      <td>106485535604500.jpg</td>
+    </tr>
+    <tr>
+      <td>65.33</td>
+      <td>7.2358</td>
+      <td><img src="BAMRAW/106485535616300.jpg" ></td>
+      <td>106485535616300.jpg</td>
+    </tr>
+    <tr>
+      <td>65.19</td>
+      <td>7.2786</td>
+      <td><img src="BAMRAW/106485535629200.jpg" ></td>
+      <td>106485535629200.jpg</td>
+    </tr>
+    <tr>
+      <td>65.06</td>
+      <td>7.2972</td>
+      <td><img src="BAMRAW/106485535641700.jpg" ></td>
+      <td>106485535641700.jpg</td>
+    </tr>
+    <tr>
+      <td>64.93</td>
+      <td>7.3577</td>
+      <td><img src="BAMRAW/106485535654100.jpg" ></td>
+      <td>106485535654100.jpg</td>
+    </tr>
+    <tr>
+      <td>64.81</td>
+      <td>7.3893</td>
+      <td><img src="BAMRAW/106485535666000.jpg" ></td>
+      <td>106485535666000.jpg</td>
+    </tr>
+    <tr>
+      <td>64.36</td>
+      <td>7.5251</td>
+      <td><img src="BAMRAW/106485535709000.jpg" ></td>
+      <td>106485535709000.jpg</td>
+    </tr>
+    <tr>
+      <td>64.23</td>
+      <td>7.5716</td>
+      <td><img src="BAMRAW/106485535721200.jpg" ></td>
+      <td>106485535721200.jpg</td>
+    </tr>
+    <tr>
+      <td>64.10</td>
+      <td>7.6172</td>
+      <td><img src="BAMRAW/106485535733200.jpg" ></td>
+      <td>106485535733200.jpg</td>
+    </tr>
+    <tr>
+      <td>63.97</td>
+      <td>7.6563</td>
+      <td><img src="BAMRAW/106485535744900.jpg" ></td>
+      <td>106485535744900.jpg</td>
+    </tr>
+    <tr>
+      <td>63.85</td>
+      <td>7.6749</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.73</td>
+      <td>7.6935</td>
+      <td><img src="BAMRAW/106485535768200.jpg" ></td>
+      <td>106485535768200.jpg</td>
+    </tr>
+    <tr>
+      <td>63.60</td>
+      <td>7.7196</td>
+      <td><img src="BAMRAW/106485535780300.jpg" ></td>
+      <td>106485535780300.jpg</td>
+    </tr>
+    <tr>
+      <td>63.48</td>
+      <td>7.7437</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.36</td>
+      <td>7.7726</td>
+      <td><img src="BAMRAW/106485535803700.jpg" ></td>
+      <td>106485535803700.jpg</td>
+    </tr>
+    <tr>
+      <td>63.23</td>
+      <td>7.8126</td>
+      <td><img src="BAMRAW/106485535815800.jpg" ></td>
+      <td>106485535815800.jpg</td>
+    </tr>
+    <tr>
+      <td>63.10</td>
+      <td>7.8433</td>
+      <td><img src="BAMRAW/106485535828100.jpg" ></td>
+      <td>106485535828100.jpg</td>
+    </tr>
+    <tr>
+      <td>62.97</td>
+      <td>7.8768</td>
+      <td><img src="BAMRAW/106485535840500.jpg" ></td>
+      <td>106485535840500.jpg</td>
+    </tr>
+    <tr>
+      <td>62.85</td>
+      <td>7.9177</td>
+      <td><img src="BAMRAW/106485535852100.jpg" ></td>
+      <td>106485535852100.jpg</td>
+    </tr>
+    <tr>
+      <td>62.67</td>
+      <td>7.9866</td>
+      <td><img src="BAMRAW/106485535869600.jpg" ></td>
+      <td>106485535869600.jpg</td>
+    </tr>
+    <tr>
+      <td>62.54</td>
+      <td>8.0173</td>
+      <td><img src="BAMRAW/106485535881200.jpg" ></td>
+      <td>106485535881200.jpg</td>
+    </tr>
+    <tr>
+      <td>62.41</td>
+      <td>8.0591</td>
+      <td><img src="BAMRAW/106485535893700.jpg" ></td>
+      <td>106485535893700.jpg</td>
+    </tr>
+    <tr>
+      <td>62.28</td>
+      <td>8.1038</td>
+      <td><img src="BAMRAW/106485535906200.jpg" ></td>
+      <td>106485535906200.jpg</td>
+    </tr>
+    <tr>
+      <td>62.15</td>
+      <td>8.1242</td>
+      <td><img src="BAMRAW/106485535918000.jpg" ></td>
+      <td>106485535918000.jpg</td>
+    </tr>
+    <tr>
+      <td>62.03</td>
+      <td>8.1503</td>
+      <td><img src="BAMRAW/106485535929600.jpg" ></td>
+      <td>106485535929600.jpg</td>
+    </tr>
+    <tr>
+      <td>61.91</td>
+      <td>8.1875</td>
+      <td><img src="BAMRAW/106485535941200.jpg" ></td>
+      <td>106485535941200.jpg</td>
+    </tr>
+    <tr>
+      <td>61.78</td>
+      <td>8.1903</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.65</td>
+      <td>8.2145</td>
+      <td><img src="BAMRAW/106485535965600.jpg" ></td>
+      <td>106485535965600.jpg</td>
+    </tr>
+    <tr>
+      <td>61.52</td>
+      <td>8.2442</td>
+      <td><img src="BAMRAW/106485535977900.jpg" ></td>
+      <td>106485535977900.jpg</td>
+    </tr>
+    <tr>
+      <td>61.39</td>
+      <td>8.2591</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.27</td>
+      <td>8.3168</td>
+      <td><img src="BAMRAW/106485536002100.jpg" ></td>
+      <td>106485536002100.jpg</td>
+    </tr>
+    <tr>
+      <td>61.14</td>
+      <td>8.3745</td>
+      <td><img src="BAMRAW/106485536013700.jpg" ></td>
+      <td>106485536013700.jpg</td>
+    </tr>
+    <tr>
+      <td>61.02</td>
+      <td>8.4154</td>
+      <td><img src="BAMRAW/106485536025600.jpg" ></td>
+      <td>106485536025600.jpg</td>
+    </tr>
+    <tr>
+      <td>60.90</td>
+      <td>8.4470</td>
+      <td><img src="BAMRAW/106485536037400.jpg" ></td>
+      <td>106485536037400.jpg</td>
+    </tr>
+    <tr>
+      <td>60.77</td>
+      <td>8.4954</td>
+      <td><img src="BAMRAW/106485536049100.jpg" ></td>
+      <td>106485536049100.jpg</td>
+    </tr>
+    <tr>
+      <td>60.64</td>
+      <td>8.5364</td>
+      <td><img src="BAMRAW/106485536061300.jpg" ></td>
+      <td>106485536061300.jpg</td>
+    </tr>
+    <tr>
+      <td>60.52</td>
+      <td>8.5829</td>
+      <td><img src="BAMRAW/106485536072900.jpg" ></td>
+      <td>106485536072900.jpg</td>
+    </tr>
+    <tr>
+      <td>60.39</td>
+      <td>8.6266</td>
+      <td><img src="BAMRAW/106485536085100.jpg" ></td>
+      <td>106485536085100.jpg</td>
+    </tr>
+    <tr>
+      <td>60.10</td>
+      <td>8.6852</td>
+      <td><img src="BAMRAW/106485536114300.jpg" ></td>
+      <td>106485536114300.jpg</td>
+    </tr>
+    <tr>
+      <td>59.90</td>
+      <td>8.7364</td>
+      <td><img src="BAMRAW/106485536132900.jpg" ></td>
+      <td>106485536132900.jpg</td>
+    </tr>
+    <tr>
+      <td>59.76</td>
+      <td>8.7903</td>
+      <td><img src="BAMRAW/106485536145000.jpg" ></td>
+      <td>106485536145000.jpg</td>
+    </tr>
+    <tr>
+      <td>59.64</td>
+      <td>8.8331</td>
+      <td><img src="BAMRAW/106485536156700.jpg" ></td>
+      <td>106485536156700.jpg</td>
+    </tr>
+    <tr>
+      <td>59.52</td>
+      <td>8.8796</td>
+      <td><img src="BAMRAW/106485536168500.jpg" ></td>
+      <td>106485536168500.jpg</td>
+    </tr>
+    <tr>
+      <td>59.39</td>
+      <td>8.9354</td>
+      <td><img src="BAMRAW/106485536180600.jpg" ></td>
+      <td>106485536180600.jpg</td>
+    </tr>
+    <tr>
+      <td>59.26</td>
+      <td>8.9755</td>
+      <td><img src="BAMRAW/106485536192300.jpg" ></td>
+      <td>106485536192300.jpg</td>
+    </tr>
+    <tr>
+      <td>59.14</td>
+      <td>8.9978</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.02</td>
+      <td>9.0303</td>
+      <td><img src="BAMRAW/106485536215600.jpg" ></td>
+      <td>106485536215600.jpg</td>
+    </tr>
+    <tr>
+      <td>58.89</td>
+      <td>9.0527</td>
+      <td><img src="BAMRAW/106485536227500.jpg" ></td>
+      <td>106485536227500.jpg</td>
+    </tr>
+    <tr>
+      <td>58.77</td>
+      <td>9.0889</td>
+      <td><img src="BAMRAW/106485536239500.jpg" ></td>
+      <td>106485536239500.jpg</td>
+    </tr>
+    <tr>
+      <td>58.64</td>
+      <td>9.1383</td>
+      <td><img src="BAMRAW/106485536251400.jpg" ></td>
+      <td>106485536251400.jpg</td>
+    </tr>
+    <tr>
+      <td>58.52</td>
+      <td>9.1783</td>
+      <td><img src="BAMRAW/106485536263100.jpg" ></td>
+      <td>106485536263100.jpg</td>
+    </tr>
+    <tr>
+      <td>58.40</td>
+      <td>9.2117</td>
+      <td><img src="BAMRAW/106485536274700.jpg" ></td>
+      <td>106485536274700.jpg</td>
+    </tr>
+    <tr>
+      <td>58.27</td>
+      <td>9.2759</td>
+      <td><img src="BAMRAW/106485536286500.jpg" ></td>
+      <td>106485536286500.jpg</td>
+    </tr>
+    <tr>
+      <td>58.15</td>
+      <td>9.3197</td>
+      <td><img src="BAMRAW/106485536298100.jpg" ></td>
+      <td>106485536298100.jpg</td>
+    </tr>
+    <tr>
+      <td>58.02</td>
+      <td>9.3783</td>
+      <td><img src="BAMRAW/106485536310200.jpg" ></td>
+      <td>106485536310200.jpg</td>
+    </tr>
+    <tr>
+      <td>57.90</td>
+      <td>9.4294</td>
+      <td><img src="BAMRAW/106485536321900.jpg" ></td>
+      <td>106485536321900.jpg</td>
+    </tr>
+    <tr>
+      <td>57.78</td>
+      <td>9.4536</td>
+      <td><img src="BAMRAW/106485536333500.jpg" ></td>
+      <td>106485536333500.jpg</td>
+    </tr>
+    <tr>
+      <td>57.65</td>
+      <td>9.5001</td>
+      <td><img src="BAMRAW/106485536345700.jpg" ></td>
+      <td>106485536345700.jpg</td>
+    </tr>
+    <tr>
+      <td>57.53</td>
+      <td>9.5392</td>
+      <td><img src="BAMRAW/106485536357300.jpg" ></td>
+      <td>106485536357300.jpg</td>
+    </tr>
+    <tr>
+      <td>57.40</td>
+      <td>9.5829</td>
+      <td><img src="BAMRAW/106485536369000.jpg" ></td>
+      <td>106485536369000.jpg</td>
+    </tr>
+    <tr>
+      <td>57.28</td>
+      <td>9.6304</td>
+      <td><img src="BAMRAW/106485536380700.jpg" ></td>
+      <td>106485536380700.jpg</td>
+    </tr>
+    <tr>
+      <td>57.16</td>
+      <td>9.6788</td>
+      <td><img src="BAMRAW/106485536392500.jpg" ></td>
+      <td>106485536392500.jpg</td>
+    </tr>
+    <tr>
+      <td>57.03</td>
+      <td>9.7253</td>
+      <td><img src="BAMRAW/106485536404200.jpg" ></td>
+      <td>106485536404200.jpg</td>
+    </tr>
+    <tr>
+      <td>56.91</td>
+      <td>9.7802</td>
+      <td><img src="BAMRAW/106485536416100.jpg" ></td>
+      <td>106485536416100.jpg</td>
+    </tr>
+    <tr>
+      <td>56.78</td>
+      <td>9.8388</td>
+      <td><img src="BAMRAW/106485536428100.jpg" ></td>
+      <td>106485536428100.jpg</td>
+    </tr>
+    <tr>
+      <td>56.66</td>
+      <td>9.9011</td>
+      <td><img src="BAMRAW/106485536439700.jpg" ></td>
+      <td>106485536439700.jpg</td>
+    </tr>
+    <tr>
+      <td>56.54</td>
+      <td>9.9820</td>
+      <td><img src="BAMRAW/106485536451500.jpg" ></td>
+      <td>106485536451500.jpg</td>
+    </tr>
+    <tr>
+      <td>56.40</td>
+      <td>10.0499</td>
+      <td><img src="BAMRAW/106485536464600.jpg" ></td>
+      <td>106485536464600.jpg</td>
+    </tr>
+    <tr>
+      <td>56.28</td>
+      <td>10.1020</td>
+      <td><img src="BAMRAW/106485536476800.jpg" ></td>
+      <td>106485536476800.jpg</td>
+    </tr>
+    <tr>
+      <td>56.15</td>
+      <td>10.1690</td>
+      <td><img src="BAMRAW/106485536488600.jpg" ></td>
+      <td>106485536488600.jpg</td>
+    </tr>
+    <tr>
+      <td>56.03</td>
+      <td>10.2239</td>
+      <td><img src="BAMRAW/106485536500200.jpg" ></td>
+      <td>106485536500200.jpg</td>
+    </tr>
+    <tr>
+      <td>55.90</td>
+      <td>10.2648</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.77</td>
+      <td>10.3560</td>
+      <td><img src="BAMRAW/106485536524400.jpg" ></td>
+      <td>106485536524400.jpg</td>
+    </tr>
+    <tr>
+      <td>55.64</td>
+      <td>10.4221</td>
+      <td><img src="BAMRAW/106485536536600.jpg" ></td>
+      <td>106485536536600.jpg</td>
+    </tr>
+    <tr>
+      <td>55.51</td>
+      <td>10.4760</td>
+      <td><img src="BAMRAW/106485536548900.jpg" ></td>
+      <td>106485536548900.jpg</td>
+    </tr>
+    <tr>
+      <td>55.39</td>
+      <td>10.5337</td>
+      <td><img src="BAMRAW/106485536560600.jpg" ></td>
+      <td>106485536560600.jpg</td>
+    </tr>
+    <tr>
+      <td>55.26</td>
+      <td>10.5904</td>
+      <td><img src="BAMRAW/106485536573300.jpg" ></td>
+      <td>106485536573300.jpg</td>
+    </tr>
+    <tr>
+      <td>55.13</td>
+      <td>10.6556</td>
+      <td><img src="BAMRAW/106485536585600.jpg" ></td>
+      <td>106485536585600.jpg</td>
+    </tr>
+    <tr>
+      <td>55.00</td>
+      <td>10.7253</td>
+      <td><img src="BAMRAW/106485536597200.jpg" ></td>
+      <td>106485536597200.jpg</td>
+    </tr>
+    <tr>
+      <td>54.88</td>
+      <td>10.7802</td>
+      <td><img src="BAMRAW/106485536609000.jpg" ></td>
+      <td>106485536609000.jpg</td>
+    </tr>
+    <tr>
+      <td>54.75</td>
+      <td>10.8518</td>
+      <td><img src="BAMRAW/106485536621000.jpg" ></td>
+      <td>106485536621000.jpg</td>
+    </tr>
+    <tr>
+      <td>54.63</td>
+      <td>10.9523</td>
+      <td><img src="BAMRAW/106485536632900.jpg" ></td>
+      <td>106485536632900.jpg</td>
+    </tr>
+    <tr>
+      <td>54.51</td>
+      <td>11.0267</td>
+      <td><img src="BAMRAW/106485536644500.jpg" ></td>
+      <td>106485536644500.jpg</td>
+    </tr>
+    <tr>
+      <td>54.38</td>
+      <td>11.0984</td>
+      <td><img src="BAMRAW/106485536656800.jpg" ></td>
+      <td>106485536656800.jpg</td>
+    </tr>
+    <tr>
+      <td>54.25</td>
+      <td>11.1747</td>
+      <td><img src="BAMRAW/106485536668700.jpg" ></td>
+      <td>106485536668700.jpg</td>
+    </tr>
+    <tr>
+      <td>54.12</td>
+      <td>11.2547</td>
+      <td><img src="BAMRAW/106485536681000.jpg" ></td>
+      <td>106485536681000.jpg</td>
+    </tr>
+    <tr>
+      <td>53.98</td>
+      <td>11.3654</td>
+      <td><img src="BAMRAW/106485536693800.jpg" ></td>
+      <td>106485536693800.jpg</td>
+    </tr>
+    <tr>
+      <td>53.86</td>
+      <td>11.4249</td>
+      <td><img src="BAMRAW/106485536706100.jpg" ></td>
+      <td>106485536706100.jpg</td>
+    </tr>
+    <tr>
+      <td>53.73</td>
+      <td>11.4891</td>
+      <td><img src="BAMRAW/106485536718300.jpg" ></td>
+      <td>106485536718300.jpg</td>
+    </tr>
+    <tr>
+      <td>53.61</td>
+      <td>11.5561</td>
+      <td><img src="BAMRAW/106485536730100.jpg" ></td>
+      <td>106485536730100.jpg</td>
+    </tr>
+    <tr>
+      <td>53.48</td>
+      <td>11.6435</td>
+      <td><img src="BAMRAW/106485536742000.jpg" ></td>
+      <td>106485536742000.jpg</td>
+    </tr>
+    <tr>
+      <td>53.35</td>
+      <td>11.7310</td>
+      <td><img src="BAMRAW/106485536754100.jpg" ></td>
+      <td>106485536754100.jpg</td>
+    </tr>
+    <tr>
+      <td>53.22</td>
+      <td>11.8240</td>
+      <td><img src="BAMRAW/106485536766100.jpg" ></td>
+      <td>106485536766100.jpg</td>
+    </tr>
+    <tr>
+      <td>53.10</td>
+      <td>11.9152</td>
+      <td><img src="BAMRAW/106485536778000.jpg" ></td>
+      <td>106485536778000.jpg</td>
+    </tr>
+    <tr>
+      <td>52.97</td>
+      <td>12.0315</td>
+      <td><img src="BAMRAW/106485536790500.jpg" ></td>
+      <td>106485536790500.jpg</td>
+    </tr>
+    <tr>
+      <td>52.84</td>
+      <td>12.1031</td>
+      <td><img src="BAMRAW/106485536802600.jpg" ></td>
+      <td>106485536802600.jpg</td>
+    </tr>
+    <tr>
+      <td>52.72</td>
+      <td>12.2026</td>
+      <td><img src="BAMRAW/106485536814300.jpg" ></td>
+      <td>106485536814300.jpg</td>
+    </tr>
+    <tr>
+      <td>52.59</td>
+      <td>12.2826</td>
+      <td><img src="BAMRAW/106485536826100.jpg" ></td>
+      <td>106485536826100.jpg</td>
+    </tr>
+    <tr>
+      <td>52.47</td>
+      <td>12.3906</td>
+      <td><img src="BAMRAW/106485536837700.jpg" ></td>
+      <td>106485536837700.jpg</td>
+    </tr>
+    <tr>
+      <td>52.35</td>
+      <td>12.4799</td>
+      <td><img src="BAMRAW/106485536849400.jpg" ></td>
+      <td>106485536849400.jpg</td>
+    </tr>
+    <tr>
+      <td>52.22</td>
+      <td>12.5701</td>
+      <td><img src="BAMRAW/106485536861000.jpg" ></td>
+      <td>106485536861000.jpg</td>
+    </tr>
+    <tr>
+      <td>52.10</td>
+      <td>12.6613</td>
+      <td><img src="BAMRAW/106485536872600.jpg" ></td>
+      <td>106485536872600.jpg</td>
+    </tr>
+    <tr>
+      <td>51.98</td>
+      <td>12.7571</td>
+      <td><img src="BAMRAW/106485536884300.jpg" ></td>
+      <td>106485536884300.jpg</td>
+    </tr>
+    <tr>
+      <td>51.85</td>
+      <td>12.8529</td>
+      <td><img src="BAMRAW/106485536896200.jpg" ></td>
+      <td>106485536896200.jpg</td>
+    </tr>
+    <tr>
+      <td>51.73</td>
+      <td>12.9701</td>
+      <td><img src="BAMRAW/106485536908200.jpg" ></td>
+      <td>106485536908200.jpg</td>
+    </tr>
+    <tr>
+      <td>51.60</td>
+      <td>13.0957</td>
+      <td><img src="BAMRAW/106485536920100.jpg" ></td>
+      <td>106485536920100.jpg</td>
+    </tr>
+    <tr>
+      <td>51.47</td>
+      <td>13.2418</td>
+      <td><img src="BAMRAW/106485536932800.jpg" ></td>
+      <td>106485536932800.jpg</td>
+    </tr>
+    <tr>
+      <td>51.34</td>
+      <td>13.3822</td>
+      <td><img src="BAMRAW/106485536944800.jpg" ></td>
+      <td>106485536944800.jpg</td>
+    </tr>
+    <tr>
+      <td>51.21</td>
+      <td>13.5060</td>
+      <td><img src="BAMRAW/106485536957300.jpg" ></td>
+      <td>106485536957300.jpg</td>
+    </tr>
+    <tr>
+      <td>51.09</td>
+      <td>13.6502</td>
+      <td><img src="BAMRAW/106485536969100.jpg" ></td>
+      <td>106485536969100.jpg</td>
+    </tr>
+    <tr>
+      <td>50.95</td>
+      <td>13.7888</td>
+      <td><img src="BAMRAW/106485536981800.jpg" ></td>
+      <td>106485536981800.jpg</td>
+    </tr>
+    <tr>
+      <td>50.83</td>
+      <td>13.8809</td>
+      <td><img src="BAMRAW/106485536993400.jpg" ></td>
+      <td>106485536993400.jpg</td>
+    </tr>
+    <tr>
+      <td>50.70</td>
+      <td>14.0130</td>
+      <td><img src="BAMRAW/106485537005300.jpg" ></td>
+      <td>106485537005300.jpg</td>
+    </tr>
+    <tr>
+      <td>50.58</td>
+      <td>14.1265</td>
+      <td><img src="BAMRAW/106485537017500.jpg" ></td>
+      <td>106485537017500.jpg</td>
+    </tr>
+    <tr>
+      <td>50.45</td>
+      <td>14.2549</td>
+      <td><img src="BAMRAW/106485537029500.jpg" ></td>
+      <td>106485537029500.jpg</td>
+    </tr>
+    <tr>
+      <td>50.32</td>
+      <td>14.4009</td>
+      <td><img src="BAMRAW/106485537042100.jpg" ></td>
+      <td>106485537042100.jpg</td>
+    </tr>
+    <tr>
+      <td>50.19</td>
+      <td>14.5423</td>
+      <td><img src="BAMRAW/106485537054100.jpg" ></td>
+      <td>106485537054100.jpg</td>
+    </tr>
+    <tr>
+      <td>50.07</td>
+      <td>14.6902</td>
+      <td><img src="BAMRAW/106485537065700.jpg" ></td>
+      <td>106485537065700.jpg</td>
+    </tr>
+    <tr>
+      <td>49.94</td>
+      <td>14.8335</td>
+      <td><img src="BAMRAW/106485537078200.jpg" ></td>
+      <td>106485537078200.jpg</td>
+    </tr>
+    <tr>
+      <td>49.81</td>
+      <td>15.0121</td>
+      <td><img src="BAMRAW/106485537090700.jpg" ></td>
+      <td>106485537090700.jpg</td>
+    </tr>
+    <tr>
+      <td>49.69</td>
+      <td>15.2084</td>
+      <td><img src="BAMRAW/106485537102400.jpg" ></td>
+      <td>106485537102400.jpg</td>
+    </tr>
+    <tr>
+      <td>49.56</td>
+      <td>15.3907</td>
+      <td><img src="BAMRAW/106485537114100.jpg" ></td>
+      <td>106485537114100.jpg</td>
+    </tr>
+    <tr>
+      <td>49.42</td>
+      <td>15.5787</td>
+      <td><img src="BAMRAW/106485537127100.jpg" ></td>
+      <td>106485537127100.jpg</td>
+    </tr>
+    <tr>
+      <td>49.30</td>
+      <td>15.7517</td>
+      <td><img src="BAMRAW/106485537139000.jpg" ></td>
+      <td>106485537139000.jpg</td>
+    </tr>
+    <tr>
+      <td>49.17</td>
+      <td>15.8903</td>
+      <td><img src="BAMRAW/106485537151400.jpg" ></td>
+      <td>106485537151400.jpg</td>
+    </tr>
+    <tr>
+      <td>49.04</td>
+      <td>16.0261</td>
+      <td><img src="BAMRAW/106485537163300.jpg" ></td>
+      <td>106485537163300.jpg</td>
+    </tr>
+    <tr>
+      <td>48.91</td>
+      <td>16.1471</td>
+      <td><img src="BAMRAW/106485537176100.jpg" ></td>
+      <td>106485537176100.jpg</td>
+    </tr>
+    <tr>
+      <td>48.78</td>
+      <td>16.3108</td>
+      <td><img src="BAMRAW/106485537187800.jpg" ></td>
+      <td>106485537187800.jpg</td>
+    </tr>
+    <tr>
+      <td>48.65</td>
+      <td>16.4810</td>
+      <td><img src="BAMRAW/106485537200400.jpg" ></td>
+      <td>106485537200400.jpg</td>
+    </tr>
+    <tr>
+      <td>48.52</td>
+      <td>16.6429</td>
+      <td><img src="BAMRAW/106485537212700.jpg" ></td>
+      <td>106485537212700.jpg</td>
+    </tr>
+    <tr>
+      <td>48.39</td>
+      <td>16.8476</td>
+      <td><img src="BAMRAW/106485537225200.jpg" ></td>
+      <td>106485537225200.jpg</td>
+    </tr>
+    <tr>
+      <td>48.26</td>
+      <td>17.0346</td>
+      <td><img src="BAMRAW/106485537237300.jpg" ></td>
+      <td>106485537237300.jpg</td>
+    </tr>
+    <tr>
+      <td>48.14</td>
+      <td>17.2271</td>
+      <td><img src="BAMRAW/106485537249200.jpg" ></td>
+      <td>106485537249200.jpg</td>
+    </tr>
+    <tr>
+      <td>48.01</td>
+      <td>17.4867</td>
+      <td><img src="BAMRAW/106485537261900.jpg" ></td>
+      <td>106485537261900.jpg</td>
+    </tr>
+    <tr>
+      <td>47.87</td>
+      <td>17.6765</td>
+      <td><img src="BAMRAW/106485537274400.jpg" ></td>
+      <td>106485537274400.jpg</td>
+    </tr>
+    <tr>
+      <td>47.75</td>
+      <td>17.8867</td>
+      <td><img src="BAMRAW/106485537286100.jpg" ></td>
+      <td>106485537286100.jpg</td>
+    </tr>
+    <tr>
+      <td>47.62</td>
+      <td>18.0718</td>
+      <td><img src="BAMRAW/106485537298100.jpg" ></td>
+      <td>106485537298100.jpg</td>
+    </tr>
+    <tr>
+      <td>47.49</td>
+      <td>18.2207</td>
+      <td><img src="BAMRAW/106485537310700.jpg" ></td>
+      <td>106485537310700.jpg</td>
+    </tr>
+    <tr>
+      <td>47.36</td>
+      <td>18.3863</td>
+      <td><img src="BAMRAW/106485537323100.jpg" ></td>
+      <td>106485537323100.jpg</td>
+    </tr>
+    <tr>
+      <td>47.23</td>
+      <td>18.5547</td>
+      <td><img src="BAMRAW/106485537335400.jpg" ></td>
+      <td>106485537335400.jpg</td>
+    </tr>
+    <tr>
+      <td>47.11</td>
+      <td>18.7333</td>
+      <td><img src="BAMRAW/106485537347400.jpg" ></td>
+      <td>106485537347400.jpg</td>
+    </tr>
+    <tr>
+      <td>46.97</td>
+      <td>18.9472</td>
+      <td><img src="BAMRAW/106485537359900.jpg" ></td>
+      <td>106485537359900.jpg</td>
+    </tr>
+    <tr>
+      <td>46.84</td>
+      <td>19.1249</td>
+      <td><img src="BAMRAW/106485537372500.jpg" ></td>
+      <td>106485537372500.jpg</td>
+    </tr>
+    <tr>
+      <td>46.71</td>
+      <td>19.3742</td>
+      <td><img src="BAMRAW/106485537384600.jpg" ></td>
+      <td>106485537384600.jpg</td>
+    </tr>
+    <tr>
+      <td>46.59</td>
+      <td>19.6161</td>
+      <td><img src="BAMRAW/106485537396700.jpg" ></td>
+      <td>106485537396700.jpg</td>
+    </tr>
+    <tr>
+      <td>46.46</td>
+      <td>19.8580</td>
+      <td><img src="BAMRAW/106485537408500.jpg" ></td>
+      <td>106485537408500.jpg</td>
+    </tr>
+    <tr>
+      <td>46.33</td>
+      <td>20.1017</td>
+      <td><img src="BAMRAW/106485537420900.jpg" ></td>
+      <td>106485537420900.jpg</td>
+    </tr>
+    <tr>
+      <td>46.21</td>
+      <td>20.3259</td>
+      <td><img src="BAMRAW/106485537432600.jpg" ></td>
+      <td>106485537432600.jpg</td>
+    </tr>
+    <tr>
+      <td>46.07</td>
+      <td>20.5501</td>
+      <td><img src="BAMRAW/106485537445100.jpg" ></td>
+      <td>106485537445100.jpg</td>
+    </tr>
+    <tr>
+      <td>45.95</td>
+      <td>20.6999</td>
+      <td><img src="BAMRAW/106485537456800.jpg" ></td>
+      <td>106485537456800.jpg</td>
+    </tr>
+    <tr>
+      <td>45.82</td>
+      <td>20.9232</td>
+      <td><img src="BAMRAW/106485537469200.jpg" ></td>
+      <td>106485537469200.jpg</td>
+    </tr>
+    <tr>
+      <td>45.69</td>
+      <td>21.1278</td>
+      <td><img src="BAMRAW/106485537481400.jpg" ></td>
+      <td>106485537481400.jpg</td>
+    </tr>
+    <tr>
+      <td>45.56</td>
+      <td>21.3455</td>
+      <td><img src="BAMRAW/106485537494000.jpg" ></td>
+      <td>106485537494000.jpg</td>
+    </tr>
+    <tr>
+      <td>45.44</td>
+      <td>21.5772</td>
+      <td><img src="BAMRAW/106485537505700.jpg" ></td>
+      <td>106485537505700.jpg</td>
+    </tr>
+    <tr>
+      <td>45.31</td>
+      <td>21.7986</td>
+      <td><img src="BAMRAW/106485537517500.jpg" ></td>
+      <td>106485537517500.jpg</td>
+    </tr>
+    <tr>
+      <td>45.19</td>
+      <td>22.0600</td>
+      <td><img src="BAMRAW/106485537529500.jpg" ></td>
+      <td>106485537529500.jpg</td>
+    </tr>
+    <tr>
+      <td>45.05</td>
+      <td>22.3409</td>
+      <td><img src="BAMRAW/106485537542000.jpg" ></td>
+      <td>106485537542000.jpg</td>
+    </tr>
+    <tr>
+      <td>44.93</td>
+      <td>22.5549</td>
+      <td><img src="BAMRAW/106485537553500.jpg" ></td>
+      <td>106485537553500.jpg</td>
+    </tr>
+    <tr>
+      <td>44.80</td>
+      <td>22.8387</td>
+      <td><img src="BAMRAW/106485537565800.jpg" ></td>
+      <td>106485537565800.jpg</td>
+    </tr>
+    <tr>
+      <td>44.67</td>
+      <td>23.1345</td>
+      <td><img src="BAMRAW/106485537578400.jpg" ></td>
+      <td>106485537578400.jpg</td>
+    </tr>
+    <tr>
+      <td>44.41</td>
+      <td>23.6145</td>
+      <td><img src="BAMRAW/106485537604100.jpg" ></td>
+      <td>106485537604100.jpg</td>
+    </tr>
+    <tr>
+      <td>44.27</td>
+      <td>23.8489</td>
+      <td><img src="BAMRAW/106485537616400.jpg" ></td>
+      <td>106485537616400.jpg</td>
+    </tr>
+    <tr>
+      <td>44.14</td>
+      <td>24.0629</td>
+      <td><img src="BAMRAW/106485537628700.jpg" ></td>
+      <td>106485537628700.jpg</td>
+    </tr>
+    <tr>
+      <td>44.01</td>
+      <td>24.2704</td>
+      <td><img src="BAMRAW/106485537640900.jpg" ></td>
+      <td>106485537640900.jpg</td>
+    </tr>
+    <tr>
+      <td>43.89</td>
+      <td>24.4471</td>
+      <td><img src="BAMRAW/106485537652800.jpg" ></td>
+      <td>106485537652800.jpg</td>
+    </tr>
+    <tr>
+      <td>43.76</td>
+      <td>24.7030</td>
+      <td><img src="BAMRAW/106485537664500.jpg" ></td>
+      <td>106485537664500.jpg</td>
+    </tr>
+    <tr>
+      <td>43.63</td>
+      <td>24.9830</td>
+      <td><img src="BAMRAW/106485537677600.jpg" ></td>
+      <td>106485537677600.jpg</td>
+    </tr>
+    <tr>
+      <td>43.50</td>
+      <td>25.2621</td>
+      <td><img src="BAMRAW/106485537690300.jpg" ></td>
+      <td>106485537690300.jpg</td>
+    </tr>
+    <tr>
+      <td>43.36</td>
+      <td>25.5914</td>
+      <td><img src="BAMRAW/106485537702900.jpg" ></td>
+      <td>106485537702900.jpg</td>
+    </tr>
+    <tr>
+      <td>43.24</td>
+      <td>25.8937</td>
+      <td><img src="BAMRAW/106485537714700.jpg" ></td>
+      <td>106485537714700.jpg</td>
+    </tr>
+    <tr>
+      <td>43.11</td>
+      <td>26.1942</td>
+      <td><img src="BAMRAW/106485537726600.jpg" ></td>
+      <td>106485537726600.jpg</td>
+    </tr>
+    <tr>
+      <td>42.98</td>
+      <td>26.5040</td>
+      <td><img src="BAMRAW/106485537738900.jpg" ></td>
+      <td>106485537738900.jpg</td>
+    </tr>
+    <tr>
+      <td>42.86</td>
+      <td>26.7589</td>
+      <td><img src="BAMRAW/106485537750600.jpg" ></td>
+      <td>106485537750600.jpg</td>
+    </tr>
+    <tr>
+      <td>42.73</td>
+      <td>27.0938</td>
+      <td><img src="BAMRAW/106485537763900.jpg" ></td>
+      <td>106485537763900.jpg</td>
+    </tr>
+    <tr>
+      <td>42.59</td>
+      <td>27.3961</td>
+      <td><img src="BAMRAW/106485537776200.jpg" ></td>
+      <td>106485537776200.jpg</td>
+    </tr>
+    <tr>
+      <td>42.47</td>
+      <td>27.6641</td>
+      <td><img src="BAMRAW/106485537787800.jpg" ></td>
+      <td>106485537787800.jpg</td>
+    </tr>
+    <tr>
+      <td>42.34</td>
+      <td>27.9683</td>
+      <td><img src="BAMRAW/106485537800700.jpg" ></td>
+      <td>106485537800700.jpg</td>
+    </tr>
+    <tr>
+      <td>42.21</td>
+      <td>28.2725</td>
+      <td><img src="BAMRAW/106485537812500.jpg" ></td>
+      <td>106485537812500.jpg</td>
+    </tr>
+    <tr>
+      <td>42.08</td>
+      <td>28.5674</td>
+      <td><img src="BAMRAW/106485537824400.jpg" ></td>
+      <td>106485537824400.jpg</td>
+    </tr>
+    <tr>
+      <td>41.95</td>
+      <td>28.8567</td>
+      <td><img src="BAMRAW/106485537836500.jpg" ></td>
+      <td>106485537836500.jpg</td>
+    </tr>
+    <tr>
+      <td>41.83</td>
+      <td>29.2977</td>
+      <td><img src="BAMRAW/106485537848500.jpg" ></td>
+      <td>106485537848500.jpg</td>
+    </tr>
+    <tr>
+      <td>41.71</td>
+      <td>29.6875</td>
+      <td><img src="BAMRAW/106485537860100.jpg" ></td>
+      <td>106485537860100.jpg</td>
+    </tr>
+    <tr>
+      <td>41.58</td>
+      <td>30.1089</td>
+      <td><img src="BAMRAW/106485537872300.jpg" ></td>
+      <td>106485537872300.jpg</td>
+    </tr>
+    <tr>
+      <td>41.45</td>
+      <td>30.5526</td>
+      <td><img src="BAMRAW/106485537884600.jpg" ></td>
+      <td>106485537884600.jpg</td>
+    </tr>
+    <tr>
+      <td>41.32</td>
+      <td>30.9554</td>
+      <td><img src="BAMRAW/106485537896400.jpg" ></td>
+      <td>106485537896400.jpg</td>
+    </tr>
+    <tr>
+      <td>41.20</td>
+      <td>31.3676</td>
+      <td><img src="BAMRAW/106485537908700.jpg" ></td>
+      <td>106485537908700.jpg</td>
+    </tr>
+    <tr>
+      <td>41.06</td>
+      <td>31.7936</td>
+      <td><img src="BAMRAW/106485537921200.jpg" ></td>
+      <td>106485537921200.jpg</td>
+    </tr>
+    <tr>
+      <td>40.94</td>
+      <td>32.0764</td>
+      <td><img src="BAMRAW/106485537933000.jpg" ></td>
+      <td>106485537933000.jpg</td>
+    </tr>
+    <tr>
+      <td>40.77</td>
+      <td>32.5835</td>
+      <td><img src="BAMRAW/106485537949300.jpg" ></td>
+      <td>106485537949300.jpg</td>
+    </tr>
+    <tr>
+      <td>40.63</td>
+      <td>32.9844</td>
+      <td><img src="BAMRAW/106485537961800.jpg" ></td>
+      <td>106485537961800.jpg</td>
+    </tr>
+    <tr>
+      <td>40.51</td>
+      <td>33.3612</td>
+      <td><img src="BAMRAW/106485537973800.jpg" ></td>
+      <td>106485537973800.jpg</td>
+    </tr>
+    <tr>
+      <td>40.38</td>
+      <td>33.8012</td>
+      <td><img src="BAMRAW/106485537986200.jpg" ></td>
+      <td>106485537986200.jpg</td>
+    </tr>
+    <tr>
+      <td>40.25</td>
+      <td>34.2719</td>
+      <td><img src="BAMRAW/106485537998400.jpg" ></td>
+      <td>106485537998400.jpg</td>
+    </tr>
+    <tr>
+      <td>40.12</td>
+      <td>34.7752</td>
+      <td><img src="BAMRAW/106485538010500.jpg" ></td>
+      <td>106485538010500.jpg</td>
+    </tr>
+    <tr>
+      <td>40.00</td>
+      <td>35.2339</td>
+      <td><img src="BAMRAW/106485538022200.jpg" ></td>
+      <td>106485538022200.jpg</td>
+    </tr>
+    <tr>
+      <td>39.87</td>
+      <td>35.7753</td>
+      <td><img src="BAMRAW/106485538033900.jpg" ></td>
+      <td>106485538033900.jpg</td>
+    </tr>
+    <tr>
+      <td>39.75</td>
+      <td>36.3158</td>
+      <td><img src="BAMRAW/106485538045900.jpg" ></td>
+      <td>106485538045900.jpg</td>
+    </tr>
+    <tr>
+      <td>39.63</td>
+      <td>36.8088</td>
+      <td><img src="BAMRAW/106485538057500.jpg" ></td>
+      <td>106485538057500.jpg</td>
+    </tr>
+    <tr>
+      <td>39.50</td>
+      <td>37.2777</td>
+      <td><img src="BAMRAW/106485538069200.jpg" ></td>
+      <td>106485538069200.jpg</td>
+    </tr>
+    <tr>
+      <td>39.38</td>
+      <td>37.7466</td>
+      <td><img src="BAMRAW/106485538080900.jpg" ></td>
+      <td>106485538080900.jpg</td>
+    </tr>
+    <tr>
+      <td>39.25</td>
+      <td>38.1726</td>
+      <td><img src="BAMRAW/106485538092800.jpg" ></td>
+      <td>106485538092800.jpg</td>
+    </tr>
+    <tr>
+      <td>39.13</td>
+      <td>38.6062</td>
+      <td><img src="BAMRAW/106485538104900.jpg" ></td>
+      <td>106485538104900.jpg</td>
+    </tr>
+    <tr>
+      <td>39.00</td>
+      <td>38.9643</td>
+      <td><img src="BAMRAW/106485538117100.jpg" ></td>
+      <td>106485538117100.jpg</td>
+    </tr>
+    <tr>
+      <td>38.87</td>
+      <td>39.4239</td>
+      <td><img src="BAMRAW/106485538129300.jpg" ></td>
+      <td>106485538129300.jpg</td>
+    </tr>
+    <tr>
+      <td>38.74</td>
+      <td>39.9309</td>
+      <td><img src="BAMRAW/106485538141700.jpg" ></td>
+      <td>106485538141700.jpg</td>
+    </tr>
+    <tr>
+      <td>38.62</td>
+      <td>40.4481</td>
+      <td><img src="BAMRAW/106485538153300.jpg" ></td>
+      <td>106485538153300.jpg</td>
+    </tr>
+    <tr>
+      <td>38.48</td>
+      <td>41.0826</td>
+      <td><img src="BAMRAW/106485538167000.jpg" ></td>
+      <td>106485538167000.jpg</td>
+    </tr>
+    <tr>
+      <td>38.33</td>
+      <td>41.8138</td>
+      <td><img src="BAMRAW/106485538180900.jpg" ></td>
+      <td>106485538180900.jpg</td>
+    </tr>
+    <tr>
+      <td>38.19</td>
+      <td>42.4604</td>
+      <td><img src="BAMRAW/106485538193800.jpg" ></td>
+      <td>106485538193800.jpg</td>
+    </tr>
+    <tr>
+      <td>38.07</td>
+      <td>43.0129</td>
+      <td><img src="BAMRAW/106485538205600.jpg" ></td>
+      <td>106485538205600.jpg</td>
+    </tr>
+    <tr>
+      <td>37.95</td>
+      <td>43.4446</td>
+      <td><img src="BAMRAW/106485538217400.jpg" ></td>
+      <td>106485538217400.jpg</td>
+    </tr>
+    <tr>
+      <td>37.81</td>
+      <td>44.0912</td>
+      <td><img src="BAMRAW/106485538230300.jpg" ></td>
+      <td>106485538230300.jpg</td>
+    </tr>
+    <tr>
+      <td>37.68</td>
+      <td>44.5898</td>
+      <td><img src="BAMRAW/106485538242600.jpg" ></td>
+      <td>106485538242600.jpg</td>
+    </tr>
+    <tr>
+      <td>37.55</td>
+      <td>45.0828</td>
+      <td><img src="BAMRAW/106485538254500.jpg" ></td>
+      <td>106485538254500.jpg</td>
+    </tr>
+    <tr>
+      <td>37.43</td>
+      <td>45.5480</td>
+      <td><img src="BAMRAW/106485538266700.jpg" ></td>
+      <td>106485538266700.jpg</td>
+    </tr>
+    <tr>
+      <td>37.29</td>
+      <td>46.0662</td>
+      <td><img src="BAMRAW/106485538279200.jpg" ></td>
+      <td>106485538279200.jpg</td>
+    </tr>
+    <tr>
+      <td>37.16</td>
+      <td>46.5750</td>
+      <td><img src="BAMRAW/106485538291500.jpg" ></td>
+      <td>106485538291500.jpg</td>
+    </tr>
+    <tr>
+      <td>37.04</td>
+      <td>47.0960</td>
+      <td><img src="BAMRAW/106485538303400.jpg" ></td>
+      <td>106485538303400.jpg</td>
+    </tr>
+    <tr>
+      <td>36.91</td>
+      <td>47.6281</td>
+      <td><img src="BAMRAW/106485538315700.jpg" ></td>
+      <td>106485538315700.jpg</td>
+    </tr>
+    <tr>
+      <td>36.77</td>
+      <td>48.2430</td>
+      <td><img src="BAMRAW/106485538328300.jpg" ></td>
+      <td>106485538328300.jpg</td>
+    </tr>
+    <tr>
+      <td>36.65</td>
+      <td>48.7798</td>
+      <td><img src="BAMRAW/106485538339900.jpg" ></td>
+      <td>106485538339900.jpg</td>
+    </tr>
+    <tr>
+      <td>36.52</td>
+      <td>49.3492</td>
+      <td><img src="BAMRAW/106485538352700.jpg" ></td>
+      <td>106485538352700.jpg</td>
+    </tr>
+    <tr>
+      <td>36.37</td>
+      <td>49.9213</td>
+      <td><img src="BAMRAW/106485538367400.jpg" ></td>
+      <td>106485538367400.jpg</td>
+    </tr>
+    <tr>
+      <td>36.24</td>
+      <td>50.1818</td>
+      <td><img src="BAMRAW/106485538379800.jpg" ></td>
+      <td>106485538379800.jpg</td>
+    </tr>
+    <tr>
+      <td>36.10</td>
+      <td>50.3669</td>
+      <td><img src="BAMRAW/106485538392100.jpg" ></td>
+      <td>106485538392100.jpg</td>
+    </tr>
+    <tr>
+      <td>35.98</td>
+      <td>50.5985</td>
+      <td><img src="BAMRAW/106485538403700.jpg" ></td>
+      <td>106485538403700.jpg</td>
+    </tr>
+    <tr>
+      <td>35.86</td>
+      <td>50.9381</td>
+      <td><img src="BAMRAW/106485538415700.jpg" ></td>
+      <td>106485538415700.jpg</td>
+    </tr>
+    <tr>
+      <td>35.73</td>
+      <td>51.2953</td>
+      <td><img src="BAMRAW/106485538428000.jpg" ></td>
+      <td>106485538428000.jpg</td>
+    </tr>
+    <tr>
+      <td>35.60</td>
+      <td>51.6833</td>
+      <td><img src="BAMRAW/106485538440000.jpg" ></td>
+      <td>106485538440000.jpg</td>
+    </tr>
+    <tr>
+      <td>35.03</td>
+      <td>53.1215</td>
+      <td><img src="BAMRAW/106485538494400.jpg" ></td>
+      <td>106485538494400.jpg</td>
+    </tr>
+    <tr>
+      <td>34.90</td>
+      <td>53.3978</td>
+      <td><img src="BAMRAW/106485538506000.jpg" ></td>
+      <td>106485538506000.jpg</td>
+    </tr>
+    <tr>
+      <td>34.78</td>
+      <td>53.6806</td>
+      <td><img src="BAMRAW/106485538517600.jpg" ></td>
+      <td>106485538517600.jpg</td>
+    </tr>
+    <tr>
+      <td>34.66</td>
+      <td>53.9020</td>
+      <td><img src="BAMRAW/106485538529200.jpg" ></td>
+      <td>106485538529200.jpg</td>
+    </tr>
+    <tr>
+      <td>34.54</td>
+      <td>54.0797</td>
+      <td><img src="BAMRAW/106485538540800.jpg" ></td>
+      <td>106485538540800.jpg</td>
+    </tr>
+    <tr>
+      <td>34.41</td>
+      <td>54.2397</td>
+      <td><img src="BAMRAW/106485538552500.jpg" ></td>
+      <td>106485538552500.jpg</td>
+    </tr>
+    <tr>
+      <td>34.29</td>
+      <td>54.3895</td>
+      <td><img src="BAMRAW/106485538565300.jpg" ></td>
+      <td>106485538565300.jpg</td>
+    </tr>
+    <tr>
+      <td>34.15</td>
+      <td>54.5588</td>
+      <td><img src="BAMRAW/106485538577700.jpg" ></td>
+      <td>106485538577700.jpg</td>
+    </tr>
+    <tr>
+      <td>34.03</td>
+      <td>54.6844</td>
+      <td><img src="BAMRAW/106485538589700.jpg" ></td>
+      <td>106485538589700.jpg</td>
+    </tr>
+    <tr>
+      <td>33.90</td>
+      <td>54.8304</td>
+      <td><img src="BAMRAW/106485538601300.jpg" ></td>
+      <td>106485538601300.jpg</td>
+    </tr>
+    <tr>
+      <td>33.78</td>
+      <td>55.0156</td>
+      <td><img src="BAMRAW/106485538612900.jpg" ></td>
+      <td>106485538612900.jpg</td>
+    </tr>
+    <tr>
+      <td>33.65</td>
+      <td>55.2053</td>
+      <td><img src="BAMRAW/106485538625300.jpg" ></td>
+      <td>106485538625300.jpg</td>
+    </tr>
+    <tr>
+      <td>33.52</td>
+      <td>55.4249</td>
+      <td><img src="BAMRAW/106485538637400.jpg" ></td>
+      <td>106485538637400.jpg</td>
+    </tr>
+    <tr>
+      <td>33.40</td>
+      <td>55.6491</td>
+      <td><img src="BAMRAW/106485538649200.jpg" ></td>
+      <td>106485538649200.jpg</td>
+    </tr>
+    <tr>
+      <td>33.27</td>
+      <td>55.8779</td>
+      <td><img src="BAMRAW/106485538661600.jpg" ></td>
+      <td>106485538661600.jpg</td>
+    </tr>
+    <tr>
+      <td>33.13</td>
+      <td>56.1226</td>
+      <td><img src="BAMRAW/106485538674400.jpg" ></td>
+      <td>106485538674400.jpg</td>
+    </tr>
+    <tr>
+      <td>33.00</td>
+      <td>56.2817</td>
+      <td><img src="BAMRAW/106485538686800.jpg" ></td>
+      <td>106485538686800.jpg</td>
+    </tr>
+    <tr>
+      <td>32.87</td>
+      <td>56.4622</td>
+      <td><img src="BAMRAW/106485538698800.jpg" ></td>
+      <td>106485538698800.jpg</td>
+    </tr>
+    <tr>
+      <td>32.73</td>
+      <td>56.6287</td>
+      <td><img src="BAMRAW/106485538712400.jpg" ></td>
+      <td>106485538712400.jpg</td>
+    </tr>
+    <tr>
+      <td>32.61</td>
+      <td>56.7487</td>
+      <td><img src="BAMRAW/106485538724000.jpg" ></td>
+      <td>106485538724000.jpg</td>
+    </tr>
+    <tr>
+      <td>32.49</td>
+      <td>56.8548</td>
+      <td><img src="BAMRAW/106485538735700.jpg" ></td>
+      <td>106485538735700.jpg</td>
+    </tr>
+    <tr>
+      <td>32.36</td>
+      <td>57.0027</td>
+      <td><img src="BAMRAW/106485538747300.jpg" ></td>
+      <td>106485538747300.jpg</td>
+    </tr>
+    <tr>
+      <td>32.24</td>
+      <td>57.1636</td>
+      <td><img src="BAMRAW/106485538759100.jpg" ></td>
+      <td>106485538759100.jpg</td>
+    </tr>
+    <tr>
+      <td>32.12</td>
+      <td>57.3590</td>
+      <td><img src="BAMRAW/106485538770700.jpg" ></td>
+      <td>106485538770700.jpg</td>
+    </tr>
+    <tr>
+      <td>31.99</td>
+      <td>57.5385</td>
+      <td><img src="BAMRAW/106485538782300.jpg" ></td>
+      <td>106485538782300.jpg</td>
+    </tr>
+    <tr>
+      <td>31.87</td>
+      <td>57.8204</td>
+      <td><img src="BAMRAW/106485538794100.jpg" ></td>
+      <td>106485538794100.jpg</td>
+    </tr>
+    <tr>
+      <td>31.74</td>
+      <td>58.1079</td>
+      <td><img src="BAMRAW/106485538806600.jpg" ></td>
+      <td>106485538806600.jpg</td>
+    </tr>
+    <tr>
+      <td>31.61</td>
+      <td>58.3367</td>
+      <td><img src="BAMRAW/106485538818600.jpg" ></td>
+      <td>106485538818600.jpg</td>
+    </tr>
+    <tr>
+      <td>31.49</td>
+      <td>58.5293</td>
+      <td><img src="BAMRAW/106485538830200.jpg" ></td>
+      <td>106485538830200.jpg</td>
+    </tr>
+    <tr>
+      <td>31.36</td>
+      <td>58.6670</td>
+      <td><img src="BAMRAW/106485538842900.jpg" ></td>
+      <td>106485538842900.jpg</td>
+    </tr>
+    <tr>
+      <td>31.23</td>
+      <td>58.7395</td>
+      <td><img src="BAMRAW/106485538855500.jpg" ></td>
+      <td>106485538855500.jpg</td>
+    </tr>
+    <tr>
+      <td>31.10</td>
+      <td>58.7330</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.97</td>
+      <td>58.7228</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.85</td>
+      <td>58.7563</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.72</td>
+      <td>58.8307</td>
+      <td><img src="BAMRAW/106485538903200.jpg" ></td>
+      <td>106485538903200.jpg</td>
+    </tr>
+    <tr>
+      <td>30.60</td>
+      <td>58.9535</td>
+      <td><img src="BAMRAW/106485538915100.jpg" ></td>
+      <td>106485538915100.jpg</td>
+    </tr>
+    <tr>
+      <td>30.47</td>
+      <td>59.0781</td>
+      <td><img src="BAMRAW/106485538926900.jpg" ></td>
+      <td>106485538926900.jpg</td>
+    </tr>
+    <tr>
+      <td>30.35</td>
+      <td>59.1991</td>
+      <td><img src="BAMRAW/106485538938600.jpg" ></td>
+      <td>106485538938600.jpg</td>
+    </tr>
+    <tr>
+      <td>30.23</td>
+      <td>59.2586</td>
+      <td><img src="BAMRAW/106485538950200.jpg" ></td>
+      <td>106485538950200.jpg</td>
+    </tr>
+    <tr>
+      <td>30.11</td>
+      <td>59.2326</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>29.98</td>
+      <td>58.9209</td>
+      <td><img src="BAMRAW/106485538974100.jpg" ></td>
+      <td>106485538974100.jpg</td>
+    </tr>
+    <tr>
+      <td>29.85</td>
+      <td>56.4454</td>
+      <td><img src="BAMRAW/106485538986600.jpg" ></td>
+      <td>106485538986600.jpg</td>
+    </tr>
+    <tr>
+      <td>29.72</td>
+      <td>55.1802</td>
+      <td><img src="BAMRAW/106485538998600.jpg" ></td>
+      <td>106485538998600.jpg</td>
+    </tr>
+    <tr>
+      <td>29.59</td>
+      <td>54.8370</td>
+      <td><img src="BAMRAW/106485539011000.jpg" ></td>
+      <td>106485539011000.jpg</td>
+    </tr>
+    <tr>
+      <td>29.46</td>
+      <td>54.9439</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>29.32</td>
+      <td>55.2733</td>
+      <td><img src="BAMRAW/106485539036500.jpg" ></td>
+      <td>106485539036500.jpg</td>
+    </tr>
+    <tr>
+      <td>29.17</td>
+      <td>55.7393</td>
+      <td><img src="BAMRAW/106485539050500.jpg" ></td>
+      <td>106485539050500.jpg</td>
+    </tr>
+    <tr>
+      <td>29.04</td>
+      <td>56.1263</td>
+      <td><img src="BAMRAW/106485539063000.jpg" ></td>
+      <td>106485539063000.jpg</td>
+    </tr>
+    <tr>
+      <td>28.92</td>
+      <td>56.6092</td>
+      <td><img src="BAMRAW/106485539075800.jpg" ></td>
+      <td>106485539075800.jpg</td>
+    </tr>
+    <tr>
+      <td>28.78</td>
+      <td>57.2418</td>
+      <td><img src="BAMRAW/106485539087700.jpg" ></td>
+      <td>106485539087700.jpg</td>
+    </tr>
+    <tr>
+      <td>28.65</td>
+      <td>57.7878</td>
+      <td><img src="BAMRAW/106485539100100.jpg" ></td>
+      <td>106485539100100.jpg</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+        </body>
+        </html>
+        
