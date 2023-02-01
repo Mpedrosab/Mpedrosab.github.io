@@ -1,0 +1,3583 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head><title>HTML Pandas Dataframe with CSS</title></head>
+        <link rel="stylesheet" type="text/css" href="../../Codes/df_style.css"/>      
+ <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js">
+     <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script src="/assets/functions/functionsLoadIndividual.js"></script> 
+      </script>
+        <body>
+        <div class="title isotherm_data"><h2>
+        Chol-DPPC-067_B1
+        </h2>
+        <div id="myIsothermPlot" style="display:none">
+        Chol-DPPC-067_B1
+        </div>
+
+<div id="headerIMG">
+        <div id="jxgbox" class="jxgbox_Data" style="width:600px; max-width:100%; height:350px;margin:50px"></div>
+
+<div id="BAMimg"></div>
+<div id="Slider"></div>
+</div>
+
+        <div class="div_isotherm_data">
+            <table border="1" class="dataframe isotherm_data">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Mma[A^2/molec]</th>
+      <th>SP[mN/m]</th>
+      <th>IMG</th>
+      <th>BamFile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>80.89</td>
+      <td>0.000</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.85</td>
+      <td>0.012</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.76</td>
+      <td>0.017</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.69</td>
+      <td>0.017</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.61</td>
+      <td>0.030</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.53</td>
+      <td>0.041</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.44</td>
+      <td>0.040</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.36</td>
+      <td>0.030</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.27</td>
+      <td>0.022</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.18</td>
+      <td>0.021</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.10</td>
+      <td>0.020</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>80.01</td>
+      <td>0.029</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.93</td>
+      <td>0.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.84</td>
+      <td>0.019</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.75</td>
+      <td>0.014</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.67</td>
+      <td>0.010</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.58</td>
+      <td>0.003</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.50</td>
+      <td>-0.002</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.41</td>
+      <td>0.004</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.33</td>
+      <td>0.007</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.24</td>
+      <td>0.012</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.15</td>
+      <td>0.020</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>79.07</td>
+      <td>0.026</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.98</td>
+      <td>0.019</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.90</td>
+      <td>0.021</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.81</td>
+      <td>0.022</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.73</td>
+      <td>0.027</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.64</td>
+      <td>0.028</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.55</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.47</td>
+      <td>0.044</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.38</td>
+      <td>0.044</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.30</td>
+      <td>0.047</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.21</td>
+      <td>0.042</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.12</td>
+      <td>0.045</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>78.04</td>
+      <td>0.052</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.95</td>
+      <td>0.054</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.87</td>
+      <td>0.053</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.78</td>
+      <td>0.045</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.70</td>
+      <td>0.034</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.61</td>
+      <td>0.040</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.52</td>
+      <td>0.034</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.44</td>
+      <td>0.041</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.35</td>
+      <td>0.046</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.27</td>
+      <td>0.052</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.18</td>
+      <td>0.050</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.09</td>
+      <td>0.044</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>77.01</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.92</td>
+      <td>0.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.84</td>
+      <td>0.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.75</td>
+      <td>0.034</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.67</td>
+      <td>0.041</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.58</td>
+      <td>0.044</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.49</td>
+      <td>0.046</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.41</td>
+      <td>0.046</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.32</td>
+      <td>0.043</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.24</td>
+      <td>0.040</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.15</td>
+      <td>0.043</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>76.07</td>
+      <td>0.046</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.98</td>
+      <td>0.048</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.89</td>
+      <td>0.050</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.81</td>
+      <td>0.056</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.72</td>
+      <td>0.061</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.64</td>
+      <td>0.059</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.55</td>
+      <td>0.066</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.46</td>
+      <td>0.069</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.38</td>
+      <td>0.066</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.29</td>
+      <td>0.070</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.21</td>
+      <td>0.064</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.12</td>
+      <td>0.060</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>75.04</td>
+      <td>0.057</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.95</td>
+      <td>0.060</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.86</td>
+      <td>0.063</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.78</td>
+      <td>0.067</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.69</td>
+      <td>0.067</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.61</td>
+      <td>0.066</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.52</td>
+      <td>0.067</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.43</td>
+      <td>0.058</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.35</td>
+      <td>0.057</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.26</td>
+      <td>0.059</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.18</td>
+      <td>0.058</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.09</td>
+      <td>0.058</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>74.01</td>
+      <td>0.057</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.92</td>
+      <td>0.058</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.83</td>
+      <td>0.050</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.75</td>
+      <td>0.037</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.66</td>
+      <td>0.031</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.58</td>
+      <td>0.031</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.49</td>
+      <td>0.034</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.40</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.32</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.23</td>
+      <td>0.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.15</td>
+      <td>0.031</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>73.06</td>
+      <td>0.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.98</td>
+      <td>0.030</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.89</td>
+      <td>0.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.80</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.72</td>
+      <td>0.039</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.63</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.55</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.46</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.37</td>
+      <td>0.024</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.29</td>
+      <td>0.018</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.20</td>
+      <td>0.024</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.12</td>
+      <td>0.024</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>72.03</td>
+      <td>0.028</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.95</td>
+      <td>0.031</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.86</td>
+      <td>0.023</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.77</td>
+      <td>0.021</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.69</td>
+      <td>0.025</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.60</td>
+      <td>0.036</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.52</td>
+      <td>0.045</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.43</td>
+      <td>0.047</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.35</td>
+      <td>0.053</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.26</td>
+      <td>0.047</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.17</td>
+      <td>0.051</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.09</td>
+      <td>0.051</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>71.00</td>
+      <td>0.067</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.92</td>
+      <td>0.075</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.83</td>
+      <td>0.081</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.74</td>
+      <td>0.088</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.66</td>
+      <td>0.091</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.57</td>
+      <td>0.088</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.49</td>
+      <td>0.086</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.40</td>
+      <td>0.083</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.32</td>
+      <td>0.084</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.23</td>
+      <td>0.085</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.14</td>
+      <td>0.087</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>70.06</td>
+      <td>0.092</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.97</td>
+      <td>0.094</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.89</td>
+      <td>0.086</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.80</td>
+      <td>0.092</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.71</td>
+      <td>0.081</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.63</td>
+      <td>0.082</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.54</td>
+      <td>0.087</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.46</td>
+      <td>0.093</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.37</td>
+      <td>0.095</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.29</td>
+      <td>0.092</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.20</td>
+      <td>0.077</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.11</td>
+      <td>0.088</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>69.03</td>
+      <td>0.106</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.94</td>
+      <td>0.130</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.86</td>
+      <td>0.142</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.77</td>
+      <td>0.142</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.69</td>
+      <td>0.133</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.60</td>
+      <td>0.131</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.51</td>
+      <td>0.119</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.43</td>
+      <td>0.124</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.34</td>
+      <td>0.116</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.26</td>
+      <td>0.103</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.17</td>
+      <td>0.101</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.08</td>
+      <td>0.100</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>68.00</td>
+      <td>0.099</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.91</td>
+      <td>0.090</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.83</td>
+      <td>0.092</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.74</td>
+      <td>0.092</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.66</td>
+      <td>0.094</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.57</td>
+      <td>0.101</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.48</td>
+      <td>0.102</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.40</td>
+      <td>0.103</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.31</td>
+      <td>0.108</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.23</td>
+      <td>0.111</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.14</td>
+      <td>0.113</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>67.05</td>
+      <td>0.121</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.97</td>
+      <td>0.137</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.88</td>
+      <td>0.152</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.80</td>
+      <td>0.163</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.71</td>
+      <td>0.167</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.63</td>
+      <td>0.165</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.54</td>
+      <td>0.168</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.45</td>
+      <td>0.174</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.37</td>
+      <td>0.181</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.28</td>
+      <td>0.182</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.20</td>
+      <td>0.184</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.11</td>
+      <td>0.190</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>66.02</td>
+      <td>0.187</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.94</td>
+      <td>0.190</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.85</td>
+      <td>0.190</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.77</td>
+      <td>0.202</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.68</td>
+      <td>0.211</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.60</td>
+      <td>0.207</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.51</td>
+      <td>0.206</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.42</td>
+      <td>0.210</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.34</td>
+      <td>0.201</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.25</td>
+      <td>0.207</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.17</td>
+      <td>0.218</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>65.08</td>
+      <td>0.221</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.99</td>
+      <td>0.230</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.91</td>
+      <td>0.240</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.82</td>
+      <td>0.254</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.74</td>
+      <td>0.256</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.65</td>
+      <td>0.259</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.57</td>
+      <td>0.262</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.48</td>
+      <td>0.270</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.39</td>
+      <td>0.278</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.31</td>
+      <td>0.285</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.22</td>
+      <td>0.283</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.14</td>
+      <td>0.287</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>64.05</td>
+      <td>0.287</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.97</td>
+      <td>0.299</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.88</td>
+      <td>0.310</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.79</td>
+      <td>0.325</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.71</td>
+      <td>0.339</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.62</td>
+      <td>0.343</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.54</td>
+      <td>0.351</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.45</td>
+      <td>0.355</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.36</td>
+      <td>0.361</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.28</td>
+      <td>0.373</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.19</td>
+      <td>0.386</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.11</td>
+      <td>0.403</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>63.02</td>
+      <td>0.423</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.94</td>
+      <td>0.431</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.85</td>
+      <td>0.463</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.76</td>
+      <td>0.486</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.68</td>
+      <td>0.505</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.59</td>
+      <td>0.529</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.51</td>
+      <td>0.551</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.42</td>
+      <td>0.583</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.33</td>
+      <td>0.610</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.25</td>
+      <td>0.632</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.16</td>
+      <td>0.657</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>62.08</td>
+      <td>0.676</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.99</td>
+      <td>0.702</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.91</td>
+      <td>0.731</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.82</td>
+      <td>0.769</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.73</td>
+      <td>0.808</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.65</td>
+      <td>0.852</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.56</td>
+      <td>0.880</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.48</td>
+      <td>0.923</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.39</td>
+      <td>0.967</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.30</td>
+      <td>1.013</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.22</td>
+      <td>1.061</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.13</td>
+      <td>1.106</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>61.05</td>
+      <td>1.150</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.96</td>
+      <td>1.188</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.88</td>
+      <td>1.236</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.79</td>
+      <td>1.292</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.70</td>
+      <td>1.357</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.62</td>
+      <td>1.410</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.53</td>
+      <td>1.468</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.45</td>
+      <td>1.535</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.36</td>
+      <td>1.593</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.27</td>
+      <td>1.651</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.19</td>
+      <td>1.678</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.10</td>
+      <td>1.725</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>60.02</td>
+      <td>1.776</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.93</td>
+      <td>1.825</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.85</td>
+      <td>1.884</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.76</td>
+      <td>1.939</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.67</td>
+      <td>1.998</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.59</td>
+      <td>2.055</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.50</td>
+      <td>2.100</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.42</td>
+      <td>2.173</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.33</td>
+      <td>2.233</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.25</td>
+      <td>2.319</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.16</td>
+      <td>2.391</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>59.07</td>
+      <td>2.463</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.99</td>
+      <td>2.524</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.90</td>
+      <td>2.577</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.82</td>
+      <td>2.639</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.73</td>
+      <td>2.706</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.64</td>
+      <td>2.774</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.56</td>
+      <td>2.842</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.47</td>
+      <td>2.912</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.39</td>
+      <td>2.980</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.30</td>
+      <td>3.054</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.22</td>
+      <td>3.118</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.13</td>
+      <td>3.166</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>58.04</td>
+      <td>3.242</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.96</td>
+      <td>3.311</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.87</td>
+      <td>3.389</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.79</td>
+      <td>3.453</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.70</td>
+      <td>3.514</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.61</td>
+      <td>3.564</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.53</td>
+      <td>3.610</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.44</td>
+      <td>3.663</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.36</td>
+      <td>3.728</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.27</td>
+      <td>3.807</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.19</td>
+      <td>3.886</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.10</td>
+      <td>3.966</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>57.01</td>
+      <td>4.040</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.93</td>
+      <td>4.114</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.84</td>
+      <td>4.173</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.76</td>
+      <td>4.260</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.67</td>
+      <td>4.346</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.58</td>
+      <td>4.421</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.50</td>
+      <td>4.491</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.41</td>
+      <td>4.551</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.33</td>
+      <td>4.620</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.24</td>
+      <td>4.693</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.16</td>
+      <td>4.746</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>56.07</td>
+      <td>4.838</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.98</td>
+      <td>4.928</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.90</td>
+      <td>5.019</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.81</td>
+      <td>5.101</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.73</td>
+      <td>5.193</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.64</td>
+      <td>5.273</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.55</td>
+      <td>5.343</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.47</td>
+      <td>5.395</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.38</td>
+      <td>5.458</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.30</td>
+      <td>5.535</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.21</td>
+      <td>5.613</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.13</td>
+      <td>5.695</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>55.04</td>
+      <td>5.779</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.95</td>
+      <td>5.859</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.87</td>
+      <td>5.957</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.78</td>
+      <td>6.032</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.70</td>
+      <td>6.165</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.61</td>
+      <td>6.274</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.53</td>
+      <td>6.379</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.44</td>
+      <td>6.465</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.35</td>
+      <td>6.558</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.27</td>
+      <td>6.647</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.18</td>
+      <td>6.738</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.10</td>
+      <td>6.817</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>54.01</td>
+      <td>6.928</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.92</td>
+      <td>7.057</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.84</td>
+      <td>7.181</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.75</td>
+      <td>7.317</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.67</td>
+      <td>7.451</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.58</td>
+      <td>7.589</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.50</td>
+      <td>7.727</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.41</td>
+      <td>7.830</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.32</td>
+      <td>7.977</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.24</td>
+      <td>8.108</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.15</td>
+      <td>8.235</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>53.07</td>
+      <td>8.348</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.98</td>
+      <td>8.464</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.89</td>
+      <td>8.596</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.81</td>
+      <td>8.730</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.72</td>
+      <td>8.872</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.64</td>
+      <td>9.045</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.55</td>
+      <td>9.216</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.47</td>
+      <td>9.368</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.38</td>
+      <td>9.517</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.29</td>
+      <td>9.666</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.21</td>
+      <td>9.794</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.12</td>
+      <td>9.927</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>52.04</td>
+      <td>10.038</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.95</td>
+      <td>10.176</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.86</td>
+      <td>10.297</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.78</td>
+      <td>10.442</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.69</td>
+      <td>10.579</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.61</td>
+      <td>10.722</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.52</td>
+      <td>10.882</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.44</td>
+      <td>11.050</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.35</td>
+      <td>11.189</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.26</td>
+      <td>11.352</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.18</td>
+      <td>11.514</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.09</td>
+      <td>11.649</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51.01</td>
+      <td>11.769</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.92</td>
+      <td>11.899</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.83</td>
+      <td>12.025</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.75</td>
+      <td>12.168</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.66</td>
+      <td>12.286</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.58</td>
+      <td>12.451</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.49</td>
+      <td>12.607</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.41</td>
+      <td>12.775</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.32</td>
+      <td>12.955</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.23</td>
+      <td>13.116</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.15</td>
+      <td>13.289</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>50.06</td>
+      <td>13.443</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.98</td>
+      <td>13.600</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.89</td>
+      <td>13.748</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.81</td>
+      <td>13.885</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.72</td>
+      <td>14.017</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.63</td>
+      <td>14.152</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.55</td>
+      <td>14.309</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.46</td>
+      <td>14.465</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.38</td>
+      <td>14.615</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.29</td>
+      <td>14.809</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.20</td>
+      <td>15.008</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.12</td>
+      <td>15.195</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>49.03</td>
+      <td>15.372</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.95</td>
+      <td>15.536</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.86</td>
+      <td>15.696</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.78</td>
+      <td>15.856</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.69</td>
+      <td>15.958</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.60</td>
+      <td>16.139</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.52</td>
+      <td>16.298</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.43</td>
+      <td>16.448</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.35</td>
+      <td>16.613</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.26</td>
+      <td>16.791</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.17</td>
+      <td>16.985</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.09</td>
+      <td>17.180</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>48.00</td>
+      <td>17.343</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.92</td>
+      <td>17.562</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.83</td>
+      <td>17.754</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.75</td>
+      <td>17.925</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.66</td>
+      <td>18.079</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.57</td>
+      <td>18.241</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.49</td>
+      <td>18.387</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.40</td>
+      <td>18.554</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.32</td>
+      <td>18.676</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.23</td>
+      <td>18.862</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.14</td>
+      <td>19.045</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>47.06</td>
+      <td>19.238</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.97</td>
+      <td>19.445</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.89</td>
+      <td>19.652</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.80</td>
+      <td>19.870</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.72</td>
+      <td>20.065</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.63</td>
+      <td>20.221</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.54</td>
+      <td>20.409</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.46</td>
+      <td>20.577</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.37</td>
+      <td>20.733</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.29</td>
+      <td>20.897</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.20</td>
+      <td>21.083</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.12</td>
+      <td>21.267</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46.03</td>
+      <td>21.483</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.94</td>
+      <td>21.663</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.86</td>
+      <td>21.920</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.77</td>
+      <td>22.158</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.69</td>
+      <td>22.375</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.60</td>
+      <td>22.591</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.51</td>
+      <td>22.779</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.43</td>
+      <td>22.968</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.34</td>
+      <td>23.139</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.26</td>
+      <td>23.274</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.17</td>
+      <td>23.432</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.09</td>
+      <td>23.612</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>45.00</td>
+      <td>23.820</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.91</td>
+      <td>24.033</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.83</td>
+      <td>24.282</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.74</td>
+      <td>24.516</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.66</td>
+      <td>24.771</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.57</td>
+      <td>24.976</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.48</td>
+      <td>25.225</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.40</td>
+      <td>25.454</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.31</td>
+      <td>25.647</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.23</td>
+      <td>25.861</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.14</td>
+      <td>26.055</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>44.06</td>
+      <td>26.269</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.97</td>
+      <td>26.473</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.88</td>
+      <td>26.677</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.80</td>
+      <td>26.949</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.71</td>
+      <td>27.211</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.63</td>
+      <td>27.505</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.54</td>
+      <td>27.801</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.45</td>
+      <td>28.098</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.37</td>
+      <td>28.367</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.28</td>
+      <td>28.611</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.20</td>
+      <td>28.827</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.11</td>
+      <td>29.060</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>43.03</td>
+      <td>29.301</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.94</td>
+      <td>29.549</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.85</td>
+      <td>29.828</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.77</td>
+      <td>30.109</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.68</td>
+      <td>30.441</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.60</td>
+      <td>30.744</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.51</td>
+      <td>31.066</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.43</td>
+      <td>31.450</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.34</td>
+      <td>31.788</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.25</td>
+      <td>32.122</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.17</td>
+      <td>32.426</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.08</td>
+      <td>32.713</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42.00</td>
+      <td>32.963</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.91</td>
+      <td>33.202</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.82</td>
+      <td>33.496</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.74</td>
+      <td>33.804</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.65</td>
+      <td>34.161</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.57</td>
+      <td>34.521</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.48</td>
+      <td>34.913</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.40</td>
+      <td>35.275</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.31</td>
+      <td>35.640</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.22</td>
+      <td>35.951</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.14</td>
+      <td>36.376</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>41.05</td>
+      <td>36.682</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.97</td>
+      <td>36.889</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.88</td>
+      <td>37.219</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.79</td>
+      <td>37.527</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.71</td>
+      <td>37.859</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.62</td>
+      <td>38.199</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.54</td>
+      <td>38.458</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.45</td>
+      <td>38.858</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.37</td>
+      <td>39.166</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.28</td>
+      <td>39.554</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.19</td>
+      <td>39.940</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.11</td>
+      <td>40.321</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>40.02</td>
+      <td>40.622</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.94</td>
+      <td>40.894</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.85</td>
+      <td>41.120</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.76</td>
+      <td>41.390</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.68</td>
+      <td>41.609</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.59</td>
+      <td>41.823</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.51</td>
+      <td>42.020</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.42</td>
+      <td>42.246</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.34</td>
+      <td>42.490</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.25</td>
+      <td>42.736</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.16</td>
+      <td>42.945</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>39.08</td>
+      <td>43.263</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.99</td>
+      <td>43.542</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.91</td>
+      <td>43.715</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.82</td>
+      <td>43.885</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.73</td>
+      <td>44.087</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.65</td>
+      <td>44.249</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.56</td>
+      <td>44.385</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.48</td>
+      <td>44.509</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.39</td>
+      <td>44.688</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.31</td>
+      <td>44.899</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.22</td>
+      <td>45.117</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.13</td>
+      <td>45.359</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>38.05</td>
+      <td>45.537</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.96</td>
+      <td>45.694</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.88</td>
+      <td>45.852</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.79</td>
+      <td>45.983</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.71</td>
+      <td>46.169</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.62</td>
+      <td>46.309</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.53</td>
+      <td>46.412</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.45</td>
+      <td>46.516</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.36</td>
+      <td>46.635</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.28</td>
+      <td>46.780</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.19</td>
+      <td>46.944</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.10</td>
+      <td>47.122</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>37.02</td>
+      <td>47.351</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.93</td>
+      <td>47.558</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.85</td>
+      <td>47.727</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.76</td>
+      <td>47.870</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.68</td>
+      <td>47.974</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.59</td>
+      <td>48.062</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.50</td>
+      <td>48.139</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.42</td>
+      <td>48.217</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.33</td>
+      <td>48.298</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.25</td>
+      <td>48.381</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.16</td>
+      <td>48.491</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36.08</td>
+      <td>48.603</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.99</td>
+      <td>48.752</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.90</td>
+      <td>48.886</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.82</td>
+      <td>49.011</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.73</td>
+      <td>49.123</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.65</td>
+      <td>49.191</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.56</td>
+      <td>49.235</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.47</td>
+      <td>49.258</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.39</td>
+      <td>49.264</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.30</td>
+      <td>49.279</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.22</td>
+      <td>49.312</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.13</td>
+      <td>49.347</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>35.05</td>
+      <td>49.363</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.96</td>
+      <td>49.399</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.87</td>
+      <td>49.432</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.79</td>
+      <td>49.474</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.70</td>
+      <td>49.509</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.62</td>
+      <td>49.535</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.53</td>
+      <td>49.542</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.44</td>
+      <td>49.518</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.36</td>
+      <td>49.397</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.27</td>
+      <td>49.193</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.19</td>
+      <td>48.935</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.10</td>
+      <td>48.533</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>34.02</td>
+      <td>47.278</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.93</td>
+      <td>46.745</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.84</td>
+      <td>46.716</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.76</td>
+      <td>46.840</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.67</td>
+      <td>47.064</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.59</td>
+      <td>47.270</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.50</td>
+      <td>47.410</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.42</td>
+      <td>47.506</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.33</td>
+      <td>47.567</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.24</td>
+      <td>47.589</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.16</td>
+      <td>47.552</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>33.07</td>
+      <td>47.476</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.99</td>
+      <td>47.124</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.90</td>
+      <td>46.326</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.81</td>
+      <td>46.044</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.73</td>
+      <td>46.125</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.64</td>
+      <td>46.365</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.56</td>
+      <td>46.683</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.47</td>
+      <td>46.962</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.38</td>
+      <td>47.188</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.30</td>
+      <td>47.450</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.21</td>
+      <td>47.619</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.13</td>
+      <td>47.638</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>32.04</td>
+      <td>47.676</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.96</td>
+      <td>47.671</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.87</td>
+      <td>47.661</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.78</td>
+      <td>47.580</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.70</td>
+      <td>47.465</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.61</td>
+      <td>47.284</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.53</td>
+      <td>47.145</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.44</td>
+      <td>47.069</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.36</td>
+      <td>46.988</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.27</td>
+      <td>46.951</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.18</td>
+      <td>46.923</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.10</td>
+      <td>46.885</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>31.01</td>
+      <td>46.814</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.93</td>
+      <td>46.682</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.84</td>
+      <td>46.535</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.75</td>
+      <td>46.351</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.67</td>
+      <td>46.145</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.58</td>
+      <td>45.713</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.50</td>
+      <td>45.537</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>30.41</td>
+      <td>45.612</td>
+      <td><img src="BAMRAW/" ></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+        </body>
+        </html>
+        
