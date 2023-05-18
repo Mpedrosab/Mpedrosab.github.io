@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object class="org.opensourcephysics.media.core.ImageVideo">
+    <property name="paths" type="array" class="[Ljava.lang.String;">
+        <property name="[0]" type="string">D:/Documentos_D/Google_Drive_UGR/Data_analysis/Data/CholPC40_B0412D/position2.png</property>
+        <property name="[1]" type="string">D:/Documentos_D/Google_Drive_UGR/Data_analysis/Data/CholPC40_B0412D/position3.png</property>
+    </property>
+    <property name="path" type="string">D:/Documentos_D/Google_Drive_UGR/Data_analysis/Data/CholPC40_B0412D/position2.png</property>
+    <property name="delta_t" type="double">100.0</property>
+</object>
