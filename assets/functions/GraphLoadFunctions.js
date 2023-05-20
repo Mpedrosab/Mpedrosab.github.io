@@ -8,6 +8,7 @@ var arrayDataLength;
 var arrayNowDataLength;
 var dataLoaded;
 var filter=[];
+var distZero= []; //Stores the distance to the origin to find where is the mouse
 
 console.log("GraphLoad")
  $(document).ready(function(){ 
@@ -106,7 +107,7 @@ function ShowDivSnapshot(key){
         item.style.display="none";
         
     })
-   console.log(key+"snapShot");
+   //console.log(key+"snapShot");
     document.getElementById(FixID(key)+"_snapShot").style.display="block"
     
 }
