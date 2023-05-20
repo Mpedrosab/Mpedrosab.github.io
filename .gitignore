@@ -7,8 +7,6 @@ Data/*/*.pdf
 Data/*/*.txt
 Data/*/DataRaw
 Data/*_BAD
-assets/css/print.css
-assets/css/style.css
 Data/*/BAM
 Data/*/BAMRAW/*cross*
 Data/*/BAMRAW/*dep*
