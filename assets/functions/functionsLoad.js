@@ -60,7 +60,7 @@ xmlhttp.onreadystatechange = function () {
       else if(myURL.indexOf("isotherm-comparison")>=0){
                   console.log(myURL)
       $.getScript("https://code.jquery.com/jquery-3.2.1.min.js");
-    $.getScript("/assets/functions/GraphLoadFunctions.js");
+    $.getScript("assets/functions/GraphLoadFunctions.js");
               
        document.getElementById("NameSuggest").style.display = "block"
        document.getElementById("Substance1Suggest").style.display = "none"
