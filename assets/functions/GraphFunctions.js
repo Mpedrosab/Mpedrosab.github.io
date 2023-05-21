@@ -255,7 +255,7 @@ function plotMyDB(dataToPlot,nameData){
     var y=splitData(dataToPlot["yData"]);
     var xparam=dataToPlot["xParam"]
     var yparam=dataToPlot["yParam"]
-    plotData(x,y, xparam, yparam,nameData);
+    plotData(x,y, nameData);
 };
  
 function plotThisNames(){
