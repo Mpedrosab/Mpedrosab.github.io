@@ -183,7 +183,7 @@ function plotData(x,y,myName) {
     var y0=y[0];
     for (i=0;i<x.length-1;i++) {
         
-        distZero[i]=Math.sqr((x[i]*x[i]+y[i]*y[i]))
+        distZero[i]=Math.sqrt((x[i]*x[i]+y[i]*y[i]))
         //Remove bias
 
         y[i]=y[i]-y0;
