@@ -1,5 +1,5 @@
 console.log("GraphFunctions")    
- console.log(filter)
+ //console.log(filter)
 var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-10,100,100,-15],axis:true,
                                            defaultAxes: {
     x : {
@@ -38,7 +38,7 @@ document.querySelectorAll('.dropSelect').forEach(item => {
     item.addEventListener("click",function(){
       //console.log("Pro")
       key=item.id.replace("drop","Suggest");
-    console.log(item+" " +key)
+   // console.log(item+" " +key)
       var mySibling=document.getElementById(key)
     //console.log(mySibling.style.display)
 if (mySibling.style.display == "block"){
@@ -71,7 +71,7 @@ document.querySelectorAll('.SuggestedNameSelect').forEach(item => {
         
      // console.log("Pro")
   
-      console.log(item+" " +key)
+    //  console.log(item+" " +key)
 document.getElementById("snapShot-container").style.display="none";
       SetName(key,"SuggestedNameSelect",true);
       item.style.display = "none"; 
@@ -114,7 +114,7 @@ function addListenerToDropList(label1){
       key=RestoreID(item.id);
         var previousKey=String(document.getElementById(FixID(label)).value);
         var parent=document.querySelector('#'+label1);
-        console.log('#\\'+previousKey+" ")
+       // console.log('#\\'+previousKey+" ")
         if ((previousKey!="Any") &&(myParam=="Temperature")){
             previousKey='\\00003'+previousKey+" "
         }
@@ -135,7 +135,7 @@ function addListenerToDropList(label1){
       
       item.style.display = "none"; 
         document.getElementById(FixID(label1)).style.display = "none";
-console.log(key) 
+//console.log(key) 
         myArrOut=FilterNames(key,myParam,filter);
     });
     });  
@@ -302,7 +302,7 @@ var item;
 
 item= document.getElementById("plot");
 item.onclick= function(){
-     console.log( document.getElementById("WaitToPlot"))
+     //console.log( document.getElementById("WaitToPlot"))
      document.getElementById("WaitToPlot").style.display = "block";
 setTimeout(() => {  plotThisNames(); }, 50);
 
@@ -318,13 +318,13 @@ document.getElementById("SuggestedNameRemove").addEventListener("click",function
 function FilterNames(key,paramFilter,filter){
         var myHTMLNow=document.querySelector('#NameSuggest');
     //No change from previous
-    console.log(filter)
+  //  console.log(filter)
     if (filter[paramFilter] == key  ){
         return myArrNow;
     }
        //Add to global filter
     console.log("HEREE")
-    console.log(filter)
+   // console.log(filter)
     
     
 var deletedKeys=[];
@@ -333,7 +333,7 @@ var deletedKeys=[];
             var filterOut=JSON.parse(JSON.stringify(myArrNow));
             filter[paramFilter] = key;7
         
-        console.log(filter)
+       // console.log(filter)
 
         if ((paramFilter=="endDate") || (paramFilter=="startDate")){
                 filterTime(key,paramFilter,filterOut);
@@ -381,10 +381,10 @@ var deletedKeys=[];
              }
              else{
                  
-                 console.log("restore")
-                 console.log(child.style.display)
+               //  console.log("restore")
+                // console.log(child.style.display)
                    document.querySelector('#'+myArr[TotalArrKey]["Name"]).style.display="block";
-                 console.log(child.style.display)
+               //  console.log(child.style.display)
              }
        }
        for (var TotalArrKey of Object.keys(myArr).values()){ 
@@ -422,7 +422,7 @@ var deletedKeys=[];
     }
     
     }
-console.log(filterOut)
+//console.log(filterOut)
     return filterOut;
 }
 
@@ -440,8 +440,8 @@ if (fromName!=true){
     else{
 
      
-    console.log(output)
-    console.log(txtName.value)
+    //console.log(output)
+    //console.log(txtName.value)
 
     if (txtName.value ==""){
         txtName.value =textOut;
@@ -502,7 +502,7 @@ function createLabel(myName, myColor){
             }          
          
       }
-     console.log("createDiv")
+    // console.log("createDiv")
      //console.log(strOut)
    
      
