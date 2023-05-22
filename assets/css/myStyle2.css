@@ -40,7 +40,7 @@ ul{
 .snapShot img {
     width: 100%;
 }
-.legend-plot hr{
+#legend-plot hr{
 	width:10px;
 	height:10px;
 	display: inline-block;
