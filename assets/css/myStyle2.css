@@ -31,10 +31,18 @@ ul{
     max-height: 60px;
 }
 
+/*Plot to compare page*/
+
 .snapShot {
     max-width: 100%;
 }
 
 .snapShot img {
     width: 100%;
+}
+.legend-plot hr{
+	width:10px;
+	height:10px;
+	display: inline-block;
+margin: auto;
 }
