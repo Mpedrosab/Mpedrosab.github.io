@@ -493,7 +493,7 @@ document.querySelectorAll('.SuggestedNameSelect').forEach(item => {item.style.di
 function createLabel(myName, myColor){
         
 
-        var strOut='<p><hr style="background: myColor">&nbsp mySubstance: myTemp °C; myVol myVolUnit [myConc myUnitConc]; mySpeed myUnitSpeed; (myDate, myName) </p>'
+        var strOut='<p><hr style="background: myColor">&nbsp myName mySubstance: myTemp °C; myVol myVolUnit [myConc myUnitConc]; mySpeed myUnitSpeed; (myDate) </p>'
       for (const [key, value] of Object.entries(myArr)){
             if(value["Name"]==myName){
                  strOut=strOut.replace("myName",value["Name"]).replace("mySubstance",value["Substance1"]).replace("mySubstance",value["Substance1"]).replace("myVol",value["Volume1"]).replace("myVolUnit",value["Unit_Vol"]).replace("myUnitConc",value["Unit1"]).replace("myConc",value["Concentration1"]).replace("myTemp",value["Temperature"]).replace("mySpeed",value["Speed"]).replace("myDate",value["Date"].split(" ")[0]).replace("myUnitSpeed",value["Unit_Speed"]).replace("myColor",myColor) //Remove date time from date
