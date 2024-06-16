@@ -168,7 +168,7 @@ function movePoint(){
 var indexData=Math.ceil(document.getElementById("sliderVal").value);
 var myX=x[indexData];
 var myY=y[indexData];
-    var dist=Math.sqr((myX*myX+myY*myY))
+    var dist=Math.sqrt((myX*myX+myY*myY))
     //console.log("PLOT VALUES")
    
     //console.log( img)
